@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "./static/css/main.f95eb558.chunk.css",
+    "main.js": "./static/js/main.397af546.chunk.js",
+    "main.js.map": "./static/js/main.397af546.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.8078a1af.js",
+    "runtime-main.js.map": "./static/js/runtime-main.8078a1af.js.map",
+    "static/js/2.85241697.chunk.js": "./static/js/2.85241697.chunk.js",
+    "static/js/2.85241697.chunk.js.map": "./static/js/2.85241697.chunk.js.map",
+    "index.html": "./index.html",
+    "precache-manifest.e0efdf168df4f794ec891c414ea32b75.js": "./precache-manifest.e0efdf168df4f794ec891c414ea32b75.js",
+    "service-worker.js": "./service-worker.js",
+    "static/css/main.f95eb558.chunk.css.map": "./static/css/main.f95eb558.chunk.css.map",
+    "static/js/2.85241697.chunk.js.LICENSE": "./static/js/2.85241697.chunk.js.LICENSE",
+    "static/media/index.scss": "./static/media/TrebuchetMS.3ed2a139.woff2",
+    "static/media/CardItem.scss": "./static/media/border-selected.4c6b233c.svg",
+    "static/media/App.scss": "./static/media/pattern@2x.630c453c.jpg",
+    "static/media/picture@1x.png": "./static/media/picture@1x.717f53c7.png",
+    "static/media/picture@2x.png": "./static/media/picture@2x.7461fed8.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8078a1af.js",
+    "static/js/2.85241697.chunk.js",
+    "static/css/main.f95eb558.chunk.css",
+    "static/js/main.397af546.chunk.js"
+  ]
+}

@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Вилана </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preload" href="fonts/montserrat/light/montserrat-300.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/montserrat/regular/montserrat-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/montserrat/bold/montserrat-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v1.6.0/mapbox-gl.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+  <link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+  <div class="page">
+    <header class="page-header page-header--main">
+      <div class="site-container">
+        <div class="page-header__wrapper"><a class="page-header__logo logo"><img class="logo__image" src="images/static/logo.png" alt="Логотип Виланы" width="153" height="88"></a>
+          <!--form.page-header__search-wrapperinput(type='text').page-header__search-input
+button(type='button').page-header__search-close
+  span.visually-hidden Закрыть поиск-->
+          <nav class="page-header__main-nav page-header__main-nav--main">
+            <ul class="page-header__nav-list">
+              <li class="page-header__nav-item"><a class="page-header__nav-link" href="main.html">О компании</a></li>
+              <li class="page-header__nav-item"><a class="page-header__nav-link" href="#metal-defence">Защита металла и бетона</a></li>
+              <li class="page-header__nav-item"><a class="page-header__nav-link" href="#wood-paint">Окраска древесины и интерьера</a></li>
+              <li class="page-header__nav-item"><a class="page-header__nav-link" href="documents.html">В помощь технологу</a></li>
+              <li class="page-header__nav-item"><a class="page-header__nav-link" href="news.html">Статьи</a></li>
+              <li class="page-header__nav-item"><a class="page-header__nav-link" href="contacts.html">Контакты</a></li>
+            </ul><a class="page-header__shop-link btn btn--white-transparent" href="#">Интернет-магазин</a>
+          </nav>
+          <div class="page-header__inner-wrapper page-header__inner-wrapper--short"><button class="page-header__toggle" type="button"><span></span><span class="visually-hidden">Открыть меню</span></button><a class="page-header__search" href="#"><span class="visually-hidden">Поиск</span></a><a class="page-header__contacts opener" href="#">+7 812 647 00 75</a></div>
+          <div class="page-header__contacts-popup contacts-popup">
+            <ul class="contacts-popup__list">
+              <li class="contacts-popup__item">
+                <p class="contacts-popup__shop-phone">+7 812 647 00 75</p>
+                <p class="contacts-popup__shop-name">Офис НПО "Вилана"</p>
+                <p class="contacts-popup__shop-address">площадь Конституции, д. 7, БЦ "ЛИДЕР", офис 310</p>
+              </li>
+              <li class="contacts-popup__item">
+                <p class="contacts-popup__shop-phone">+7 812 647 00 75</p>
+                <p class="contacts-popup__shop-name">Магазин на Ленинском</p>
+                <p class="contacts-popup__shop-address">Ленинский проспект, д. 140 А, ТЦ "Загородный дом 2", 1 этаж, секция 15</p>
+              </li>
+              <li class="contacts-popup__item">
+                <p class="contacts-popup__shop-phone">+7 812 647 00 75</p>
+                <p class="contacts-popup__shop-name">Магазин на Приморском</p>
+                <p class="contacts-popup__shop-address">Приморский проспект д. 4</p>
+              </li>
+              <li class="contacts-popup__item">
+                <p class="contacts-popup__shop-phone">+7 812 647 00 75</p>
+                <p class="contacts-popup__shop-name">Склад</p>
+                <p class="contacts-popup__shop-address">Волхонское шоссе, 111<br>(синие ворота с надписью "SOFI")</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="popup-search popup-search--closed">
+      <div class="search-header site-container popup-search__header">
+        <div class="search-header__wrapper"><a class="search-header__logo logo" href="/"><img class="logo__image" src="images/static/logo.png" alt="Логотип Виланы" width="153" height="88"></a>
+          <form class="search-header__form"><label class="visually-hidden" for="search">Поиск по сайту</label><input class="search-header__form-input" type="text" id="search" autocomplete="off"><span class="search-header__form-placeholder">Что будем искать?</span><span class="search-header__form-hide"></span><button class="search-header__form-close" type="button"><span class="visually-hidden">Закрыть поиск</span></button></form>
+        </div>
+      </div>
+    </div>
+    <main class="content">
+      <h1 class="visually-hidden">Вилана — официальный дистрибьютор лакокрасочных материалов TEKNOS</h1>
+      <section class="site-intro">
+        <div class="site-intro__map-container" id="map-container"></div>
+        <h2 class="visually-hidden">Где заказать</h2>
+        <div class="site-intro__top-wrapper">
+          <div class="site-intro__container">
+            <div class="site-intro__flex-container">
+              <p class="site-intro__description">Официальный дистрибьютер ведущего производителя лакокрасочных материалов в Финляндии — концерна TEKNOS</p><a class="site-intro__button btn btn--white-transparent btn--thin" href="catalog.html">Интернет-магазин</a>
+            </div>
+          </div>
+        </div>
+        <div class="site-intro__bottom-wrapper">
+          <div class="site-intro__container">
+            <p class="site-intro__slogan title title--h1 title--light">Качество финских промышленных технологий по доступной цене</p>
+          </div>
+        </div>
+      </section>
+      <section class="tabs">
+        <h2 class="visually-hidden">Наши услуги</h2>
+        <ul class="tabs__list">
+          <li class="tabs__item tabs__item--corrosion" data-section="corrosion"><a class="tabs__button" href="#" id="metal-defence"><span class="tabs__toggle"><span class="visually-hidden">Показать больше</span></span>
+              <h3>Антикоррозионные краски и покрытия</h3>
+              <p>Поставка и полное техническое сопровождение процесса нанесения антикоррозионных красок и покрытий ТЕКНОС</p>
+            </a></li>
+          <li class="tabs__item tabs__item--wood tabs__item--current" data-section="wood"><a class="tabs__button" href="#" id="wood-paint"><span class="tabs__toggle"><span class="visually-hidden">Показать больше</span></span>
+              <h3>Для дерева</h3>
+              <p>Поставка и техническое сопровождение применения красок, лаков, антисептиков и лазурей TEKNOS для деревянных конструкций и изделий</p>
+            </a></li>
+          <li class="tabs__item tabs__item--complex" data-section="complex"><a class="tabs__button" href="#"><span class="tabs__toggle"><span class="visually-hidden">Показать больше</span></span>
+              <h3>Полный комплекс работ</h3>
+              <p>Выполнение полного комплекса антикоррозионных и огнезащитных работ силами собственной сервисной компании</p>
+            </a></li>
+        </ul>
+      </section>
+      <div class="corrosion">
+        <section class="corrosion__paints-wrapper custom-slider">
+          <h2 class="visually-hidden">Антикоррозионные краски и покрытия</h2>
+          <div class="custom-slider__buttons-wrapper"><button class="custom-slider__button custom-slider__button--prev" type="button"><span class="visually-hidden">Назад</span></button><button class="custom-slider__button custom-slider__button--next" type="button"><span class="visually-hidden">Вперёд</span></button></div><span class="corrosion__paints-number">01</span>
+          <ul class="corrosion__paints-list">
+            <li class="corrosion__paints-item custom-slider__item custom-slider__item--current">
+              <div class="corrosion__paints-image"><img class="lazyload" data-src="images/content/paints-item-1@2x.jpg" src="images/content/paints-item-1@2x.jpg" alt="" width="826" height="671"></div>
+              <h3>Антикоррозионные краски «ТЕКНОС» из Финляндии</h3>
+              <p>Антикоррозионные краски и промышленные краски «ТЕКНОС» известны в нашей стране более 40 лет. По результатам продаж за 2013 год антикоррозионные краски «Текнос» занимают на рынке АКЗ 4 место в России, 12 в Европе и 39 в мире.</p>
+            </li>
+            <li class="corrosion__paints-item custom-slider__item">
+              <div class="corrosion__paints-image"><img class="lazyload" data-src="images/content/paint-nordica-thin@2x.png" src="images/content/paint-nordica-thin@2x.png" alt="" width="826" height="671"></div>
+              <h3>test<br>^_^</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam quaerat eos nam consequuntur maxime non nulla sed, laborum ullam explicabo?</p>
+            </li>
+            <li class="corrosion__paints-item custom-slider__item">
+              <div class="corrosion__paints-image"><img class="lazyload" data-src="images/content/teknos-example-1.jpg" src="images/content/teknos-example-1.jpg" alt="" width="826" height="671"></div>
+              <h3>test 2040403 (っ´ω`)ﾉ(╥ω╥)<br>test ⊂(･ω･*⊂)</h3>
+                <p>test ( ` ω ´ )</p>
+            </li>
+            <li class="corrosion__paints-item custom-slider__item">
+              <div class="corrosion__paints-image"><img class="lazyload" data-src="images/content/teknos-example-3.jpg" src="images/content/teknos-example-3.jpg" alt="" width="826" height="671"></div>
+              <h3>Это четвёртый<br>testoviy слайд</h3>
+                <p>И я уже не знаю, что здесь писать</p>
+            </li>
+          </ul>
+          <ul class="custom-slider__pagination-wrapper">
+            <li class="custom-slider__pagination-item custom-slider__pagination-item--current"><span class="visually-hidden">1 слайд</span></li>
+            <li class="custom-slider__pagination-item"><span class="visually-hidden">2 слайд</span></li>
+            <li class="custom-slider__pagination-item"><span class="visually-hidden">3 слайд</span></li>
+            <li class="custom-slider__pagination-item"><span class="visually-hidden">4 слайд</span></li>
+          </ul>
+        </section>
+        <div class="corrosion__features-wrapper">
+          <div class="corrosion__inner-wrapper">
+            <h2 class="visually-hidden"> Статистика компании</h2>
+            <ul class="corrosion__list corrosion__list corrosion__list--column">
+              <li class="corrosion__indicators-item indicator indicator--row">
+                <div class="indicator__top-wrapper"><span class="indicator__value">> 40</span><span class="indicator__text"> лет</span></div>
+                <p>Антикоррозионные краски и промышленные краски «ТЕКНОС» известны в нашей стране более 40 лет.</p>
+              </li>
+              <li class="corrosion__indicators-item indicator indicator--row">
+                <div class="indicator__top-wrapper"><span class="indicator__value">4</span><span class="indicator__text"> место</span></div>
+                <p>Антикоррозионные краски «Текнос» занимают на рынке в России *<small class="corrosion__indicators-legend">* По результатам продаж за 2013 год</small></p>
+              </li>
+              <li class="corrosion__indicators-item indicator indicator--row">
+                <div class="indicator__top-wrapper"><span class="indicator__value">12</span><span class="indicator__text"> место</span></div>
+                <p>Антикоррозионные краски «Текнос» занимают на рынке в Европе *</p>
+              </li>
+            </ul>
+          </div>
+          <div class="corrosion__inner-wrapper corrosion__inner-wrapper--bottom" id="features-wrapper">
+            <h2 class="corrosion__title title title--h1 title--light">Чем отличаются антикоррозионные краски «ТЕКНОС» от аналогов?</h2>
+            <div class="corrosion__slider">
+              <ul class="corrosion__features-list">
+                <li class="corrosion__features-item corrosion__features-item--tech feature"><img class="lazyload" data-src="images/content/features-icon-1.svg" src="images/content/features-icon-1.svg" width="110" height="108" alt="">
+                  <h3>Высокая технологичность</h3>
+                  <p>Лакокрасочная продукция ТЕКНОС по сравнению с конкурирующими покрытиями имеет минимальное время высыхания и перекрытия следующим слоем, что позволяет поддерживать высочайшую скорость производства окрасочных работ.</p><a href="#" target="blank">Подробнее</a>
+                </li>
+                <li class="corrosion__features-item corrosion__features-item--quality feature"><img class="lazyload" data-src="images/content/features-icon-2.svg" src="images/content/features-icon-2.svg" width="106" height="118" alt="">
+                  <h3>Высочайшее качество</h3>
+                  <p>Концерн ТЕКНОС имеет десять заводов по производству лакокрасочных материалов в шести европейских странах. В Санкт-Петербурге в 2015 году запущено самое современное производство в России.</p><a href="#" target="blank">Подробнее</a>
+                </li>
+                <li class="corrosion__features-item corrosion__features-item--support feature"><img class="lazyload" data-src="images/content/features-icon-3.svg" src="images/content/features-icon-3.svg" width="108" height="108" alt="">
+                  <h3>Техническая поддержка</h3>
+                  <p>К услугам партнеров НПО «Вилана» собственный склад с неснижаемым остатком лакокрасочной продукции, превышающим 200  000 литров. Штат компании укомплектован сертифицированными инспекторами-технологами.</p><a href="#" target="blank">Подробнее</a>
+                </li>
+                <li class="corrosion__features-item corrosion__features-item--cost feature"><img class="lazyload" data-src="images/content/features-icon-4.svg" src="images/content/features-icon-4.svg" width="114" height="108" alt="">
+                  <h3>Стоимость</h3>
+                  <p>Цена на лакокрасочную продукцию ТЕКНОС оптимизирована по критерию «цена-качество». Любой Заказчик может подобрать покрытие, полностью отвечающее техническим потребностям и собственным финансовым возможностям.</p><a href="#" target="blank">Подробнее</a>
+                </li>
+              </ul>
+              <div class="slider-button slider-button--light slider-button--prev slider-button--mobile-only"></div>
+              <div class="slider-button slider-button--light slider-button--next slider-button--mobile-only"></div>
+            </div>
+          </div>
+        </div>
+        <div class="corrosion__outer-bottom-wrapper">
+          <div class="site-container">
+            <div class="corrosion__inner-bottom-wrapper">
+              <section class="examples">
+                <h2 class="examples__title title title--h1 title--light">Краской «ТЕКНОС» окрашено</h2>
+                <ul class="examples__list">
+                  <li class="examples__item"><img class="lazyload" data-src="images/content/teknos-example-1.jpg" src="images/content/teknos-example-1.jpg" width="500" height="500" alt="">
+                    <p>Адмиралтейство</p>
+                  </li>
+                  <li class="examples__item"><img class="lazyload" data-src="images/content/teknos-example-2.jpg" src="images/content/teknos-example-2.jpg" width="500" height="500" alt="">
+                    <p>Эрмитаж</p>
+                  </li>
+                  <li class="examples__item"><img class="lazyload" data-src="images/content/teknos-example-3.jpg" src="images/content/teknos-example-3.jpg" width="500" height="500" alt="">
+                    <p>ДЛТ</p>
+                  </li>
+                </ul><a class="examples__button" href="#">Смотреть все</a>
+              </section>
+              <section class="our-clients">
+                <h2 class="title title--h1 title--light our-clients__title">Наши клиенты</h2>
+                <p>Финский семейный концерн ТЕКНОС известен своим ответственным подходом к производству лакокрасочной продукции</p>
+                <ul class="our-clients__list">
+                  <li class="our-clients__item"><img class="lazyload" data-src="images/content/client-rosneft@1x.jpg" src="images/content/client-rosneft@1x.jpg" width="211" height="104" data-srcset="images/content/client-rosneft@2x.jpg 2x" alt="Роснефть"></li>
+                  <li class="our-clients__item"><img class="lazyload" data-src="images/content/client-transneft@1x.jpg" src="images/content/client-transneft@1x.jpg" width="211" height="104" data-srcset="images/content/client-transneft@2x.jpg 2x" alt="Транснефть"></li>
+                  <li class="our-clients__item"><img class="lazyload" data-src="images/content/client-lukoil@1x.jpg" src="images/content/client-lukoil@1x.jpg" width="211" height="104" data-srcset="images/content/client-lukoil@2x.jpg 2x" alt="Лукойл"></li>
+                  <li class="our-clients__item"><img class="lazyload" data-src="images/content/client-rosmorport@1x.jpg" src="images/content/client-rosmorport@1x.jpg" width="211" height="104" data-srcset="images/content/client-rosmorport@2x.jpg 2x" alt="Росморпорт"></li>
+                  <li class="our-clients__item"><img class="lazyload" data-src="images/content/client-sibur@1x.jpg" src="images/content/client-sibur@1x.jpg" width="211" height="104" data-srcset="images/content/client-sibur@2x.jpg 2x" alt="Сибур"></li>
+                  <li class="our-clients__item"><img class="lazyload" data-src="images/content/client-mrts@1x.jpg" src="images/content/client-mrts@1x.jpg" width="211" height="104" data-srcset="images/content/client-mrts@2x.jpg 2x" alt="МРТС"></li>
+                </ul>
+              </section>
+              <section class="personal-solution">
+                <h2 class="personal-solution__title title title--h1 title--light">Мы разработаем для вас индивидуальное решение</h2>
+                <p>Вы хотите снизить издержки на АКЗ мероприятия или купить лакокрасочные материалы «ТЕКНОС» со скидкой? Индивидуальное решение по защите от коррозии и окраске металлоконструкций, с гарантией желаемого результата.</p>
+                <div class="personal-solution__modal"><a class="personal-solution__download-link download-link" href="#">Скачать опросный лист</a>
+                  <form class="personal-solution__form" novalidate>
+                    <div class="personal-solution__form-wrapper">
+                      <div class="personal-solution__input-row input-row"><label class="visually-hidden" for="name"></label><input class="input-row__input input-row__input--blue" id="name" type="text" name="name" placeholder="Имя и фамилия" autocomplete="on" /><span class="input-row__error-sign">!</span><span class="input-row__error-message"></span></div>
+                      <div class="personal-solution__input-row input-row"><label class="visually-hidden" for="phone"></label><input class="input-row__input input-row__input--blue" id="phone" type="text" name="phone" placeholder="Номер телефона" autocomplete="on" /><span class="input-row__error-sign">!</span><span class="input-row__error-message"></span></div>
+                      <div class="personal-solution__input-row input-row"><label class="visually-hidden" for="email"></label><input class="input-row__input input-row__input--blue" id="email" type="text" name="email" placeholder="E-mail" autocomplete="on" /><span class="input-row__error-sign">!</span><span class="input-row__error-message"></span></div>
+                    </div>
+                    <div class="personal-solution__file-upload"><input type="file" id="file-upload-input" name="file" multiple required><label for="file-upload-input"><span class="personal-solution__form-label personal-solution__form-label--desktop">Перетащите файлы в область или<u>выберите из списка</u></span><span class="personal-solution__form-label personal-solution__form-label--mobile">Нажмите для загрузки файла</span><span class="personal-solution__files-list"></span></label><span class="input-row__error-sign">!</span><span class="input-row__error-message"></span></div><button class="personal-solution__form-button btn btn--green" type="submit">Отправить заявку</button>
+                  </form>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="wood-wrapper" id="wood-wrapper">
+        <section class="wood">
+          <div class="wood__container">
+            <div class="wood__top-wrapper">
+              <h2 class="wood__title title title--h4 title--light">Дом через 15 лет</h2>
+              <div class="wood__buttons-wrapper"><a class="wood__button btn btn--green" href="choose-paint.html">Выбрать краску по дереву</a><a class="wood__button btn btn--dark-transparent" href="#">Раскрасить дом</a></div>
+              <div class="wood__description-wrapper">
+                <p class="wood__description-text">Без технологии Teknos</p>
+                <p class="wood__description-text wood__description-text--right">С технологией Teknos</p>
+              </div>
+            </div>
+          </div>
+          <div class="wood__another-wrapper">
+            <div class="wood__container wood__container--bottom">
+              <div class="wood__middle-wrapper">
+                <div class="wood__house-wrapper">
+                  <div class="twentytwenty-container"><img class="lazyload wood__house-image" data-src="images/static/house-old.png" src="images/static/house-old.png" width="1554" height="827" alt="Дом с облупившейся краской."><img class="lazyload wood__house-image" data-src="images/static/house-new.png" src="images/static/house-new.png" width="1554" height="827" alt="Дом с ярким лакокрасочным прокрытием."></div>
+                </div>
+                <ul class="wood__list">
+                  <li class="wood__item">
+                    <h3 class="wood__list-title title title--h6">Гарантия 15 лет</h3>
+                    <p class="wood__list-description">Выполнение полного комплекса антикоррозионных</p>
+                  </li>
+                  <li class="wood__item">
+                    <h3 class="wood__list-title title title--h6">Подбор системы окрашивания</h3>
+                    <p class="wood__list-description">Выполнение полного комплекса антикоррозионных</p>
+                  </li>
+                  <li class="wood__item">
+                    <h3 class="wood__list-title title title--h6">Всегда в наличии</h3>
+                    <p class="wood__list-description">Выполнение полного комплекса антикоррозионных</p>
+                  </li>
+                  <li class="wood__item">
+                    <h3 class="wood__list-title title title--h6">Консультация специалистов</h3>
+                    <p class="wood__list-description">Выполнение полного комплекса антикоррозионных</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div><video class="wood__background-video" src="video/house-background.mp4" width="1600" autoplay loop></video>
+        </section>
+        <section class="cube">
+          <div class="cube__bg-wrapper"></div>
+          <div class="cube__main-container">
+            <div class="cube__top-wrapper">
+              <h2 class="cube__title title title--h2 title--light">Плюсы промышленных технологий</h2><a class="cube__button btn btn--green" href="choose-paint.html">Выбрать краску по дереву</a>
+            </div>
+            <div class="cube__image">
+              <div class="sprite" id="sprite"></div>
+            </div>
+            <div class="cube__slider-wrapper">
+              <div class="cube__slider-pagination"></div>
+              <div class="cube__slider-button slider-button slider-button--prev slider-button--light"></div>
+              <div class="cube__slider-button slider-button slider-button--next slider-button--light"></div>
+              <ul class="cube__list">
+                <li class="cube__item cube__item--first cube__item--antiseptic cube__item--active">
+                  <h3 class="cube__list-title">Обязательное антисептирование</h3><img class="lazyload cube__list-icon cube__list-icon--first" data-src="images/static/icon-antiseptic-2.svg" src="images/static/icon-antiseptic-2.svg" width="40" height="40" alt=""><img class="lazyload cube__list-icon cube__list-icon--second" data-src="images/static/icon-antiseptic-1.svg" src="images/static/icon-antiseptic-1.svg" width="40" height="40" alt="">
+                  <p class="cube__list-description">Выполнение полного комплекса антикоррозионных</p>
+                </li>
+                <li class="cube__item cube__item--second">
+                  <h3 class="cube__list-title">Грунтование</h3>
+                  <p class="cube__list-description">Обеспечивает сцепление комплексного лакокрасочного покрытия с древесиной, увеличение барьерных свойств покрытия</p>
+                </li>
+                <li class="cube__item cube__item--third">
+                  <h3 class="cube__list-title">Послойное нанесение</h3>
+                  <p class="cube__list-description">Являются экологичными, не имеют запаха, обладают высокой укрывистостью.</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <div class="wood-wrapper__bottom-container">
+          <div class="site-container">
+            <section class="examples">
+              <h2 class="examples__title title title--h1 title--light">Краской «ТЕКНОС» окрашено</h2>
+              <ul class="examples__list">
+                <li class="examples__item"><img class="lazyload" data-src="images/content/teknos-example-1.jpg" src="images/content/teknos-example-1.jpg" width="500" height="500" alt="">
+                  <p>Адмиралтейство</p>
+                </li>
+                <li class="examples__item"><img class="lazyload" data-src="images/content/teknos-example-2.jpg" src="images/content/teknos-example-2.jpg" width="500" height="500" alt="">
+                  <p>Эрмитаж</p>
+                </li>
+                <li class="examples__item"><img class="lazyload" data-src="images/content/teknos-example-3.jpg" src="images/content/teknos-example-3.jpg" width="500" height="500" alt="">
+                  <p>ДЛТ</p>
+                </li>
+              </ul><a class="examples__button" href="#">Смотреть все</a>
+            </section>
+          </div>
+          <section class="wood-wrapper__modal">
+            <h2 class="wood-wrapper__modal-title title title--h1 title--light">Стать субдилером для&nbsp;красок по дереву</h2>
+            <p class="wood-wrapper__modal-description">Коротко информация для субдилеров. проводит выездные обучающие семинары и тренинги</p><a class="wood-wrapper__modal-button btn btn--green">Отправить заявку</a>
+          </section>
+          <section class="popup popup-request overlay">
+            <div class="popup__wrapper">
+              <div class="popup__wrapper-content popup-request__wrapper-content">
+                <h2>Заполните форму</h2>
+                <p>Коротко информация для субдилеров. проводит выездные обучающие семинары и тренинги</p>
+                <form class="popup__form" action="https://echo.htmlacademy.ru" method="post" target="dummy-iframe" novalidate>
+                  <div class="popup__input-row input-row"><label class="visually-hidden" for="request-name">Представьтесь</label><input class="input-row__input" id="request-name" type="text" name="name" placeholder="Ваше имя" autocomplete="on" value="" /><span class="input-row__error-sign">!</span><span class="input-row__error-message"></span></div>
+                  <div class="popup__input-row input-row"><label class="visually-hidden" for="request-email">Укажите Ваш электронный адрес</label><input class="input-row__input" id="request-email" type="email" name="email" placeholder="E-mail" autocomplete="on" value="" /><span class="input-row__error-sign">!</span><span class="input-row__error-message"></span></div>
+                  <div class="popup__input-row input-row"><label class="visually-hidden" for="request-tel">Укажите Ваш номер телефона</label><input class="input-row__input" id="request-tel" type="tel" name="phone" placeholder="Телефон" autocomplete="on" value="" /><span class="input-row__error-sign">!</span><span class="input-row__error-message"></span></div>
+                  <div class="undefined__textarea custom-textarea"><textarea name="message" id="request-message" rows="8" placeholder="Комментарий"></textarea></div>
+                  <div class="popup-request__checkbox-row checkbox-row"><input class="visually-hidden checkbox-row__input" id="request-personal-data" type="checkbox" name="personal-data" checked="checked" /><label class="checkbox-row__label" for="request-personal-data">Даю согласие на обработку персональных данных и соглашаюсь с политикой конфиденциальности</label></div><button class="popup__button popup-request__button btn btn--green" type="submit">Отправить</button>
+                </form><button class="popup__close" type="button">Закрыть</button>
+              </div>
+            </div>
+          </section>
+          <section class="popup overlay popup-thx">
+            <div class="popup__wrapper">
+              <div class="popup__wrapper-content popup-thx__wrapper-content">
+                <h2>Спасибо за заявку</h2><button class="popup__close" type="button">Закрыть</button>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+      <section class="complex">
+        <div class="complex__top-container">
+          <div class="complex__text-container">
+            <h2 class="title title--h1 title--light complex__title">C 2008 года работает собственная сервисная компания</h2><a class="complex__aside-link" href="#">Допуск №0183.03-2009-7810501505-С-2</a>
+            <p>«Саморегулируемая организация «Межрегиональное объединение строителей» в т.ч. и на работы, «оказывающие влияние на безопасность объектов капитального строительства, включая особо опасные и технически сложные объекты капитального строительства».</p>
+          </div>
+        </div>
+        <div class="complex__bottom-container">
+          <div class="complex__text-container">
+            <div class="complex__slider-wrapper">
+              <div class="examples-slider">
+                <ul class="examples-slider__list">
+                  <li class="examples-slider__item"><img class="lazyload examples-slider__image" data-src="images/content/complex-example-1@1x.jpg" src="images/content/complex-example-1@1x.jpg" width="1056" height="704" alt="Резервуар, покрытый антикоррозионной краской" data-srcset="images/content/complex-example-1@2x.jpg 2x">
+                    <p class="examples-slider__description">ООО "ТехноОкраска" (выполнение АКЗ работ), совместно с НПО "Вилана" (поставка ЛКМ TEKNOS), завершило работы по антикоррозионной защите</p>
+                  </li>
+                  <li class="examples-slider__item"><img class="lazyload examples-slider__image" data-src="images/content/teknos-example-1.jpg" src="images/content/teknos-example-1.jpg" width="1056" height="704" alt="Резервуар, покрытый антикоррозионной краской" data-srcset="images/content/teknos-example-1.jpg">
+                    <p class="examples-slider__description">ООО Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, vitae!</p>
+                  </li>
+                  <li class="examples-slider__item"><img class="lazyload examples-slider__image" data-src="images/content/teknos-example-2.jpg" src="images/content/teknos-example-2.jpg" width="1056" height="704" alt="Резервуар, покрытый антикоррозионной краской" data-srcset="images/content/teknos-example-2.jpg 2x">
+                    <p class="examples-slider__description">ООО "ТехноОкраска" (выполнение АКЗ работ), совместно с НПО "Вилана" (поставка ЛКМ TEKNOS), завершило работы по антикоррозионной защите</p>
+                  </li>
+                  <li class="examples-slider__item"><img class="lazyload examples-slider__image" data-src="images/content/teknos-example-3.jpg" src="images/content/teknos-example-3.jpg" width="1056" height="704" alt="Резервуар, покрытый антикоррозионной краской" data-srcset="images/content/teknos-example-3.jpg 2x">
+                    <p class="examples-slider__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, optio, officiis, illum excepturi nobis consequatur enim earum nihil reiciendis maxime nostrum quam vel distinctio eaque similique. Distinctio aliquid culpa quam!</p>
+                  </li>
+                  <li class="examples-slider__item"><img class="lazyload examples-slider__image" data-src="images/content/scheme-bg-1.jpg" src="images/content/scheme-bg-1.jpg" width="1056" height="704" alt="Резервуар, покрытый антикоррозионной краской" data-srcset="images/content/scheme-bg-1.jpg 2x">
+                    <p class="examples-slider__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro reiciendis sed, provident itaque fugit voluptates impedit saepe quae. Dignissimos eligendi accusamus nisi in perspiciatis saepe.</p>
+                  </li>
+                </ul>
+                <div class="examples-slider__buttons slider-buttons">
+                  <div class="slider-pagination slider-pagination--numeric"></div>
+                  <div class="slider-button slider-button--prev"></div>
+                  <div class="slider-button slider-button--next"></div>
+                </div>
+              </div>
+            </div>
+            <div class="complex__text">
+              <p>Коллектив компании укомплектован профессиональными строителями, сертифицированными инспекторами-технологами окрасочного производства и опытными рабочими – малярами, пескоструйщиками и операторами дизельных установок.</p>
+              <p>Предприятие прошло аттестацию в ДО АО «Центрэнергогаз» и включено в реестр организаций, допущенных к выполнению АКЗ работ на объектах ОАО «Газпром». Производственные единицы оснащены высокопроизводительным импортным оборудованием: компрессорами «Atlas Copco», окрасочными аппаратами «Graco» и «Wagner», аппаратами струйной очистки поверхности «AIRBLAST», а также приборами контроля «Elcometer».</p>
+            </div>
+            <p class="complex__additional-text">Компания имеет возможность выполнения АКЗ работ (полный комплекс) до 80 000м²/месяц.</p>
+          </div>
+          <div class="site-container">
+            <section class="our-clients">
+              <h2 class="title title--h1 title--light our-clients__title">Наши клиенты</h2>
+              <p>Финский семейный концерн ТЕКНОС известен своим ответственным подходом к производству лакокрасочной продукции</p>
+              <ul class="our-clients__list">
+                <li class="our-clients__item"><img class="lazyload" data-src="images/content/client-rosneft@1x.jpg" src="images/content/client-rosneft@1x.jpg" width="211" height="104" data-srcset="images/content/client-rosneft@2x.jpg 2x" alt="Роснефть"></li>
+                <li class="our-clients__item"><img class="lazyload" data-src="images/content/client-transneft@1x.jpg" src="images/content/client-transneft@1x.jpg" width="211" height="104" data-srcset="images/content/client-transneft@2x.jpg 2x" alt="Транснефть"></li>
+                <li class="our-clients__item"><img class="lazyload" data-src="images/content/client-lukoil@1x.jpg" src="images/content/client-lukoil@1x.jpg" width="211" height="104" data-srcset="images/content/client-lukoil@2x.jpg 2x" alt="Лукойл"></li>
+                <li class="our-clients__item"><img class="lazyload" data-src="images/content/client-rosmorport@1x.jpg" src="images/content/client-rosmorport@1x.jpg" width="211" height="104" data-srcset="images/content/client-rosmorport@2x.jpg 2x" alt="Росморпорт"></li>
+                <li class="our-clients__item"><img class="lazyload" data-src="images/content/client-sibur@1x.jpg" src="images/content/client-sibur@1x.jpg" width="211" height="104" data-srcset="images/content/client-sibur@2x.jpg 2x" alt="Сибур"></li>
+                <li class="our-clients__item"><img class="lazyload" data-src="images/content/client-mrts@1x.jpg" src="images/content/client-mrts@1x.jpg" width="211" height="104" data-srcset="images/content/client-mrts@2x.jpg 2x" alt="МРТС"></li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </section>
+      <section class="main-features">
+        <div class="main-features__text-content">
+          <h2>Компания Вилана</h2>
+          <p>НПО «Вилана» производит окрасочные и огнезащитные работы любой сложности, в кратчайшие сроки с предоставлением финансовых гарантий, проводит выездные обучающие семинары и тренинги</p>
+        </div>
+        <ul class="main-features__top-list">
+          <li class="main-features__indicator indicator"><svg class="indicator__icon indicator__icon--circle" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="220" height="140" viewBox="0 0 1432.4 1079.8">
+              <path fill="#3882f1" d="M9,594.5C-32.7,398.5,60.2,61.7,493.6,7.6C869-39.4,1230.4,137,1368,409.3c213.8,423.1-142.2,809.8-508.1,621.6 C545.7,869.3,77.7,916.9,9,594.5z"></path>
+            </svg>
+            <div class="indicator__top-wrapper"><span class="indicator__value">+ 30</span><span class="indicator__text"> тыс.</span></div>
+            <p>Клиентов по всей России</p>
+          </li>
+          <li class="main-features__indicator indicator"><svg class="indicator__icon indicator__icon--rhombus" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="220" height="140" viewBox="0 0 1432.4 1079.8">
+              <path fill="#3882f1" d="M9,594.5C-32.7,398.5,60.2,61.7,493.6,7.6C869-39.4,1230.4,137,1368,409.3c213.8,423.1-142.2,809.8-508.1,621.6 C545.7,869.3,77.7,916.9,9,594.5z"></path>
+            </svg>
+            <div class="indicator__top-wrapper"><span class="indicator__value">200</span></div>
+            <p>Неснижаемый товарный запас красок</p>
+          </li>
+          <li class="main-features__indicator indicator"><svg class="feature-icon indicator__icon indicator__icon--triangle" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="220" height="140" viewBox="0 0 1432.4 1079.8">
+              <path fill="#3882f1" d="M9,594.5C-32.7,398.5,60.2,61.7,493.6,7.6C869-39.4,1230.4,137,1368,409.3c213.8,423.1-142.2,809.8-508.1,621.6 C545.7,869.3,77.7,916.9,9,594.5z"></path>
+            </svg>
+            <div class="indicator__top-wrapper"><span class="indicator__value">+ 30</span><span class="indicator__text"> тыс.</span></div>
+            <p>Клиентов по всей России</p>
+          </li>
+          <li class="main-features__indicator indicator"><svg class="indicator__icon indicator__icon--circle" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="220" height="140" viewBox="0 0 1432.4 1079.8">
+              <path fill="#3882f1" d="M9,594.5C-32.7,398.5,60.2,61.7,493.6,7.6C869-39.4,1230.4,137,1368,409.3c213.8,423.1-142.2,809.8-508.1,621.6 C545.7,869.3,77.7,916.9,9,594.5z"></path>
+            </svg>
+            <div class="indicator__top-wrapper"><span class="indicator__value">200</span></div>
+            <p>Неснижаемый товарный запас красок</p>
+          </li>
+        </ul>
+        <div class="main-features__slider-wrapper">
+          <ul class="main-features__list main-features__bottom-list">
+            <li class="main-features__item feature feature--light"><img class="lazyload" data-src="images/content/features-item-1.jpg" src="images/content/features-item-1.jpg" width="254" height="254" alt="" srcset="images/content/features-item-1@2x.jpg 2x">
+              <h3>Снабжение промышленных <br/> предприятий</h3>
+                <p>Приоритетным для НПО «Вилана» является снабжение промышленных предприятий и крупных строительно-монтажных организаций высококачественными антикоррозионными</p><button class="main-features__details-toggle" type="button">Подробнее</button>
+                <p class="main-features__details"> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+            </li>
+            <li class="main-features__item feature feature--light"><img class="lazyload" data-src="images/content/features-item-2.jpg" src="images/content/features-item-2.jpg" width="254" height="254" alt="" data-srcset="images/content/features-item-2@2x.jpg 2x">
+              <h3>Техническая <br/> поддержка</h3>
+                <p>Приоритетным для НПО «Вилана» является снабжение промышленных предприятий и крупных строительно-монтажных организаций высококачественными антикоррозионными</p><button class="main-features__details-toggle" type="button">Подробнее</button>
+                <p class="main-features__details"> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+            </li>
+            <li class="main-features__item feature feature--light"><img class="lazyload" data-src="images/content/features-item-2.jpg" src="images/content/features-item-2.jpg" width="254" height="254" alt="" data-srcset="images/content/features-item-2@2x.jpg 2x">
+              <h3>Техническая <br/> поддержка</h3>
+                <p>Приоритетным для НПО «Вилана» является снабжение промышленных предприятий и крупных строительно-монтажных организаций высококачественными антикоррозионными</p><button class="main-features__details-toggle" type="button">Подробнее</button>
+                <p class="main-features__details"> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+            </li>
+          </ul>
+          <div class="main-features__slider-buttons slider-buttons slider-buttons--mobile-only">
+            <div class="slider-pagination slider-pagination--numeric"></div>
+            <div class="slider-button slider-button--prev"></div>
+            <div class="slider-button slider-button--next"></div>
+          </div>
+        </div>
+      </section>
+      <div class="main-bottom-container">
+        <div class="main-bottom-container__wrapper">
+          <section class="documents">
+            <h2 class="documents__title title title--h3 title--light">В помощь технологу</h2>
+            <ul class="documents__list">
+              <li class="documents__item"><a class="documents__link download-link" href="#">Госты</a></li>
+              <li class="documents__item"><a class="documents__link download-link" href="#">ASTIM</a></li>
+              <li class="documents__item"><a class="documents__link download-link" href="#">Ведомственные нормативы</a></li>
+              <li class="documents__item"><a class="documents__link download-link" href="#">ISO</a></li>
+              <li class="documents__item"><a class="documents__link download-link" href="#">Ведомственные нормативы</a></li>
+              <li class="documents__item"><a class="documents__link download-link" href="#">Ведомственные нормативы</a></li>
+            </ul>
+          </section>
+          <section class="articles-list">
+            <h2 class="articles-list__title title title--h3 title--light">Статьи</h2>
+            <ul class="articles-list__wrapper">
+              <li class="articles-list__item"><time class="articles-list__date" datetime="2019-02-05">05 февраля '19</time>
+                <h3 class="articles-list__header title title--h5 title--light">Послойное нанесение</h3>
+                <p class="articles-list__description">Являются экологичными, не имеют запаха, обладают высокой укрывистостью.</p><a class="articles-list__link" href="#">Подробнее</a>
+              </li>
+              <li class="articles-list__item"><time class="articles-list__date" datetime="2019-02-05">05 февраля '19</time>
+                <h3 class="articles-list__header title title--h5 title--light">Послойное нанесение</h3>
+                <p class="articles-list__description">Являются экологичными, не имеют запаха, обладают высокой укрывистостью.</p><a class="articles-list__link" href="#">Подробнее</a>
+              </li>
+              <li class="articles-list__item"><time class="articles-list__date" datetime="2019-02-05">05 февраля '19</time>
+                <h3 class="articles-list__header title title--h5 title--light">Послойное нанесение</h3>
+                <p class="articles-list__description">Являются экологичными, не имеют запаха, обладают высокой укрывистостью.</p><a class="articles-list__link" href="#">Подробнее</a>
+              </li>
+            </ul>
+          </section>
+        </div>
+      </div>
+      <section class="main-contacts">
+        <div class="main-contacts__wrapper">
+          <h2 class="visually-hidden">Контактная информация</h2>
+          <ul class="main-contacts__list">
+            <li class="main-contacts__item main-contacts__item--current" data-place="primorsky"><a class="main-contacts__button" href="#">
+                <h3 class="main-contacts__title title title--h5">Магазин на Приморском</h3>
+                <div class="main-contacts__description">
+                  <p>Приморский проспект, д.4</p>
+                  <p>+7 (812) 431-15-01<br>Режим работы: вторник-суббота с 10-00 до 18-00 (без перерыва)</p>
+                </div>
+              </a></li>
+            <li class="main-contacts__item" data-place="leninsky"><a class="main-contacts__button" href="#">
+                <h3 class="main-contacts__title title title--h5">Магазин на Ленинском</h3>
+                <div class="main-contacts__description">
+                  <p>Приморский проспект, д.4</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque quos atque ipsum sapiente, ea quod tenetur at neque, voluptatum repellat recusandae reiciendis similique necessitatibus facilis soluta optio dolorum vel assumenda?</p>
+                </div>
+              </a></li>
+            <li class="main-contacts__item" data-place="office"><a class="main-contacts__button" href="#">
+                <h3 class="main-contacts__title title title--h5">Склад</h3>
+                <div class="main-contacts__description">
+                  <p>Приморский проспект, д. 4</p>
+                  <p>Описание</p>
+                </div>
+              </a></li>
+            <li class="main-contacts__item" data-place="store"><a class="main-contacts__button" href="#">
+                <h3 class="main-contacts__title title title--h5">Офис</h3>
+                <div class="main-contacts__description">
+                  <p>Приморский проспект, д. 4</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, consectetur!</p>
+                </div>
+              </a></li>
+          </ul>
+          <div class="main-contacts__map-wrapper" id="main-map"></div>
+        </div>
+      </section><template id="personalSolutionFile"><span class="personal-solution__file-item"><span class="personal-solution__file-name"></span><button class="personal-solution__file-close" type="button"><span class="visually-hidden">Удалить</span></button></span></template>
+    </main>
+    <footer class="page-footer">
+      <div class="site-container">
+        <div class="page-footer__wrapper">
+          <p class="page-footer__copyright page-footer__copyright--left">© vilana.ru, 2018</p>
+          <div class="page-footer__logos-wrapper"><a class="page-footer__logo-link" href="#" target="blank"><img class="page-footer__logo-image page-footer__logo-image--vilana" src="images/static/footer-logo.png" alt="Логотип Виланы." width="148" height="56"></a><a class="page-footer__logo-link" href="#" target="blank"><img class="page-footer__logo-image page-footer__logo-image--teknos" src="images/static/teknos.svg" alt="Логотип Текнос." width="122" height="32"></a></div>
+          <p class="page-footer__copyright page-footer__copyright--right"><a class="page-footer__text-link" href="https://cake.ru/" target="blank">Разработка сайта – Cake.ru</a></p>
+        </div>
+      </div>
+    </footer>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ac32881e-2cf9-4841-9f89-d0c71e95b37f&amp;lang=ru_RU" defer></script>
+  </div>
+  <script src="js/vendor.min.js"></script>
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>
