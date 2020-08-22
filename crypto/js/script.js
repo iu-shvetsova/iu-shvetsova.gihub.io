@@ -32,12 +32,23 @@ if (btnRoute) {
       e.preventDefault();
       let btnRouteHref = e.currentTarget.getAttribute("data-link");
       window.location.href = btnRouteHref;
-      console.log(btnRouteHref);
       // if (!e.currentTarget.classList.contains("nf-btn--disable")) {
       //   let btnRouteHref = e.currentTarget.getAttribute("data-link");
       //   window.location.href = btnRouteHref;
       //   console.log(btnRouteHref);
       // }
+    });
+  }
+}
+
+const backBtn = document.querySelectorAll(".widget__header-back");
+
+if (backBtn) {
+  for (let i = 0; i < backBtn.length; i++) {
+    backBtn[i].addEventListener("click", (e) => {
+      e.preventDefault();
+      let btnRouteHref = e.currentTarget.getAttribute("data-back");
+      window.location.href = btnRouteHref;
     });
   }
 }
@@ -364,8 +375,8 @@ document.addEventListener("DOMContentLoaded", () => {
   placeholder("#detailInp", "0.<span>0267213</span>");
   placeholder("#buyInpBNT", "20.<span>7955</span>");
   placeholderLong("#cardNumber", "Card&nbsp;<span>number</span>");
-  placeholderLong("#cardHolder", "Card&nbsp;<span>holder</span>");
-  placeholder("#cardCVC", "CVC&nbsp;<span>CVV</span>");
+  placeholderLong("#cardHolder", "Name on card");
+  placeholder("#cardCVC", "CVC");
   userCoude("#userCoude", "123456", ".verify .btn__send");
   userCoude("#bitcoinAddress", "123456", ".detail .btn__send");
   inputValidValue("#expiresMM", "12");

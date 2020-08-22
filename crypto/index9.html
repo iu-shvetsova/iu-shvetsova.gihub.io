@@ -87,12 +87,11 @@
             </div>
           </div>
           <div class="widget__section">
-            <div class="widget__header">
+            <div class="widget__header widget__header--pos-a">
               <button class="widget__header-back">
-                ← back
               </button>
               <button class="widget__header-menu">
-                <p>menu</p>
+                <p>m***m@g***l.com</p>
                 <span>close</span>
                 <svg
                   width="18"
@@ -108,13 +107,76 @@
                 </svg>
               </button>
             </div>
-            <form action="#" class="nf-form">
-              <div class="buy__title">
-                <p>You’ll pay</p>
-                <p class="buy__title-error">ErrorError</p>
-                <p class="buy__title-desc">Euro</p>
+            <div class="nf-info"> 
+              <div class="nf-info__col">
+                <div class="buy__title">
+                  <p>You'll pay</p>
+                  <p class="buy__title-error">Too simple</p>
+                  <p class="buy__title-desc">Euro</p>
+                </div>
+                <div class="nf-info__input">
+                  <p class="nf-info__input-val">
+                    15,023.12
+                  </p>
+                  <p class="nf-info__input-currency">
+                    Eur
+                  </p>
+                </div>
+                <ul class="nf-info__list">
+                  <li class="nf-info__list-item">
+                    <p class="nf-info__list-text">
+                      Rate
+                    </p>
+                    <p class="nf-info__list-text">
+                      1 BTC → 9,234.23 EUR
+                    </p>
+                  </li>
+                  <li class="nf-info__list-item">
+                    <p class="nf-info__list-text">
+                      Rate is fixed for
+                    </p>
+                    <p class="nf-info__list-text nf-info__list-text--green">
+                      00:30
+                    </p>
+                  </li>
+                </ul>
               </div>
-              <div class="user__input nf-input-line nf-input-line--bottom">
+              <div class="nf-info__col">
+                <div class="buy__title">
+                  <p>You'll get</p>
+                  <p class="buy__title-error"></p>
+                  <p class="buy__title-desc">Bitcoin</p>
+                </div>
+                <div class="nf-info__input">
+                  <p class="nf-info__input-val">
+                    0.82761234
+                  </p>
+                  <p class="nf-info__input-currency">
+                    Btc
+                  </p>
+                </div>
+                <ul class="nf-info__list">
+                  <li class="nf-info__list-item">
+                    <p class="nf-info__list-text">
+                      Fee incl
+                    </p>
+                    <p class="nf-info__list-text">
+                      0.0001 BTC
+                    </p>
+                  </li>
+                  <li class="nf-info__list-item">
+                    <p class="nf-info__list-text">
+                      Total to pay
+                    </p>
+                    <p class="nf-info__list-text nf-info__list-text--black">
+                      15,023.12 EUR
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <form action="#" class="nf-form">
+              <div class="user__input">
                 <p class="updateText">Card&nbsp;<span>number</span></p>
                 <input
                   type="text"
@@ -123,54 +185,19 @@
                   maxlength="19"
                 />
               </div>
-              <div class="buy__hint-box">
-                <div class="buy__hint">
-                  <p class="buy__hint-title">1 BTC ~ 9235.87 EUR</p>
-                  <div class="buy__hint-icon-box">
-                    <div class="buy__hint-icon">
-                      <img src="img/lock.svg" alt="" />
-                      <p class="buy__hint-desc">
-                        No verification required for purchases less than €300
-                      </p>
-                    </div>
-                    <!-- <div class="buy__hint-icon">
-                      <img src="img/lock-ico.svg" alt="" />
-                      <p class="buy__hint-desc buy__hint-desc--orange">
-                        No verification required for purchases less than €300
-                      </p>
-                    </div> -->
-                    <div class="buy__hint-icon">
-                      <img src="img/question.svg" alt="" />
-                      <p class="buy__hint-desc buy__hint-desc--blue">
-                        Min. payment amount is €30 or equivalent. Max. purchase
-                        limit for unverified users is €300 or equivalent. Our
-                        fee comes to 4% of the transaction amount and is
-                        included in the final transaction amount for the user.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="buy__title">
-                <p>Name on credit card</p>
-                <p class="buy__title-error">ErrorError</p>
-                <p class="buy__title-desc"></p>
-              </div>
-              <div class="user__input nf-input-line">
-                <p class="updateText">Card&nbsp;<span> holder</span></p>
+              <div class="user__input">
+                <p class="updateText">Name on card</p>
                 <input type="text" id="cardHolder" maxlength="19"/>
               </div>
               <div class="expires">
                 <div class="expires_data">
-                  <p class="expires__title">Expires</p>
-                  <div class="user__input user__input--m-b-0">
+                  <div class="user__input user__input--big-text user__input--line user__input--m-b-0">
                     <input
                       type="text"
                       placeholder="mm"
                       maxlength="2"
                       class="expires__mm"
                     />
-                    <p class="expires__slesh">/</p>
                     <input
                       type="text"
                       placeholder="yy"
@@ -180,9 +207,8 @@
                   </div>
                 </div>
                 <div class="expires_cvc">
-                  <p class="expires__title">CVC/CVV</p>
-                  <div class="user__input user__input--m-b-0">
-                    <p class="updateText">CVC&nbsp;<span>CVV</span></p>
+                  <div class="user__input user__input--m-b-0 user__input--big-text user__input--width-text">
+                    <p class="updateText">CVC</p>
                     <input
                       type="text"
                       maxlength="3"
