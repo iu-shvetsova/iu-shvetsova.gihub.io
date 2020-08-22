@@ -1649,6 +1649,9 @@ p {
 .site-content__widget-wrapper {
   width: 100%;
   max-width: 400px;
+}
+
+.site-content__widget-wrapper--animated {
   animation: fall 1.5s linear;
 }
 
