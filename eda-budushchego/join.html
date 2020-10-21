@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Клуб &quot;Еда будущего&quot;</title>
+    <meta name="theme-color" content="#fff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
+    <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+    <link rel="stylesheet" href="styles/main.css">
+  </head>
+  <body>
+    <header class="header"><a class="header__instagram-link" href="#"><span class="visually-hidden">Мы в инстаграме</span></a>
+      <div class="header__actions-wrapper"><a class="header__join-link" href="join.html">Присоединиться</a>
+        <button class="header__menu-button" type="button"><span class="header__button-text">Меню</span></button>
+      </div>
+      <div class="header__menu-outer-wrapper">
+        <div class="header__menu-inner-wrapper">
+          <button class="header__mobile-close-button" type="button" aria-label="Закрыть меню"></button>
+          <nav class="header__nav-wrapper">
+            <ul class="header__nav-list">
+              <li class="header__nav-item"><a class="header__nav-link" href="#">Неотвратимость</a></li>
+              <li class="header__nav-item"><a class="header__nav-link" href="#">Почему растительная еда?</a></li>
+              <li class="header__nav-item"><a class="header__nav-link" href="#">Кому это может быть интересно?</a></li>
+              <li class="header__nav-item"><a class="header__nav-link" href="#">Что у нас уже получилось?</a></li>
+              <li class="header__nav-item"><a class="header__nav-link" href="#">Идеи, приближающие нас к мечте</a></li>
+            </ul>
+          </nav>
+          <div class="header__contacts-wrapper">
+            <ul class="header__contacts-list">
+              <li class="header__contacts-item header__contacts-item--separate"><a class="header__text-contact" href="mailto:regregawef.@efewf.ru">regregawef.@efewf.ru</a></li>
+              <li class="header__contacts-item header__contacts-item--separate"><a class="header__text-contact" href="mailto:+79658494874">+7 965 849 48 74</a></li>
+              <li class="header__contacts-item"><a class="header__icon-contact header__icon-contact--fb" href="#"><span class="visually-hidden">Мы в фейсбуке</span></a></li>
+              <li class="header__contacts-item"><a class="header__icon-contact header__icon-contact--vk" href="#"><span class="visually-hidden">Мы во вконтакте</span></a></li>
+              <li class="header__contacts-item"><a class="header__icon-contact header__icon-contact--tg" href="#"><span class="visually-hidden">Мы в телеграме</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <form class="join-form">
+        <div class="join-form__wrapper">
+          <div class="join-form__input-wrapper" id="step-0">
+            <label class="join-form__label" for="name">Имя и фамилия</label>
+            <input class="join-form__field" id="name" name="name">
+          </div>
+          <div class="join-form__input-wrapper join-form__input-wrapper--hidden" id="step-1">
+            <label class="join-form__label" for="email">E-mail</label>
+            <input class="join-form__field" id="email" name="email">
+          </div>
+          <div class="join-form__input-wrapper join-form__input-wrapper--hidden" id="step-2">
+            <label class="join-form__label join-form__label--with-long-text" for="link">Имя пользователя&nbsp;/ ссылка на профиль в соц. сети</label>
+            <input class="join-form__field" id="link" name="link">
+          </div>
+          <button class="join-form__next-button" type="button">
+            <svg class="join-form__button-wave-face" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 105.25 84.17">
+              <path d="M44 .3c20.07-3.13 26.52 19.16 42 26.31 13.72 5 23.41 19.34 17.54 33.74-4.77 11.29-14.19 24.18-27.72 23.82-10-1.28-19.7-4.5-29.86-4.82C32.73 77.12 15.61 82 6 70.36-6 53.87 1.45 31 15.88 18.58 24.4 11.47 32.34 1.52 44 .3" fill="#f4b848"></path>
+            </svg>
+            <svg class="join-form__button-wave-shadow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 105.25 84.17">
+              <path d="M44 .3c20.07-3.13 26.52 19.16 42 26.31 13.72 5 23.41 19.34 17.54 33.74-4.77 11.29-14.19 24.18-27.72 23.82-10-1.28-19.7-4.5-29.86-4.82C32.73 77.12 15.61 82 6 70.36-6 53.87 1.45 31 15.88 18.58 24.4 11.47 32.34 1.52 44 .3" fill="#d1cece"></path>
+            </svg><span class="visually-hidden">Далее</span>
+          </button>
+        </div>
+      </form>
+    </main>
+    <script src="js/main.js"></script>
+    <script src="js/vendor.js"></script>
+  </body>
+</html>
