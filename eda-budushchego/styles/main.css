@@ -800,7 +800,8 @@ ol {
   height: auto;
 }
 
-.join-form {
+.join-page {
+  position: relative;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
@@ -810,13 +811,42 @@ ol {
   background-image: url("../img/form-bg-desktop@1x.png");
 }
 
-.join-form__wrapper {
+.join-page::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 0;
+  background-image: url("../img/thanks-bg-desktop@1x.png");
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.join-page--thanks-step::after {
+  opacity: 1;
+}
+
+.join-page__form {
+  position: relative;
+  z-index: 2;
+}
+
+.join-page__form--hidden {
+  display: none;
+}
+
+.join-page__inputs-container {
   position: relative;
   top: 49vh;
   left: 14vw;
 }
 
-.join-form__input-wrapper {
+.join-page__input-wrapper {
   position: relative;
   max-width: 50vw;
   padding-top: 86px;
@@ -825,18 +855,20 @@ ol {
   text-transform: uppercase;
   letter-spacing: 0.04em;
   transition-property: opacity, transform;
-  transition-duration: 0.25s, 1s;
+  transition-duration: 0.4s, 1s;
 }
 
-.join-form__input-wrapper--hidden {
+.join-page__input-wrapper--hidden {
   position: absolute;
+  z-index: -1;
   left: 0;
   top: 0;
-  transform: translateX(-200%);
+  transform: translateX(40%);
   opacity: 0;
+  transition: none;
 }
 
-.join-form__label {
+.join-page__label {
   position: absolute;
   left: 0;
   bottom: 98px;
@@ -844,11 +876,11 @@ ol {
   font-weight: 700;
 }
 
-.join-form__label--with-long-text {
+.join-page__label--with-long-text {
   font-size: 40px;
 }
 
-.join-form__field {
+.join-page__field {
   padding: 0;
   border: none;
   border-bottom: 1px solid #000000;
@@ -856,11 +888,11 @@ ol {
   background-color: transparent;
 }
 
-.join-form__field:focus {
+.join-page__field:focus {
   outline: none;
 }
 
-.join-form__next-button {
+.join-page__next-button {
   cursor: pointer;
   position: relative;
   margin-top: 11vh;
@@ -872,7 +904,7 @@ ol {
   background-color: transparent;
 }
 
-.join-form__next-button::before {
+.join-page__next-button::before {
   content: "";
   position: absolute;
   z-index: 3;
@@ -886,24 +918,127 @@ ol {
   background-image: url("../img/arrow-icon@1x.png");
 }
 
-.join-form__next-button:focus {
+.join-page__next-button:focus {
   outline: none;
 }
 
-.join-form__button-wave-face {
+.join-page__button-wave-face {
   position: relative;
   z-index: 2;
 }
 
-.join-form__button-wave-shadow {
+.join-page__button-wave-shadow {
   position: absolute;
   opacity: 0.54;
   top: 24px;
   left: 8px;
 }
 
+.join-page__thanks-container {
+  position: relative;
+  top: 36vh;
+  opacity: 0;
+  transition: opacity 1s;
+  text-align: center;
+}
+
+.join-page__thanks-container--visible {
+  z-index: 2;
+  opacity: 1;
+}
+
+.join-page__thanks-text {
+  display: grid;
+  margin: 0;
+}
+
+.join-page__thanks-top-word {
+  margin-bottom: 28px;
+  font-size: 64px;
+  line-height: 1em;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.join-page__thanks-bottom-words {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 38px;
+  line-height: 1.2em;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.join-page__social-wrapper {
+  margin-top: 11vh;
+  display: grid;
+  justify-items: center;
+}
+
+.join-page__social-text {
+  margin: 0;
+  max-width: 480px;
+  font-size: 28px;
+  line-height: 1.3em;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.join-page__social-list {
+  margin: 0;
+  margin-top: 4vh;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.join-page__social-item {
+  margin-right: 70px;
+}
+
+.join-page__social-item:last-child {
+  margin-right: 0;
+}
+
+.join-page__social-icon {
+  height: auto;
+}
+
+.join-page__back-link {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  margin-top: 24px;
+  width: 100px;
+  height: 60px;
+  font-size: 8px;
+  line-height: 1em;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-decoration: none;
+  background-size: contain;
+  background-image: url("../img/back-button-bg.svg");
+}
+
+.join-page__confetti-wrapper {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 html.webp .join-form {
   background-image: url("../img/form-bg-desktop@1x.webp");
+}
+
+html.webp .join-form::after {
+  background-image: url("../img/thanks-bg-desktop@1x.webp");
 }
 
 html.webp .join-form__next-button::before {
@@ -950,7 +1085,7 @@ html.webp .join-form__next-button::before {
     opacity: 1;
   }
 
-  .join-form__input-wrapper {
+  .join-page__input-wrapper {
     max-width: 70vw;
   }
 }
@@ -1052,50 +1187,99 @@ html.webp .join-form__next-button::before {
     display: block;
   }
 
-  .join-form {
+  .join-page {
     background-image: url("../img/form-bg-tablet@1x.png");
   }
 
-  .join-form__wrapper {
+  .join-page::after {
+    background-image: url("../img/thanks-bg-tablet@1x.png");
+  }
+
+  .join-page__inputs-container {
     left: 12.5vw;
   }
 
-  .join-form__wrapper {
+  .join-page__inputs-container {
     top: 47vh;
   }
 
-  .join-form__input-wrapper {
+  .join-page__input-wrapper {
     padding-top: 80px;
     font-size: 36px;
   }
 
-  .join-form__label {
+  .join-page__label {
     bottom: 92px;
   }
 
-  .join-form__label--with-long-text {
+  .join-page__label--with-long-text {
     font-size: 24px;
   }
 
-  .join-form__next-button {
+  .join-page__next-button {
     margin-top: 8vh;
     left: 80px;
     width: 180px;
     height: 140px;
   }
 
+  .join-page__thanks-top-word {
+    margin-bottom: 12px;
+    font-size: 48px;
+  }
+
+  .join-page__thanks-bottom-words {
+    font-size: 20px;
+    max-width: 340px;
+  }
+
+  .join-page__social-wrapper {
+    margin-top: 6vh;
+  }
+
+  .join-page__social-text {
+    max-width: 220px;
+    font-size: 13px;
+  }
+
+  .join-page__social-item {
+    margin-right: 18px;
+  }
+
+  .join-page__social-icon {
+    width: 80px;
+  }
+
   html.webp .join-form {
     background-image: url("../img/form-bg-tablet@1x.webp");
+  }
+
+  html.webp .join-form::after {
+    background-image: url("../img/thanks-bg-tablet@1x.webp");
   }
 }
 
 @media (min-resolution: 1.5dppx) and (max-width: 768px), (min-resolution: 144dpi) and (max-width: 768px) {
-  .join-form {
+  .join-page {
     background-image: url("../img/form-bg-tablet@2x.png") !important;
+  }
+
+  .join-page::after {
+    background-image: url("../img/thanks-bg-tablet@2x.png") !important;
   }
 
   html.webp .join-form {
     background-image: url("../img/form-bg-tablet@1x.webp") !important;
+  }
+
+  html.webp .join-form::after {
+    background-image: url("../img/thanks-bg-tablet@1x.webp") !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .join-page__back-link {
+    display: flex;
   }
 }
 
@@ -1145,45 +1329,62 @@ html.webp .join-form__next-button::before {
     right: 32px;
   }
 
-  .join-form__input-wrapper {
+  .join-page__input-wrapper {
     padding-top: 43px;
     font-size: 20px;
   }
 
-  .join-form__label {
+  .join-page__label {
     bottom: 55px;
   }
 
-  .join-form__label--with-long-text {
+  .join-page__label--with-long-text {
     font-size: 16px;
   }
 
-  .join-form__field {
+  .join-page__field {
     width: 204px;
   }
 
-  .join-form__next-button {
+  .join-page__next-button {
     margin-top: 11vh;
     width: 110px;
     height: 90px;
   }
 
-  .join-form__next-button::before {
+  .join-page__next-button::before {
     background-size: 28px auto;
+  }
+
+  .join-page__thanks-top-word {
+    font-size: 26px;
+  }
+
+  .join-page__thanks-bottom-words {
+    max-width: 260px;
+    font-size: 16px;
   }
 }
 
 @media (min-resolution: 1.5dppx), (min-resolution: 144dpi) {
-  .join-form {
+  .join-page {
     background-image: url("../img/form-bg-desktop@2x.png");
   }
 
-  .join-form__next-button::before {
+  .join-page::after {
+    background-image: url("../img/thanks-bg-desktop@2x.png");
+  }
+
+  .join-page__next-button::before {
     background-image: url("../img/arrow-icon@2x.png");
   }
 
   html.webp .join-form {
     background-image: url("../img/form-bg-desktop@2x.webp");
+  }
+
+  html.webp .join-form::after {
+    background-image: url("../img/thanks-bg-desktop@2x.webp");
   }
 
   html.webp .join-form__next-button::before {

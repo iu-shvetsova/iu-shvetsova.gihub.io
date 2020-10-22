@@ -1,6 +1,66 @@
 /******/ (function(modules) { // webpackBootstrap
+/******/ 	// install a JSONP callback for chunk loading
+/******/ 	function webpackJsonpCallback(data) {
+/******/ 		var chunkIds = data[0];
+/******/ 		var moreModules = data[1];
+/******/ 		var executeModules = data[2];
+/******/
+/******/ 		// add "moreModules" to the modules object,
+/******/ 		// then flag all "chunkIds" as loaded and fire callback
+/******/ 		var moduleId, chunkId, i = 0, resolves = [];
+/******/ 		for(;i < chunkIds.length; i++) {
+/******/ 			chunkId = chunkIds[i];
+/******/ 			if(Object.prototype.hasOwnProperty.call(installedChunks, chunkId) && installedChunks[chunkId]) {
+/******/ 				resolves.push(installedChunks[chunkId][0]);
+/******/ 			}
+/******/ 			installedChunks[chunkId] = 0;
+/******/ 		}
+/******/ 		for(moduleId in moreModules) {
+/******/ 			if(Object.prototype.hasOwnProperty.call(moreModules, moduleId)) {
+/******/ 				modules[moduleId] = moreModules[moduleId];
+/******/ 			}
+/******/ 		}
+/******/ 		if(parentJsonpFunction) parentJsonpFunction(data);
+/******/
+/******/ 		while(resolves.length) {
+/******/ 			resolves.shift()();
+/******/ 		}
+/******/
+/******/ 		// add entry modules from loaded chunk to deferred list
+/******/ 		deferredModules.push.apply(deferredModules, executeModules || []);
+/******/
+/******/ 		// run deferred modules when all chunks ready
+/******/ 		return checkDeferredModules();
+/******/ 	};
+/******/ 	function checkDeferredModules() {
+/******/ 		var result;
+/******/ 		for(var i = 0; i < deferredModules.length; i++) {
+/******/ 			var deferredModule = deferredModules[i];
+/******/ 			var fulfilled = true;
+/******/ 			for(var j = 1; j < deferredModule.length; j++) {
+/******/ 				var depId = deferredModule[j];
+/******/ 				if(installedChunks[depId] !== 0) fulfilled = false;
+/******/ 			}
+/******/ 			if(fulfilled) {
+/******/ 				deferredModules.splice(i--, 1);
+/******/ 				result = __webpack_require__(__webpack_require__.s = deferredModule[0]);
+/******/ 			}
+/******/ 		}
+/******/
+/******/ 		return result;
+/******/ 	}
+/******/
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
+/******/
+/******/ 	// object to store loaded and loading chunks
+/******/ 	// undefined = chunk not loaded, null = chunk preloaded/prefetched
+/******/ 	// Promise = chunk loading, 0 = chunk loaded
+/******/ 	var installedChunks = {
+/******/ 		"main": 0
+/******/ 	};
+/******/
+/******/ 	var deferredModules = [];
 /******/
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
@@ -79,9 +139,18 @@
 /******/ 	// __webpack_public_path__
 /******/ 	__webpack_require__.p = "/";
 /******/
+/******/ 	var jsonpArray = window["webpackJsonp"] = window["webpackJsonp"] || [];
+/******/ 	var oldJsonpFunction = jsonpArray.push.bind(jsonpArray);
+/******/ 	jsonpArray.push = webpackJsonpCallback;
+/******/ 	jsonpArray = jsonpArray.slice();
+/******/ 	for(var i = 0; i < jsonpArray.length; i++) webpackJsonpCallback(jsonpArray[i]);
+/******/ 	var parentJsonpFunction = oldJsonpFunction;
 /******/
-/******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/js/index.js");
+/******/
+/******/ 	// add entry module to deferred list
+/******/ 	deferredModules.push(["./src/js/index.js","vendor"]);
+/******/ 	// run deferred modules when ready
+/******/ 	return checkDeferredModules();
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -113,9 +182,9 @@ if (header) {
   var joinLink = header.querySelector(".header__join-link");
   var menuWrapper = header.querySelector(".header__menu-outer-wrapper");
   var navItems = header.querySelectorAll(".header__nav-item");
-  var joinForm = document.querySelector(".join-form");
+  var joinPage = document.querySelector(".join-page");
 
-  if (joinForm) {
+  if (joinPage) {
     joinLink.classList.add("header__menu-button--hidden");
   } else {
     joinLink.classList.remove("header__menu-button--hidden");
@@ -128,7 +197,7 @@ if (header) {
     if (window.matchMedia("(max-width: 768px)").matches) {
       toggleMenuButton.classList.toggle("header__join-link--hidden");
 
-      if (!joinForm) {
+      if (!joinPage) {
         joinLink.classList.toggle("header__menu-button--hidden");
       }
     }
@@ -142,7 +211,7 @@ if (header) {
       if (window.matchMedia("(max-width: 768px)").matches) {
         toggleMenuButton.classList.remove("header__join-link--hidden");
 
-        if (!joinForm) {
+        if (!joinPage) {
           joinLink.classList.remove("header__menu-button--hidden");
         }
       }
@@ -179,25 +248,49 @@ if (header) {
 /*!***************************************************!*\
   !*** ./src/blocks/modules/join-form/join-form.js ***!
   \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-var joinForm = document.querySelector(".join-form");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var confetti_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! confetti-js */ "./node_modules/confetti-js/dist/index.es.js");
 
-if (joinForm) {
+var joinPage = document.querySelector(".join-page");
+
+if (joinPage) {
   var STEPS_NUMBER = 3;
-  var nextButton = joinForm.querySelector(".join-form__next-button");
-  var formFields = joinForm.querySelectorAll(".join-form__input-wrapper");
+  var joinForm = joinPage.querySelector(".join-page__form");
+  var thanksBlock = joinPage.querySelector(".join-page__thanks-container");
+  var nextButton = joinPage.querySelector(".join-page__next-button");
+  var formFields = joinPage.querySelectorAll(".join-page__input-wrapper");
   var currentStep = 0;
   nextButton.addEventListener("click", function () {
     currentStep++;
 
     if (currentStep < STEPS_NUMBER) {
       formFields.forEach(function (field) {
-        return field.classList.add("join-form__input-wrapper--hidden");
+        return field.classList.add("join-page__input-wrapper--hidden");
       });
-      document.querySelector("#step-".concat(currentStep)).classList.remove("join-form__input-wrapper--hidden");
-    } else {}
+      document.querySelector("#step-".concat(currentStep)).classList.remove("join-page__input-wrapper--hidden");
+    } else {
+      joinPage.classList.add("join-page--thanks-step");
+      joinForm.classList.add("join-page__form--hidden");
+      thanksBlock.classList.add("join-page__thanks-container--visible");
+      var confettiSettings = {
+        target: "confetti-canvas",
+        max: "65",
+        size: "1.5",
+        animate: true,
+        props: ["circle"],
+        colors: [[96, 31, 107], [178, 222, 210], [255, 177, 60]],
+        clock: "80",
+        rotate: false,
+        start_from_edge: true,
+        respawn: true
+      };
+      var confetti = new confetti_js__WEBPACK_IMPORTED_MODULE_0__["default"](confettiSettings);
+      confetti.render();
+    }
   });
 }
 
@@ -388,7 +481,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_footer_footer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! %modules%/footer/footer */ "./src/blocks/modules/footer/footer.js");
 /* harmony import */ var _modules_footer_footer__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modules_footer_footer__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _modules_join_form_join_form__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! %modules%/join-form/join-form */ "./src/blocks/modules/join-form/join-form.js");
-/* harmony import */ var _modules_join_form_join_form__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_modules_join_form_join_form__WEBPACK_IMPORTED_MODULE_2__);
 
 
 
