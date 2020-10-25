@@ -265,33 +265,68 @@ if (joinPage) {
   var formFields = joinPage.querySelectorAll(".join-page__input-wrapper");
   var currentStep = 0;
   nextButton.addEventListener("click", function () {
-    currentStep++;
+    var currentField = document.querySelector("#step-".concat(currentStep));
 
-    if (currentStep < STEPS_NUMBER) {
-      formFields.forEach(function (field) {
-        return field.classList.add("join-page__input-wrapper--hidden");
-      });
-      document.querySelector("#step-".concat(currentStep)).classList.remove("join-page__input-wrapper--hidden");
+    if (currentField.querySelector("input").value) {
+      currentField.classList.remove("join-page__input-wrapper--with-error");
+      currentStep++;
+
+      if (currentStep < STEPS_NUMBER) {
+        formFields.forEach(function (field) {
+          return field.classList.add("join-page__input-wrapper--hidden");
+        });
+        document.querySelector("#step-".concat(currentStep)).classList.remove("join-page__input-wrapper--hidden");
+      } else {
+        joinPage.classList.add("join-page--thanks-step");
+        joinForm.classList.add("join-page__form--hidden");
+        thanksBlock.classList.add("join-page__thanks-container--visible");
+        var confettiSettings = {
+          target: "confetti-canvas",
+          max: "65",
+          size: "1.5",
+          animate: true,
+          props: ["circle"],
+          colors: [[96, 31, 107], [178, 222, 210], [255, 177, 60]],
+          clock: "80",
+          rotate: false,
+          start_from_edge: true,
+          respawn: true
+        };
+        var confetti = new confetti_js__WEBPACK_IMPORTED_MODULE_0__["default"](confettiSettings);
+        confetti.render();
+      }
     } else {
-      joinPage.classList.add("join-page--thanks-step");
-      joinForm.classList.add("join-page__form--hidden");
-      thanksBlock.classList.add("join-page__thanks-container--visible");
-      var confettiSettings = {
-        target: "confetti-canvas",
-        max: "65",
-        size: "1.5",
-        animate: true,
-        props: ["circle"],
-        colors: [[96, 31, 107], [178, 222, 210], [255, 177, 60]],
-        clock: "80",
-        rotate: false,
-        start_from_edge: true,
-        respawn: true
-      };
-      var confetti = new confetti_js__WEBPACK_IMPORTED_MODULE_0__["default"](confettiSettings);
-      confetti.render();
+      currentField.classList.remove("join-page__input-wrapper--with-error");
+      setTimeout(function () {
+        currentField.classList.add("join-page__input-wrapper--with-error");
+      }, 200);
     }
   });
+}
+
+/***/ }),
+
+/***/ "./src/blocks/modules/our-ideas/our-ideas.js":
+/*!***************************************************!*\
+  !*** ./src/blocks/modules/our-ideas/our-ideas.js ***!
+  \***************************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var rellax__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! rellax */ "./node_modules/rellax/rellax.js");
+/* harmony import */ var rellax__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(rellax__WEBPACK_IMPORTED_MODULE_0__);
+
+var ourIdeasBlock = document.querySelector(".our-ideas");
+
+if (ourIdeasBlock) {
+  var plantImage_1 = ourIdeasBlock.querySelector(".our-ideas__first-plant");
+  var plantImage_2 = ourIdeasBlock.querySelector(".our-ideas__second-plant");
+  var plantImage_3 = ourIdeasBlock.querySelector(".our-ideas__third-plant");
+  new rellax__WEBPACK_IMPORTED_MODULE_0___default.a(plantImage_1);
+  new rellax__WEBPACK_IMPORTED_MODULE_0___default.a(plantImage_2);
+  new rellax__WEBPACK_IMPORTED_MODULE_0___default.a(plantImage_3);
 }
 
 /***/ }),
@@ -481,6 +516,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_footer_footer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! %modules%/footer/footer */ "./src/blocks/modules/footer/footer.js");
 /* harmony import */ var _modules_footer_footer__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modules_footer_footer__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _modules_join_form_join_form__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! %modules%/join-form/join-form */ "./src/blocks/modules/join-form/join-form.js");
+/* harmony import */ var _modules_our_ideas_our_ideas__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! %modules%/our-ideas/our-ideas */ "./src/blocks/modules/our-ideas/our-ideas.js");
+
 
 
 

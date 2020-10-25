@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
@@ -469,15 +471,35 @@ ol {
   overflow: hidden;
 }
 
+.block-container__title {
+  position: relative;
+  font-size: 3.26389vw;
+  line-height: 1.1em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.block-container__title::before {
+  content: "/ 0" counter(section) ".";
+  position: absolute;
+  bottom: calc(100% + 6px);
+  left: 0;
+  font-size: 1.66667vw;
+  line-height: 1em;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  counter-increment: section;
+}
+
 .header {
+  box-sizing: border-box;
+  display: flex;
   position: fixed;
+  z-index: 10;
   top: 0;
   left: 0;
-  z-index: 10;
-  box-sizing: border-box;
   width: 100%;
   padding: 32px 70px;
-  display: flex;
 }
 
 .header::before {
@@ -492,10 +514,10 @@ ol {
 }
 
 .header__actions-wrapper {
-  margin-left: 72px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  margin-left: 72px;
 }
 
 .header__join-link,
@@ -520,8 +542,8 @@ ol {
 }
 
 .header__join-link {
-  margin-right: 24px;
   padding: 12px 0 12px 72px;
+  margin-right: 24px;
   color: inherit;
   text-decoration: none;
 }
@@ -540,16 +562,21 @@ ol {
 }
 
 .header__button-text {
-  opacity: 1;
   transition: opacity 0.15s;
+  opacity: 1;
 }
 
 .header__menu-button {
   z-index: 3;
-  cursor: pointer;
   border: none;
   padding: 12px 32px 12px 0;
+  cursor: pointer;
   background-color: transparent;
+}
+
+.header__menu-button:focus {
+  outline: none;
+  opacity: 0.7;
 }
 
 .header__menu-button::before,
@@ -557,8 +584,8 @@ ol {
   content: "";
   position: absolute;
   right: 0;
-  transform: translateY(-50%);
   height: 2px;
+  transform: translateY(-50%);
   background-color: #000000;
 }
 
@@ -590,17 +617,12 @@ ol {
   opacity: 0;
 }
 
-.header__menu-button:focus {
-  outline: none;
-  opacity: 0.7;
-}
-
 .header__instagram-link {
-  margin: 0 auto;
   min-width: 53px;
-  min-height: 53px;
   max-width: 53px;
+  min-height: 53px;
   max-height: 53px;
+  margin: 0 auto;
   transition: opacity 0.4s;
   background-image: url("../img/instagram-icon.svg");
   background-repeat: no-repeat;
@@ -617,14 +639,14 @@ ol {
 
 .header__menu-outer-wrapper {
   position: fixed;
-  right: 0;
   top: 0;
+  right: 0;
   width: 82%;
   height: 100vh;
-  transform: translateX(100vw);
   overflow: scroll;
-  background-color: #f5b940;
+  transform: translateX(100vw);
   transition: transform 1s ease-out;
+  background-color: #f5b940;
 }
 
 .header__menu-outer-wrapper--opened {
@@ -632,17 +654,17 @@ ol {
 }
 
 .header__menu-inner-wrapper {
-  height: 100%;
   display: flex;
+  height: 100%;
 }
 
 .header__nav-wrapper,
 .header__contacts-wrapper {
   box-sizing: border-box;
-  border-left: 2px solid rgba(112, 113, 114, 0.3);
   display: flex;
   flex-direction: column;
   justify-content: center;
+  border-left: 2px solid rgba(112, 113, 114, 0.3);
 }
 
 .header__nav-wrapper {
@@ -655,13 +677,13 @@ ol {
 }
 
 .header__contacts-wrapper {
-  width: 40%;
   align-items: center;
+  width: 40%;
 }
 
 .header__nav-list {
-  counter-reset: item;
   padding: 0 102px;
+  counter-reset: item;
   font-size: 28px;
   line-height: 1.25em;
   letter-spacing: 0.04em;
@@ -670,9 +692,9 @@ ol {
 
 .header__nav-item {
   position: relative;
+  transition: opacity 0.4s;
   padding-left: 66px;
   margin-bottom: 66px;
-  transition: opacity 0.4s;
 }
 
 .header__nav-item:last-child {
@@ -680,11 +702,11 @@ ol {
 }
 
 .header__nav-item::before {
-  counter-increment: item;
   content: counter(item, decimal-leading-zero) ".";
   position: absolute;
   top: 0;
   left: 0;
+  counter-increment: item;
 }
 
 .header__nav-item--faded {
@@ -701,9 +723,9 @@ ol {
 
 .header__nav-link {
   display: block;
+  transition: transform 0.4s linear;
   color: inherit;
   text-decoration: none;
-  transition: transform 0.4s linear;
 }
 
 .header__contacts-list {
@@ -724,6 +746,7 @@ ol {
 .header__text-contact {
   display: inline-block;
   position: relative;
+  transition: opacity 0.4s;
   padding-bottom: 8px;
   font-size: 20px;
   line-height: 1.3em;
@@ -732,19 +755,18 @@ ol {
   text-decoration: none;
   text-transform: uppercase;
   opacity: 0.6;
-  transition: opacity 0.4s;
 }
 
 .header__text-contact::after {
   content: "";
   position: absolute;
   bottom: 0;
-  transform: translateX(-50%);
   left: 50%;
   width: 100%;
   height: 1px;
-  background-color: #282828;
+  transform: translateX(-50%);
   transition: width 0.4s ease;
+  background-color: #282828;
 }
 
 .header__text-contact:hover {
@@ -759,11 +781,11 @@ ol {
   display: inline-block;
   width: 50px;
   height: 40px;
+  transition: opacity 0.4s;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: left top;
   opacity: 0.6;
-  transition: opacity 0.4s;
 }
 
 .header__icon-contact:hover {
@@ -785,18 +807,305 @@ ol {
 .header__mobile-close-button {
   display: none;
   position: absolute;
-  bottom: 48px;
   right: 48px;
+  bottom: 48px;
   width: 40px;
   height: 40px;
-  padding: 0;
   border: none;
+  padding: 0;
   background-color: transparent;
   background-image: url("../img/close-icon.svg");
 }
 
-.intro-block img {
+.footer {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  background-image: url("../img/footer-bg.svg");
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: auto 90%;
+  background-color: #ffffff;
+}
+
+.footer__logo-link {
+  display: block;
+  width: 470px;
+  padding: 70px 0;
+  border-right: 1px solid #d4d4d4;
+}
+
+.footer__logo-link:hover .footer__logo-image {
+  opacity: 0.8;
+}
+
+.footer__logo-link:active .footer__logo-image {
+  opacity: 0.3;
+}
+
+.footer__logo-image {
+  display: block;
+  height: auto;
+  margin: 0 auto;
+  transition: opacity 0.4s;
+}
+
+.footer__links-wrapper {
+  padding-left: 118px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.footer__email-link {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 28px;
+  font-size: 22px;
+  line-height: 1.3em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #282828;
+}
+
+.footer__email-link::after {
+  content: "";
+  position: absolute;
+  top: calc(100% + 2px);
+  left: 0;
   width: 100%;
+  height: 1px;
+  background-color: #282828;
+}
+
+.footer__email-link,
+.footer__social-link {
+  transition: opacity 0.4s;
+}
+
+.footer__email-link:hover,
+.footer__social-link:hover {
+  opacity: 0.7;
+}
+
+.footer__email-link:active,
+.footer__social-link:active {
+  opacity: 0.3;
+}
+
+.footer__social-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.footer__social-item {
+  margin-right: 36px;
+}
+
+.footer__social-item:last-child {
+  margin-right: 0;
+}
+
+.footer__social-link {
+  display: block;
+  width: 60px;
+  height: 50px;
+  background-repeat: no-repeat;
+  background-position: center left;
+}
+
+.footer__social-link--fb {
+  background-image: url("../img/facebook-icon.svg");
+}
+
+.footer__social-link--vk {
+  background-image: url("../img/vk-icon.svg");
+}
+
+.footer__social-link--tg {
+  background-image: url("../img/telegram-icon.svg");
+}
+
+.footer__social-link--ig {
+  background-image: url("../img/instagram-icon-thin.svg");
+}
+
+.intro-block img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.inevitability-block {
+  position: relative;
+  padding-bottom: 140px;
+  padding-left: 56px;
+  padding-right: 56px;
+  background: url("../img/inevitability-bg-1@1x.png") top left no-repeat, url("../img/inevitability-bg-2@1x.png") top right no-repeat, linear-gradient(to bottom, #ffb700 37%, #e4e3e9 37%);
+  background-size: 34.9% auto, 54.56% auto, auto;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.inevitability-block__title {
+  margin-bottom: 200px;
+  padding-top: 195px;
+}
+
+.inevitability-block__subtitle {
+  margin-bottom: 35px;
+  line-height: 37px;
+  font-size: 28px;
+}
+
+.inevitability-block__founder-image {
+  position: absolute;
+  top: 80px;
+  right: 100px;
+  width: 397px;
+  height: auto;
+}
+
+.inevitability-block__scientist {
+  position: absolute;
+  top: 850px;
+  left: 4%;
+  width: 436px;
+  height: 450px;
+  background-image: url("../img/inevitability-scientist@1x.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.inevitability-block__ellips {
+  position: absolute;
+  top: 1300px;
+  right: 0;
+  width: 124px;
+  height: 250px;
+  background-image: url("../img/inevitability-ellips@1x.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.inevitability-block__cloud {
+  display: block;
+  position: absolute;
+}
+
+.inevitability-block__cloud_population {
+  z-index: -1;
+  top: 13.5%;
+  left: 0;
+  width: 1035px;
+  height: auto;
+}
+
+.inevitability-block__cloud_problems {
+  z-index: -2;
+  top: 33%;
+  right: 0;
+  width: 871px;
+  height: auto;
+}
+
+.inevitability-block__cloud_club {
+  z-index: -1;
+  top: 47%;
+  left: 0;
+  width: 500px;
+  height: auto;
+}
+
+.inevitability-block__cloud_technologies {
+  z-index: -1;
+  top: 61%;
+  left: 0;
+  width: 824px;
+  height: auto;
+}
+
+.inevitability-block__list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.inevitability-block__item_population {
+  margin-bottom: 180px;
+  margin-right: auto;
+  max-width: 847px;
+  line-height: 30px;
+  font-size: 22px;
+}
+
+.inevitability-block__item_problems {
+  margin-left: auto;
+  max-width: 690px;
+  line-height: 40px;
+  font-size: 26px;
+  color: #ffffff;
+  text-align: right;
+}
+
+.inevitability-block__item_club {
+  margin-bottom: 200px;
+  margin-left: auto;
+  max-width: 690px;
+  line-height: 40px;
+  font-size: 26px;
+  color: #ffffff;
+  text-align: right;
+}
+
+.inevitability-block__item_technologies {
+  margin-right: auto;
+  max-width: 663px;
+  line-height: 40px;
+  font-size: 24px;
+}
+
+.inevitability-block__item_join-us {
+  margin-left: auto;
+  max-width: 726px;
+  line-height: 42px;
+  font-size: 30px;
+  font-weight: 600;
+  text-align: right;
+}
+
+.inevitability-block__founder-name {
+  margin: 0;
+  margin-top: 35px;
+  margin-bottom: 8px;
+}
+
+.inevitability-block__founder {
+  margin: 0;
+}
+
+.inevitability-block__bottom-bg {
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  bottom: -100px;
+  left: 0;
+  width: 350px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.inevitability-block__bottom {
+  position: absolute;
+  bottom: 1%;
+  left: 0;
+  width: 100vw;
   height: auto;
 }
 
@@ -829,6 +1138,26 @@ ol {
 
 .join-page--thanks-step::after {
   opacity: 1;
+}
+
+.join-page__logo-link {
+  position: absolute;
+  top: 59px;
+  left: 7vw;
+  z-index: 4;
+  transition: opacity 0.4s;
+}
+
+.join-page__logo-link:hover {
+  opacity: 0.8;
+}
+
+.join-page__logo-link:active {
+  opacity: 0.3;
+}
+
+.join-page__logo-image {
+  height: auto;
 }
 
 .join-page__form {
@@ -866,6 +1195,19 @@ ol {
   transform: translateX(40%);
   opacity: 0;
   transition: none;
+}
+
+.join-page__input-wrapper--with-error::after {
+  content: "Нужно ввести текст";
+  position: absolute;
+  bottom: -24px;
+  left: 0;
+  font-size: 14px;
+  line-height: 1.2em;
+}
+
+.join-page__input-wrapper--with-error .join-page__field {
+  animation: shake-input 0.4s linear;
 }
 
 .join-page__label {
@@ -1045,6 +1387,528 @@ html.webp .join-form__next-button::before {
   background-image: url("../img/arrow-icon@1x.webp");
 }
 
+@keyframes shake-input {
+  0% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(5%);
+  }
+
+  50% {
+    transform: translateX(0);
+  }
+
+  75% {
+    transform: translateX(-5%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.why-plant-based-food {
+  position: relative;
+  padding-bottom: 350px;
+  padding-left: 56px;
+  padding-right: 56px;
+  background: url("../img/why-plants-leaf@1x.png") bottom 310px left -130px no-repeat, url("../img/why-plants-leaf@1x.png") top 80px right 60px no-repeat, url("../img/why-plants-cow@1x.png") bottom 350px left 0 no-repeat, url("../img/inevitability-bottom@1x.png") bottom 90px left 0 no-repeat, url("../img/why-plants-culture@1x.png") top 930px right -200px no-repeat, url("../img/why-plants-history.svg") top 85px left -120px no-repeat, url("../img/why-plants-progress@1x.png") top 190px right -150px no-repeat, #e4e3e9;
+  background-size: 405px auto, 405px auto, 728px auto, 100% auto, 1464px auto, 1044px auto, 1013px auto, auto;
+  overflow: hidden;
+}
+
+.why-plant-based-food__circle {
+  position: absolute;
+  top: 1000px;
+  right: 100px;
+  width: 206px;
+  height: 206px;
+  background-image: url("../img/why-plants-circle@1x.png");
+}
+
+.why-plant-based-food__title {
+  padding-top: 200px;
+  margin-bottom: 125px;
+}
+
+.why-plant-based-food__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.why-plant-based-food__item {
+  line-height: 40px;
+}
+
+.why-plant-based-food__item--history {
+  width: 720px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.why-plant-based-food__item--progress {
+  margin-left: auto;
+  margin-top: -250px;
+  margin-bottom: 30px;
+  width: 500px;
+  font-size: 23px;
+  text-align: right;
+}
+
+.why-plant-based-food__item--health {
+  margin-bottom: 90px;
+  width: 785px;
+  font-size: 24px;
+}
+
+.why-plant-based-food__item--culture {
+  margin-bottom: 100px;
+  margin-left: auto;
+  width: 600px;
+  font-size: 23px;
+  text-align: right;
+}
+
+.why-plant-based-food__item--answer {
+  margin-left: auto;
+  width: 800px;
+  font-size: 24px;
+  font-weight: 600;
+  text-align: right;
+}
+
+.our-ideas {
+  position: relative;
+  color: #ffffff;
+  background-color: #184382;
+  background-image: linear-gradient(to bottom, #6b1b6a 34.72222vw, #184382 34.72222vw);
+}
+
+.our-ideas::before {
+  content: "";
+  width: 35.76389vw;
+  height: 35.06944vw;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 3;
+  background-image: url("../img/our-ideas-plant-4.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.our-ideas__top-container {
+  position: relative;
+  padding-top: 10.13889vw;
+}
+
+.our-ideas__first-wave,
+.our-ideas__second-wave,
+.our-ideas__third-wave,
+.our-ideas__third-plant {
+  background-repeat: no-repeat;
+}
+
+.our-ideas__first-thesis,
+.our-ideas__second-thesis,
+.our-ideas__third-thesis,
+.our-ideas__centered-title,
+.our-ideas__item-title,
+.our-ideas__item-paragraph {
+  margin: 0;
+}
+
+.our-ideas__first-wave {
+  position: relative;
+  box-sizing: border-box;
+  width: 56.59722vw;
+  height: 52.77778vw;
+  padding-top: 8.88889vw;
+  padding-left: 3.88889vw;
+  color: #000000;
+  background-image: url("../img/our-ideas-wave-1.svg");
+  background-size: 63.19444vw auto;
+  background-position: top right;
+}
+
+.our-ideas__title {
+  margin-bottom: 2.22222vw;
+  max-width: 35.76389vw;
+}
+
+.our-ideas__first-thesis {
+  max-width: 30.55556vw;
+  font-size: 1.52778vw;
+  line-height: 1.8em;
+  font-weight: 600;
+}
+
+.our-ideas__second-wave {
+  position: absolute;
+  top: 18.33333vw;
+  right: 0;
+  box-sizing: border-box;
+  width: 56.25vw;
+  height: 45.83333vw;
+  padding-top: 15.97222vw;
+  padding-right: 8.19444vw;
+  display: flex;
+  justify-content: flex-end;
+  background-image: url("../img/our-ideas-wave-2.svg"), url("../img/our-ideas-wave-2-faded.svg");
+  background-size: 63.19444vw auto;
+  background-position: top left, top 2.29167vw left 0.69444vw;
+}
+
+.our-ideas__first-plant {
+  position: absolute;
+  top: -7.91667vw;
+  right: 0;
+  width: 22.01389vw;
+  height: 24.02778vw;
+}
+
+.our-ideas__first-plant::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotate(180deg);
+  background-image: url("../img/our-ideas-plant-1.svg");
+}
+
+.our-ideas__second-thesis {
+  max-width: 41.66667vw;
+  font-size: 1.80556vw;
+  line-height: 1.5em;
+  letter-spacing: 0.02em;
+  color: #000000;
+  text-align: right;
+}
+
+.our-ideas__second-thesis strong {
+  font-weight: 700;
+}
+
+.our-ideas__third-wave {
+  position: absolute;
+  top: 38.19444vw;
+  padding-left: 8.88889vw;
+  padding-top: 6.66667vw;
+  color: #000000;
+}
+
+.our-ideas__third-thesis {
+  max-width: 37.5vw;
+  font-size: 1.875vw;
+  line-height: 1.6em;
+  font-weight: 700;
+  letter-spacing: -0.05em;
+}
+
+.our-ideas__second-plant {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 11.11111vw;
+  height: 36.11111vw;
+}
+
+.our-ideas__second-plant::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: scaleX(-1);
+  background-image: url("../img/our-ideas-stones-1.svg"), url("../img/our-ideas-plant-2.svg");
+  background-position: bottom 5vw left, top left 2.77778vw;
+  background-repeat: no-repeat;
+}
+
+.our-ideas__centered-title {
+  margin: 0 auto;
+  margin-top: 3.33333vw;
+  max-width: 40.27778vw;
+  font-size: 2.15278vw;
+  line-height: 1.4em;
+  text-align: center;
+}
+
+.our-ideas__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: list;
+}
+
+.our-ideas__item-wrapper {
+  position: relative;
+  counter-increment: list;
+}
+
+.our-ideas__item-wrapper::before,
+.our-ideas__item-wrapper::after {
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+}
+
+.our-ideas__item-wrapper::before {
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.our-ideas__item-wrapper--proteins-and-carbohydrates {
+  padding-left: 8.88889vw;
+  padding-top: 8.88889vw;
+  color: #000000;
+}
+
+.our-ideas__item-wrapper--proteins-and-carbohydrates .our-ideas__item-description {
+  max-width: 77.77778vw;
+}
+
+.our-ideas__item-wrapper--proteins-and-carbohydrates::before {
+  height: 40.69444vw;
+  background-image: url("../img/our-ideas-wave-4.svg");
+  background-size: cover;
+  background-position: left -4.16667vw top;
+}
+
+.our-ideas__item-wrapper--proteins-and-carbohydrates::after {
+  top: -5vw;
+  right: 6.94444vw;
+  width: 17.5vw;
+  height: 18.05556vw;
+  transform: rotate(240deg) scaleY(-1);
+  background-image: url("../img/our-ideas-figure-1.svg");
+  background-size: contain;
+}
+
+.our-ideas__item-wrapper--lipids {
+  padding-top: 11.11111vw;
+  padding-right: 5.41667vw;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.our-ideas__item-wrapper--lipids .our-ideas__item-description {
+  max-width: 50.69444vw;
+}
+
+.our-ideas__item-wrapper--lipids::before {
+  top: -0.69444vw;
+  height: 51.11111vw;
+  background-image: url("../img/our-ideas-wave-5.svg"), url("../img/our-ideas-wave-5-faded.svg");
+  background-position: right -8.33333vw top, right -7.29167vw top 1.66667vw;
+  background-size: 89.58333vw auto;
+}
+
+.our-ideas__item-wrapper--lipids::after {
+  width: 22.91667vw;
+  height: 22.91667vw;
+  top: 16.25vw;
+  left: 27.77778vw;
+  transform: scaleX(-1);
+  background-image: url("../img/our-ideas-figure-2.svg"), url("../img/our-ideas-figure-2-bg.svg");
+  background-size: 14.58333vw auto, 100% auto;
+  background-position: right 2.08333vw top, left bottom;
+}
+
+.our-ideas__item-wrapper--biosynthesis {
+  margin-top: 16.11111vw;
+  padding-left: 10.83333vw;
+}
+
+.our-ideas__item-wrapper--biosynthesis .our-ideas__item-title {
+  max-width: 34.72222vw;
+}
+
+.our-ideas__item-wrapper--biosynthesis .our-ideas__item-description {
+  max-width: 63.88889vw;
+}
+
+.our-ideas__item-wrapper--biosynthesis .our-ideas__item-paragraph:last-child {
+  max-width: 55.55556vw;
+}
+
+.our-ideas__item-wrapper--biosynthesis::after {
+  z-index: 3;
+  width: 14.23611vw;
+  height: 22.22222vw;
+  top: 3.33333vw;
+  right: 8.33333vw;
+  transform: scaleX(-1);
+  background-image: url("../img/our-ideas-figure-3.svg");
+}
+
+.our-ideas__item-wrapper--green-shelf {
+  padding-top: 7.22222vw;
+  padding-right: 5.41667vw;
+  padding-bottom: 10.27778vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  color: #000000;
+  text-align: right;
+}
+
+.our-ideas__item-wrapper--green-shelf .our-ideas__item-description {
+  max-width: 45.83333vw;
+}
+
+.our-ideas__item-wrapper--green-shelf::before {
+  top: -9.44444vw;
+  height: 48.61111vw;
+  background-image: url("../img/our-ideas-wave-6.svg");
+  background-size: 72.70833vw auto;
+  background-position: top right;
+}
+
+.our-ideas__item-wrapper--green-shelf::after {
+  width: 17.36111vw;
+  height: 20.83333vw;
+  top: 12.5vw;
+  left: 34.72222vw;
+  transform: scaleX(-1);
+  background-image: url("../img/our-ideas-figure-4.svg");
+  background-size: contain;
+}
+
+.our-ideas__biosynthesis-image {
+  display: none;
+  width: 25.71429vw;
+  padding: 2.85714vw;
+  height: auto;
+  float: left;
+}
+
+.our-ideas__item-title,
+.our-ideas__item-description {
+  position: relative;
+  z-index: 2;
+}
+
+.our-ideas__item-title {
+  font-size: 1.875vw;
+  line-height: 1.6em;
+  letter-spacing: -0.03em;
+  font-weight: 700;
+}
+
+.our-ideas__item-title::before {
+  content: counter(list) ". ";
+}
+
+.our-ideas__item-description {
+  margin-top: 1.11111vw;
+  font-size: 1.66667vw;
+  line-height: 1.5em;
+  letter-spacing: 0.02em;
+  font-weight: 500;
+}
+
+.our-ideas__item-paragraph {
+  margin-bottom: 0.55556vw;
+}
+
+.our-ideas__item-paragraph:last-child {
+  margin-bottom: 0;
+}
+
+.our-ideas__third-plant {
+  position: absolute;
+  top: 7.22222vw;
+  left: 0;
+  width: 22.77778vw;
+  height: 40.27778vw;
+  background-image: url("../img/our-ideas-plant-3.svg");
+  background-size: contain;
+}
+
+@media (min-width: 769px) {
+  .inevitability-block__cloud_club {
+    display: none;
+  }
+
+  .inevitability-block__bottom-bg {
+    display: none;
+  }
+}
+
+@media (min-width: 1401px) and (min-resolution: 1.5dppx), (min-width: 1401px) and (min-resolution: 144dpi) {
+  .why-plant-based-food {
+    background: url("../img/why-plants-leaf@2x.png") bottom 310px left -130px no-repeat, url("../img/why-plants-leaf@2x.png") top 80px right 60px no-repeat, url("../img/why-plants-cow@2x.png") bottom 350px left 0 no-repeat, url("../img/inevitability-bottom@2x.png") bottom 90px left 0 no-repeat, url("../img/why-plants-culture@2x.png") top 930px right -200px no-repeat, url("../img/why-plants-history.svg") top 85px left -120px no-repeat, url("../img/why-plants-progress@2x.png") top 190px right -150px no-repeat, #e4e3e9;
+    background-size: 405px auto, 405px auto, 728px auto, 100% auto, 1464px auto, 1044px auto, 1013px auto, auto;
+  }
+}
+
+@media (min-width: 1441px) {
+  .inevitability-block {
+    background: url("../img/inevitability-bg-1@1x.png") top left no-repeat, url("../img/inevitability-bg-2@1x.png") top right no-repeat, #ffb700;
+    background-size: 34.9% auto, 54.56% auto, auto;
+  }
+}
+
+@media (min-width: 1441px) and (min-resolution: 1.5dppx), (min-width: 1441px) and (min-resolution: 144dpi) {
+  .inevitability-block {
+    background: url("../img/inevitability-bg-1@2x.png") top left no-repeat, url("../img/inevitability-bg-2@2x.png") top right no-repeat, #ffb700;
+    background-size: 34.9% auto, 54.56% auto, auto;
+  }
+}
+
+@media (max-width: 1400px) and (min-resolution: 1.5dppx), (max-width: 1400px) and (min-resolution: 144dpi) {
+  .why-plant-based-food {
+    background: url("../img/why-plants-leaf@2x.png") bottom 310px left -130px no-repeat, url("../img/why-plants-leaf@2x.png") top 80px right 50px no-repeat, url("../img/why-plants-cow@2x.png") bottom 350px left 0 no-repeat, url("../img/inevitability-bottom@2x.png") bottom 90px left 0 no-repeat, url("../img/why-plants-culture@2x.png") top 1620px right -200px no-repeat, url("../img/why-plants-history.svg") top 85px left -120px no-repeat, url("../img/why-plants-progress@2x.png") top 560px right -150px no-repeat, #e4e3e9;
+    background-size: 405px auto, 405px auto, 600px auto, 100% auto, 1464px auto, 1044px auto, 1013px auto, auto;
+  }
+}
+
+@media (max-width: 1400px) {
+  .why-plant-based-food {
+    background: url("../img/why-plants-leaf@1x.png") bottom 310px left -130px no-repeat, url("../img/why-plants-leaf@1x.png") top 80px right 50px no-repeat, url("../img/why-plants-cow@1x.png") bottom 350px left 0 no-repeat, url("../img/inevitability-bottom@1x.png") bottom 90px left 0 no-repeat, url("../img/why-plants-culture@1x.png") top 1620px right -200px no-repeat, url("../img/why-plants-history.svg") top 85px left -120px no-repeat, url("../img/why-plants-progress@1x.png") top 560px right -150px no-repeat, #e4e3e9;
+    background-size: 405px auto, 405px auto, 600px auto, 100% auto, 1464px auto, 1044px auto, 1013px auto, auto;
+  }
+
+  .why-plant-based-food__circle {
+    top: 1600px;
+  }
+
+  .why-plant-based-food__item--progress {
+    margin-top: 120px;
+    margin-bottom: 120px;
+  }
+
+  .why-plant-based-food__item--health {
+    margin-bottom: 320px;
+  }
+
+  .why-plant-based-food__item--answer {
+    width: 700px;
+  }
+}
+
+@media (max-width: 1200px) and (min-resolution: 1.5dppx), (max-width: 1200px) and (min-resolution: 144dpi) {
+  .inevitability-block {
+    background: url("../img/inevitability-bg-1@2x.png") top left no-repeat, url("../img/inevitability-bg-2@2x.png") top right no-repeat, url("../img/inevitability-bottom@2x.png") bottom 1% left 0% no-repeat, linear-gradient(to bottom, #ffb700 36%, #e4e3e9 36%);
+    background-size: 34.9% auto, 54.56% auto, 100% auto, auto;
+  }
+
+  .why-plant-based-food {
+    background: url("../img/why-plants-leaf@2x.png") bottom 310px left -130px no-repeat, url("../img/why-plants-leaf@2x.png") top 0 right 20px no-repeat, url("../img/why-plants-cow@2x.png") bottom 350px left 0 no-repeat, url("../img/inevitability-bottom@2x.png") bottom 90px left 0 no-repeat, url("../img/why-plants-culture@2x.png") top 1300px right -200px no-repeat, url("../img/why-plants-history.svg") top 60px left -120px no-repeat, url("../img/why-plants-progress@2x.png") top 450px right -150px no-repeat, #e4e3e9;
+    background-size: 300px auto, 300px auto, 500px auto, 100% auto, 1100px auto, 980px auto, 850px auto, auto;
+  }
+}
+
 @media (max-width: 1200px) {
   .header {
     padding-left: 48px;
@@ -1068,8 +1932,8 @@ html.webp .join-form__next-button::before {
   }
 
   .header__contacts-wrapper {
-    width: 100%;
     align-items: flex-start;
+    width: 100%;
     padding: 48px 64px;
   }
 
@@ -1085,15 +1949,216 @@ html.webp .join-form__next-button::before {
     opacity: 1;
   }
 
+  .inevitability-block {
+    background: url("../img/inevitability-bg-1@1x.png") top left no-repeat, url("../img/inevitability-bg-2@1x.png") top right no-repeat, url("../img/inevitability-bottom@1x.png") bottom 1% left 0% no-repeat, linear-gradient(to bottom, #ffb700 36%, #e4e3e9 36%);
+    background-size: 34.9% auto, 54.56% auto, 100% auto, auto;
+  }
+
+  .inevitability-block__subtitle {
+    line-height: 30px;
+    font-size: 26px;
+  }
+
+  .inevitability-block__founder-image {
+    width: 27.57%;
+  }
+
+  .inevitability-block__scientist {
+    top: 720px;
+    left: 4%;
+    width: 25%;
+    height: 28%;
+  }
+
+  .inevitability-block__ellips {
+    top: 1150px;
+    width: 100px;
+    height: 200px;
+  }
+
+  .inevitability-block__cloud_population {
+    width: 900px;
+  }
+
+  .inevitability-block__cloud_problems {
+    width: 771px;
+  }
+
+  .inevitability-block__cloud_technologies {
+    top: 53%;
+    width: 724px;
+  }
+
+  .inevitability-block__item_population {
+    max-width: 747px;
+    line-height: 22px;
+    font-size: 20px;
+  }
+
+  .inevitability-block__item_problems {
+    line-height: 24px;
+    font-size: 22px;
+  }
+
+  .inevitability-block__item_club {
+    line-height: 24px;
+    font-size: 22px;
+  }
+
+  .inevitability-block__item_technologies {
+    max-width: 563px;
+    line-height: 28px;
+    font-size: 26px;
+  }
+
+  .inevitability-block__item_join-us {
+    margin-left: auto;
+    max-width: 526px;
+    line-height: 30px;
+    font-size: 26px;
+    font-weight: 600;
+    text-align: right;
+    margin-top: 150px;
+  }
+
   .join-page__input-wrapper {
     max-width: 70vw;
+  }
+
+  .why-plant-based-food {
+    background: url("../img/why-plants-leaf@1x.png") bottom 310px left -130px no-repeat, url("../img/why-plants-leaf@1x.png") top 0 right 20px no-repeat, url("../img/why-plants-cow@1x.png") bottom 350px left 0 no-repeat, url("../img/inevitability-bottom@1x.png") bottom 90px left 0 no-repeat, url("../img/why-plants-culture@1x.png") top 1300px right -200px no-repeat, url("../img/why-plants-history.svg") top 60px left -120px no-repeat, url("../img/why-plants-progress@1x.png") top 450px right -150px no-repeat, #e4e3e9;
+    background-size: 300px auto, 300px auto, 500px auto, 100% auto, 1100px auto, 980px auto, 850px auto, auto;
+  }
+
+  .why-plant-based-food__circle {
+    top: 1250px;
+  }
+
+  .why-plant-based-food__item--history {
+    line-height: 22px;
+    font-size: 20px;
+  }
+
+  .why-plant-based-food__item--progress {
+    margin-top: 230px;
+    margin-bottom: 170px;
+    line-height: 22px;
+    font-size: 21px;
+  }
+
+  .why-plant-based-food__item--health {
+    margin-bottom: 260px;
+    width: 700px;
+    line-height: 24px;
+    font-size: 22px;
+  }
+
+  .why-plant-based-food__item--culture {
+    margin-bottom: 80px;
+  }
+
+  .why-plant-based-food__item--answer {
+    line-height: 22px;
+    font-size: 21px;
+  }
+}
+
+@media (max-width: 900px) {
+  .inevitability-block {
+    padding-left: 2%;
+    padding-right: 2%;
+    background: url("../img/inevitability-bg-1@1x.png") top left no-repeat, url("../img/inevitability-bg-2@1x.png") top right no-repeat, linear-gradient(to bottom, #ffb700 34%, #e4e3e9 34%);
+    background-size: 34.9% auto, 54.56% auto, auto;
+  }
+
+  .inevitability-block__title {
+    margin-bottom: 140px;
+  }
+
+  .inevitability-block__subtitle {
+    margin-bottom: 15px;
+  }
+
+  .inevitability-block__scientist {
+    top: 670px;
+  }
+
+  .inevitability-block__cloud_population {
+    top: 15.5%;
+    width: 700px;
+  }
+
+  .inevitability-block__cloud_problems {
+    top: 30%;
+    width: 550px;
+  }
+
+  .inevitability-block__cloud_technologies {
+    top: 53.8%;
+    width: 600px;
+  }
+
+  .inevitability-block__item_population {
+    margin-bottom: 70px;
+    max-width: 600px;
+  }
+
+  .inevitability-block__item_problems {
+    max-width: 500px;
+    line-height: 22px;
+    font-size: 20px;
+  }
+
+  .inevitability-block__item_club {
+    max-width: 500px;
+    line-height: 22px;
+    font-size: 20px;
+  }
+
+  .inevitability-block__item_technologies {
+    max-width: 480px;
+    line-height: 26px;
+    font-size: 24px;
+  }
+
+  .inevitability-block__item_join-us {
+    margin-top: 100px;
+    line-height: 26px;
+    font-size: 24px;
+  }
+
+  .why-plant-based-food {
+    padding-bottom: 200px;
+    padding-left: 2%;
+    padding-right: 2%;
+    background: url("../img/why-plants-leaf@1x.png") bottom 310px left -30px no-repeat, url("../img/why-plants-leaf@1x.png") top 0 right 20px no-repeat, url("../img/why-plants-cow@1x.png") bottom 350px left 0 no-repeat, url("../img/inevitability-bottom@1x.png") bottom 90px left 0 no-repeat, url("../img/why-plants-culture@1x.png") top 1300px right -200px no-repeat, url("../img/why-plants-history.svg") top 60px left -120px no-repeat, url("../img/why-plants-progress@1x.png") top 450px right -150px no-repeat, #e4e3e9;
+    background-size: 200px auto, 200px auto, 400px auto, 100% auto, 1100px auto, 980px auto, 850px auto, auto;
+  }
+
+  .why-plant-based-food__circle {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) and (min-resolution: 1.5dppx), (max-width: 900px) and (min-resolution: 144dpi) {
+  .inevitability-block {
+    background: url("../img/inevitability-bg-1@2x.png") top left no-repeat, url("../img/inevitability-bg-2@2x.png") top right no-repeat, linear-gradient(to bottom, #ffb700 34%, #e4e3e9 34%);
+    background-size: 34.9% auto, 54.56% auto, auto;
+  }
+
+  .why-plant-based-food {
+    padding-bottom: 200px;
+    padding-left: 2%;
+    padding-right: 2%;
+    background: url("../img/why-plants-leaf@2x.png") bottom 310px left -30px no-repeat, url("../img/why-plants-leaf@2x.png") top 0 right 20px no-repeat, url("../img/why-plants-cow@2x.png") bottom 350px left 0 no-repeat, url("../img/inevitability-bottom@2x.png") bottom 90px left 0 no-repeat, url("../img/why-plants-culture@2x.png") top 1300px right -200px no-repeat, url("../img/why-plants-history.svg") top 60px left -120px no-repeat, url("../img/why-plants-progress@2x.png") top 450px right -150px no-repeat, #e4e3e9;
+    background-size: 200px auto, 200px auto, 400px auto, 100% auto, 1100px auto, 980px auto, 850px auto, auto;
   }
 }
 
 @media (max-width: 768px) {
   .header {
-    padding: 28px 0;
     flex-direction: column;
+    padding: 28px 0;
   }
 
   .header::before,
@@ -1104,9 +2169,9 @@ html.webp .join-form__next-button::before {
 
   .header__join-link,
   .header__menu-button {
+    box-sizing: border-box;
     position: fixed;
     top: 50%;
-    box-sizing: border-box;
     min-height: 114px;
     transform: translateY(-50%) rotate(180deg);
     font-size: 8px;
@@ -1137,8 +2202,8 @@ html.webp .join-form__next-button::before {
   }
 
   .header__menu-button {
-    padding: 12px;
     right: 0;
+    padding: 12px;
   }
 
   .header__menu-button::before,
@@ -1151,10 +2216,10 @@ html.webp .join-form__next-button::before {
   }
 
   .header__instagram-link {
-    min-width: auto;
-    min-height: auto;
     width: 26px;
+    min-width: auto;
     height: 26px;
+    min-height: auto;
   }
 
   .header__menu-outer-wrapper {
@@ -1187,12 +2252,158 @@ html.webp .join-form__next-button::before {
     display: block;
   }
 
+  .footer {
+    flex-direction: column;
+    background-image: url("../img/footer-bg.svg"), linear-gradient(to bottom, transparent 96px, #d4d4d4 96px, #d4d4d4 97px, transparent 97px);
+    background-position: bottom right, 0 0;
+    background-size: auto 90%, 100%;
+  }
+
+  .footer__logo-link {
+    width: 100%;
+    padding: 12px 0;
+    border-right: none;
+  }
+
+  .footer__logo-image {
+    width: 85px;
+  }
+
+  .footer__links-wrapper {
+    padding: 26px 42px 32px 42px;
+    display: block;
+  }
+
+  .footer__email-link {
+    margin-bottom: 16px;
+    font-size: 10px;
+  }
+
+  .footer__social-item {
+    margin-right: 24px;
+  }
+
+  .footer__social-link {
+    width: 28px;
+    height: 23px;
+  }
+
+  .inevitability-block {
+    padding-left: 3%;
+    padding-right: 3%;
+    background: url("../img/inevitability-top-bg@1x.png") top no-repeat, linear-gradient(to bottom, #ffb700 30%, #e4e3e9 30%);
+    background-size: 100% auto, auto;
+  }
+
+  .inevitability-block__title {
+    margin-bottom: 250px;
+  }
+
+  .inevitability-block__subtitle {
+    line-height: 24px;
+    font-size: 22px;
+  }
+
+  .inevitability-block__founder-image {
+    top: 700px;
+    right: 0;
+    width: 230px;
+  }
+
+  .inevitability-block__scientist {
+    top: 1450px;
+    width: 180px;
+    background-image: url("../img/inevitability-scientist-mobile@1x.png");
+  }
+
+  .inevitability-block__ellips {
+    display: none;
+  }
+
+  .inevitability-block__cloud_population {
+    top: 10%;
+    left: -50px;
+    width: 750px;
+    height: auto;
+  }
+
+  .inevitability-block__cloud_problems {
+    top: 20%;
+  }
+
+  .inevitability-block__cloud_technologies {
+    top: 61%;
+    right: 0;
+    left: auto;
+    width: 500px;
+  }
+
+  .inevitability-block__item_population {
+    line-height: 20px;
+    font-size: 18px;
+    margin-bottom: 270px;
+    width: 72%;
+  }
+
+  .inevitability-block__item_problems {
+    margin-bottom: 200px;
+    line-height: 20px;
+    font-size: 18px;
+  }
+
+  .inevitability-block__item_club {
+    margin-left: 0;
+    margin-right: auto;
+    max-width: 300px;
+    line-height: 20px;
+    font-size: 18px;
+    color: inherit;
+    font-weight: 600;
+    text-align: left;
+  }
+
+  .inevitability-block__item_technologies {
+    margin-right: 0;
+    margin-left: auto;
+    max-width: 400px;
+    line-height: 20px;
+    font-size: 18px;
+    text-align: right;
+  }
+
+  .inevitability-block__item_join-us {
+    max-width: 100%;
+    margin-top: 300px;
+    margin-right: auto;
+    line-height: 20px;
+    font-size: 18px;
+    text-align: inherit;
+  }
+
+  .inevitability-block__founder-name {
+    margin-top: 55px;
+    text-align: right;
+  }
+
+  .inevitability-block__founder {
+    text-align: right;
+  }
+
   .join-page {
     background-image: url("../img/form-bg-tablet@1x.png");
   }
 
   .join-page::after {
     background-image: url("../img/thanks-bg-tablet@1x.png");
+  }
+
+  .join-page__logo-link {
+    top: 54px;
+    left: 11vw;
+  }
+
+  .join-page__logo-image {
+    width: 100px;
   }
 
   .join-page__inputs-container {
@@ -1206,6 +2417,11 @@ html.webp .join-form__next-button::before {
   .join-page__input-wrapper {
     padding-top: 80px;
     font-size: 36px;
+  }
+
+  .join-page__input-wrapper--with-error::after {
+    bottom: -14px;
+    font-size: 8px;
   }
 
   .join-page__label {
@@ -1257,6 +2473,72 @@ html.webp .join-form__next-button::before {
   html.webp .join-form::after {
     background-image: url("../img/thanks-bg-tablet@1x.webp");
   }
+
+  .why-plant-based-food {
+    padding-bottom: 120px;
+    padding-left: 3%;
+    padding-right: 3%;
+    background: url("../img/why-plants-cow-mobile@1x.png") top 1080px left 300px no-repeat, url("../img/inevitability-bottom@1x.png") bottom 50px left 0 no-repeat, url("../img/why-plants-progress-mobile@1x.png") top 640px right -50px no-repeat, url("../img/why-plants-culture-mobile@1x.png") top 1270px right -100px no-repeat, url("../img/why-plants-health-mobile@1x.png") top 870px left -50px no-repeat, url("../img/why-plants-history-mobile@1x.png") top 100px left -170px no-repeat, url("../img/why-plants-bottom-bg@1x.png") bottom -50px right -100px no-repeat, #e4e3e9;
+    background-size: 300px auto, 100% auto, 600px auto, 640px auto, 577px auto, 800px auto, 239px auto, auto;
+  }
+
+  .why-plant-based-food__title {
+    margin-bottom: 90px;
+  }
+
+  .why-plant-based-food__title::before {
+    bottom: 45px;
+  }
+
+  .why-plant-based-food__item {
+    line-height: 20px;
+    font-size: 18px;
+  }
+
+  .why-plant-based-food__item--history {
+    margin-bottom: 170px;
+    width: 400px;
+  }
+
+  .why-plant-based-food__item--progress {
+    margin-top: 0;
+    margin-bottom: 110px;
+    width: 470px;
+  }
+
+  .why-plant-based-food__item--health {
+    margin-bottom: 180px;
+    width: 300px;
+  }
+
+  .why-plant-based-food__item--culture {
+    margin-bottom: 170px;
+    width: 400px;
+  }
+
+  .why-plant-based-food__item--answer {
+    width: 100%;
+    text-align: justify;
+  }
+}
+
+@media (max-width: 768px) and (min-resolution: 1.5dppx), (max-width: 768px) and (min-resolution: 144dpi) {
+  .inevitability-block {
+    background: url("../img/inevitability-top-bg@2x.png") top no-repeat, linear-gradient(to bottom, #ffb700 30%, #e4e3e9 30%);
+    background-size: 100% auto, auto;
+  }
+
+  .inevitability-block__scientist {
+    background-image: url("../img/inevitability-scientist-mobile@2x.png");
+  }
+
+  .why-plant-based-food {
+    padding-bottom: 120px;
+    padding-left: 3%;
+    padding-right: 3%;
+    background: url("../img/why-plants-cow-mobile@2x.png") top 1080px left 300px no-repeat, url("../img/inevitability-bottom@2x.png") bottom 50px left 0 no-repeat, url("../img/why-plants-progress-mobile@2x.png") top 640px right -50px no-repeat, url("../img/why-plants-culture-mobile@2x.png") top 1270px right -100px no-repeat, url("../img/why-plants-health-mobile@2x.png") top 870px left -50px no-repeat, url("../img/why-plants-history-mobile@2x.png") top 100px left -170px no-repeat, url("../img/why-plants-bottom-bg@2x.png") bottom -50px right -100px no-repeat, #e4e3e9;
+    background-size: 300px auto, 100% auto, 600px auto, 640px auto, 577px auto, 800px auto, 239px auto, auto;
+  }
 }
 
 @media (min-resolution: 1.5dppx) and (max-width: 768px), (min-resolution: 144dpi) and (max-width: 768px) {
@@ -1283,7 +2565,31 @@ html.webp .join-form__next-button::before {
   }
 }
 
+@media (max-width: 540px) and (min-resolution: 1.5dppx), (max-width: 540px) and (min-resolution: 144dpi) {
+  .inevitability-block {
+    background: url("../img/inevitability-top-bg@2x.png") top no-repeat, linear-gradient(to bottom, #ffb700 30%, #e4e3e9 30%);
+    background-size: 100% auto, auto;
+  }
+
+  .why-plant-based-food {
+    padding-bottom: 120px;
+    padding-left: 3%;
+    padding-right: 3%;
+    background: url("../img/why-plants-cow-mobile@2x.png") top 1080px left 200px no-repeat, url("../img/inevitability-bottom@2x.png") bottom 50px left 0 no-repeat, url("../img/why-plants-progress-mobile@2x.png") top 640px right -50px no-repeat, url("../img/why-plants-culture-mobile@2x.png") top 1300px right -100px no-repeat, url("../img/why-plants-health-mobile@2x.png") top 950px left -50px no-repeat, url("../img/why-plants-history-mobile@2x.png") top 245px left -160px no-repeat, url("../img/why-plants-bottom-bg@2x.png") bottom -50px right -100px no-repeat, #e4e3e9;
+    background-size: 300px auto, 100% auto, 400px auto, 440px auto, 377px auto, 524px auto, 239px auto, auto;
+  }
+}
+
 @media (max-width: 540px) {
+  .block-container__title {
+    font-size: 7.42857vw;
+  }
+
+  .block-container__title::before {
+    bottom: calc(100% + 2px);
+    font-size: 3.14286vw;
+  }
+
   .header__nav-wrapper {
     padding: 48px 0;
   }
@@ -1325,8 +2631,95 @@ html.webp .join-form__next-button::before {
   }
 
   .header__mobile-close-button {
-    bottom: 32px;
     right: 32px;
+    bottom: 32px;
+  }
+
+  .inevitability-block {
+    padding-bottom: 70px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background: url("../img/inevitability-top-bg@1x.png") top no-repeat, linear-gradient(to bottom, #ffb700 30%, #e4e3e9 30%);
+    background-size: 100% auto, 95% auto, auto;
+  }
+
+  .inevitability-block__title {
+    margin-bottom: 75px;
+    padding-top: 130px;
+  }
+
+  .inevitability-block__subtitle {
+    line-height: 21px;
+    font-size: 16px;
+  }
+
+  .inevitability-block__founder-image {
+    top: 470px;
+    right: -10px;
+    width: 160px;
+    overflow-x: hidden;
+  }
+
+  .inevitability-block__scientist {
+    top: 1000px;
+    height: 220px;
+  }
+
+  .inevitability-block__cloud_population {
+    top: 160px;
+    width: 450px;
+  }
+
+  .inevitability-block__cloud_problems {
+    top: 370px;
+    width: 340px;
+  }
+
+  .inevitability-block__cloud_club {
+    top: 750px;
+    width: 330px;
+  }
+
+  .inevitability-block__cloud_technologies {
+    top: 1070px;
+    width: 330px;
+  }
+
+  .inevitability-block__item_population {
+    margin-bottom: 170px;
+    width: 250px;
+    line-height: 16px;
+    font-size: 14px;
+  }
+
+  .inevitability-block__item_problems {
+    margin-bottom: 130px;
+    width: 300px;
+    line-height: 16px;
+    font-size: 14px;
+  }
+
+  .inevitability-block__item_club {
+    margin-bottom: 220px;
+    line-height: 16px;
+    font-size: 14px;
+  }
+
+  .inevitability-block__item_technologies {
+    margin-bottom: 110px;
+    width: 280px;
+    line-height: 16px;
+    font-size: 14px;
+  }
+
+  .inevitability-block__item_join-us {
+    margin-top: 0;
+    line-height: 16px;
+    font-size: 14px;
+  }
+
+  .inevitability-block__founder-name {
+    margin-top: 30px;
   }
 
   .join-page__input-wrapper {
@@ -1364,9 +2757,294 @@ html.webp .join-form__next-button::before {
     max-width: 260px;
     font-size: 16px;
   }
+
+  .why-plant-based-food {
+    padding-bottom: 120px;
+    padding-left: 3%;
+    padding-right: 3%;
+    background: url("../img/why-plants-cow-mobile@1x.png") top 1080px left 200px no-repeat, url("../img/inevitability-bottom@1x.png") bottom 50px left 0 no-repeat, url("../img/why-plants-progress-mobile@1x.png") top 640px right -50px no-repeat, url("../img/why-plants-culture-mobile@1x.png") top 1300px right -100px no-repeat, url("../img/why-plants-health-mobile@1x.png") top 950px left -50px no-repeat, url("../img/why-plants-history-mobile@1x.png") top 245px left -160px no-repeat, url("../img/why-plants-bottom-bg@1x.png") bottom -50px right -100px no-repeat, #e4e3e9;
+    background-size: 300px auto, 100% auto, 400px auto, 440px auto, 377px auto, 524px auto, 239px auto, auto;
+  }
+
+  .why-plant-based-food__title {
+    margin-bottom: 20px;
+    width: 250px;
+  }
+
+  .why-plant-based-food__title::before {
+    bottom: 110px;
+  }
+
+  .why-plant-based-food__item {
+    line-height: 16px;
+    font-size: 14px;
+  }
+
+  .why-plant-based-food__item--history {
+    margin-bottom: 120px;
+    width: 260px;
+  }
+
+  .why-plant-based-food__item--progress {
+    margin-top: 0;
+    margin-bottom: 110px;
+    width: 270px;
+  }
+
+  .why-plant-based-food__item--health {
+    margin-bottom: 150px;
+    width: 200px;
+  }
+
+  .why-plant-based-food__item--culture {
+    margin-bottom: 130px;
+    width: 268px;
+  }
+
+  .our-ideas {
+    padding-top: 200vw;
+    background-image: linear-gradient(to bottom, #6b1b6a 40vw, #184382 40vw);
+  }
+
+  .our-ideas::before {
+    content: none;
+  }
+
+  .our-ideas__top-container {
+    position: absolute;
+    padding-top: 0;
+    top: 6.85714vw;
+    left: 0;
+  }
+
+  .our-ideas__first-wave {
+    width: 100%;
+    height: 85.71429vw;
+    padding: 22.85714vw 6.28571vw 0 6.28571vw;
+    background-image: url("../img/our-ideas-wave-1-mobile.svg");
+    background-size: 117.14286vw auto;
+    background-position: top center;
+  }
+
+  .our-ideas__title {
+    max-width: 100%;
+  }
+
+  .our-ideas__first-thesis {
+    position: relative;
+    max-width: 100%;
+    font-size: 4vw;
+    line-height: 1.6em;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+  }
+
+  .our-ideas__second-wave {
+    position: relative;
+    top: -26.28571vw;
+    width: 100%;
+    height: 80vw;
+    padding: 16vw 6.28571vw 0 2.85714vw;
+    background-image: url("../img/our-ideas-wave-2-mobile.svg");
+    background-size: 114.28571vw auto;
+    background-position: top left 0.69444vw;
+  }
+
+  .our-ideas__first-plant {
+    display: none;
+  }
+
+  .our-ideas__second-thesis {
+    max-width: 100%;
+    font-size: 4vw;
+    line-height: 1.6em;
+    letter-spacing: -0.02em;
+  }
+
+  .our-ideas__third-wave {
+    position: relative;
+    top: -48.57143vw;
+    box-sizing: border-box;
+    height: 71.42857vw;
+    padding-left: 6.28571vw;
+    padding-top: 20vw;
+    background-image: url("../img/our-ideas-wave-3.svg"), url("../img/our-ideas-wave-3-faded.svg");
+    background-size: 335px auto;
+    background-position: top left -14.28571vw, top 4.57143vw left -11.42857vw;
+  }
+
+  .our-ideas__third-thesis {
+    max-width: 62.85714vw;
+    font-size: 4.57143vw;
+    line-height: 1.4em;
+    letter-spacing: 0.03em;
+  }
+
+  .our-ideas__second-plant {
+    left: auto;
+    right: 0;
+    width: 27.14286vw;
+    height: 100%;
+  }
+
+  .our-ideas__second-plant::after {
+    transform: none;
+    background-position: bottom left, top left 1.14286vw;
+  }
+
+  .our-ideas__centered-title {
+    margin-top: 0;
+    margin-bottom: 6.85714vw;
+    max-width: 100%;
+    font-size: 4.57143vw;
+    line-height: 1.3em;
+  }
+
+  .our-ideas__item-wrapper--proteins-and-carbohydrates {
+    text-align: right;
+    padding: 22.85714vw 6.28571vw 0 6.28571vw;
+  }
+
+  .our-ideas__item-wrapper--proteins-and-carbohydrates .our-ideas__item-description {
+    max-width: 100%;
+  }
+
+  .our-ideas__item-wrapper--proteins-and-carbohydrates::before {
+    height: 128.57143vw;
+    background-image: url("../img/our-ideas-wave-4-mobile.svg");
+    background-size: 125.71429vw auto;
+    background-position: top center;
+  }
+
+  .our-ideas__item-wrapper--proteins-and-carbohydrates::after {
+    top: -4vw;
+    right: auto;
+    left: 1.71429vw;
+    width: 34.85714vw;
+    height: 36vw;
+    transform: scaleX(-1);
+  }
+
+  .our-ideas__item-wrapper--lipids {
+    margin-top: 4vw;
+    padding: 18.28571vw 0 0 6.28571vw;
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .our-ideas__item-wrapper--lipids .our-ideas__item-description {
+    max-width: 68.57143vw;
+  }
+
+  .our-ideas__item-wrapper--lipids .our-ideas__item-paragraph:last-child {
+    max-width: 51.42857vw;
+  }
+
+  .our-ideas__item-wrapper--lipids::before {
+    top: 0;
+    height: 131.42857vw;
+    background-image: url("../img/our-ideas-wave-5-mobile.svg"), url("../img/our-ideas-wave-5-mobile-faded.svg");
+    background-position: left -45.71429vw top, left -40.57143vw top 3.42857vw;
+    background-size: 147.14286vw auto;
+  }
+
+  .our-ideas__item-wrapper--lipids::after {
+    top: auto;
+    left: auto;
+    bottom: 6.85714vw;
+    right: 16vw;
+    width: 28.57143vw;
+    height: 38.85714vw;
+    background-image: url("../img/our-ideas-figure-2.svg");
+    background-size: contain;
+    background-position: top center;
+  }
+
+  .our-ideas__item-wrapper--biosynthesis {
+    text-align: right;
+    margin-top: 17.14286vw;
+    padding: 0 6.28571vw;
+  }
+
+  .our-ideas__item-wrapper--biosynthesis .our-ideas__item-title {
+    max-width: 100%;
+  }
+
+  .our-ideas__item-wrapper--biosynthesis .our-ideas__item-description {
+    max-width: 100%;
+  }
+
+  .our-ideas__item-wrapper--biosynthesis .our-ideas__item-paragraph:last-child {
+    max-width: 100%;
+  }
+
+  .our-ideas__item-wrapper--biosynthesis::after {
+    content: none;
+  }
+
+  .our-ideas__item-wrapper--green-shelf {
+    padding: 18.85714vw 6.28571vw 40vw 6.28571vw;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .our-ideas__item-wrapper--green-shelf .our-ideas__item-description {
+    max-width: 68.57143vw;
+    font-size: 4vw;
+    letter-spacing: 0.03em;
+  }
+
+  .our-ideas__item-wrapper--green-shelf::before {
+    top: 0;
+    height: 131.42857vw;
+    background-image: url("../img/our-ideas-wave-6-mobile.svg"), url("../img/our-ideas-wave-6-mobile-faded.svg");
+    background-size: 145.14286vw auto;
+    background-position: top right -8.57143vw, top 6.85714vw right -13.14286vw;
+  }
+
+  .our-ideas__item-wrapper--green-shelf::after {
+    width: 33.14286vw;
+    height: 38.85714vw;
+    top: 27.42857vw;
+    left: auto;
+    right: 6.28571vw;
+    transform: none;
+  }
+
+  .our-ideas__biosynthesis-image {
+    display: block;
+  }
+
+  .our-ideas__item-title {
+    font-size: 3.71429vw;
+    letter-spacing: 0.01em;
+  }
+
+  .our-ideas__item-description {
+    margin-top: 2.85714vw;
+    font-size: 3.71429vw;
+    line-height: 1.6em;
+    letter-spacing: 0.01em;
+  }
+
+  .our-ideas__item-paragraph {
+    margin-bottom: 0;
+  }
+
+  .our-ideas__third-plant {
+    display: none;
+  }
 }
 
 @media (min-resolution: 1.5dppx), (min-resolution: 144dpi) {
+  .inevitability-block__scientist {
+    background-image: url("../img/inevitability-scientist@2x.png");
+  }
+
+  .inevitability-block__ellips {
+    background-image: url("../img/inevitability-ellips@2x.png");
+  }
+
   .join-page {
     background-image: url("../img/form-bg-desktop@2x.png");
   }
@@ -1389,6 +3067,10 @@ html.webp .join-form__next-button::before {
 
   html.webp .join-form__next-button::before {
     background-image: url("../img/arrow-icon@2x.webp");
+  }
+
+  .why-plant-based-food__circle {
+    background-image: url("../img/why-plants-circle@2x.png");
   }
 }
 /*# sourceMappingURL=maps/main.css.map */
