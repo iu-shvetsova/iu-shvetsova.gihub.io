@@ -460,6 +460,10 @@ ol {
   padding: 0;
 }
 
+main {
+  counter-reset: section;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -941,91 +945,62 @@ ol {
 
 .inevitability-block {
   position: relative;
-  padding-bottom: 140px;
-  padding-left: 56px;
-  padding-right: 56px;
-  background: url("../img/inevitability-bg-1@1x.png") top left no-repeat, url("../img/inevitability-bg-2@1x.png") top right no-repeat, linear-gradient(to bottom, #ffb700 37%, #e4e3e9 37%);
-  background-size: 34.9% auto, 54.56% auto, auto;
+  padding-top: 13.54167vw;
+  padding-bottom: 9.72222vw;
+  padding-left: 3.88889vw;
+  padding-right: 2.77778vw;
+  background: url("../img/inevitability-bg-1@1x.png") top left no-repeat, url("../img/inevitability-bg-2@1x.png") top right no-repeat, url("../img/inevitability-population.svg") top 18.75vw left -5.55556vw no-repeat, url("../img/inevitability-population-bg.svg") top 18.75vw left -3.47222vw no-repeat, url("../img/inevitability-problems.svg") top 41.66667vw right -14.58333vw no-repeat, url("../img/inevitability-join-us.svg") top 60.41667vw right -9.375vw no-repeat, url("../img/inevitability-technologies.svg") top 72.91667vw left -0.69444vw no-repeat, url("../img/inevitability-technologies-bg.svg") top 72.91667vw left 2.08333vw no-repeat, url("../img/block-bottom@1x.png") bottom 2.77778vw left 0 no-repeat, linear-gradient(to bottom, #ffb700 37%, #e4e3e8 37%);
+  background-size: 34.9% auto, 54.56% auto, 74.30556vw auto, 74.30556vw auto, 73.61111vw auto, 47.22222vw auto, 54.16667vw auto, 54.16667vw auto, 100vw, auto, auto;
   z-index: 0;
   overflow: hidden;
 }
 
 .inevitability-block__title {
-  margin-bottom: 200px;
-  padding-top: 195px;
+  margin-bottom: 13.88889vw;
 }
 
 .inevitability-block__subtitle {
-  margin-bottom: 35px;
-  line-height: 37px;
-  font-size: 28px;
+  margin-bottom: 2.22222vw;
+  line-height: 1.3em;
+  font-size: 1.94444vw;
+  letter-spacing: 0.03em;
 }
 
 .inevitability-block__founder-image {
   position: absolute;
-  top: 80px;
-  right: 100px;
-  width: 397px;
+  top: 6.25vw;
+  right: 11.80556vw;
+  width: 27.56944vw;
   height: auto;
+}
+
+.inevitability-block__founder-caption {
+  position: absolute;
+  top: 31.25vw;
+  right: 3.88889vw;
+  font-weight: 600;
+  text-align: right;
 }
 
 .inevitability-block__scientist {
   position: absolute;
-  top: 850px;
-  left: 4%;
-  width: 436px;
-  height: 450px;
-  background-image: url("../img/inevitability-scientist@1x.png");
-  background-repeat: no-repeat;
-  background-size: contain;
+  top: 53.47222vw;
+  left: 7.29167vw;
+  width: 30.55556vw;
+  height: 32.63889vw;
+  background: url("../img/inevitability-scientist.svg") no-repeat, url("../img/inevitability-scientist-bg@1x.png") top 1.38889vw left 1.38889vw no-repeat;
+  background-size: 27.77778vw auto;
 }
 
 .inevitability-block__ellips {
   position: absolute;
-  top: 1300px;
-  right: 0;
-  width: 124px;
-  height: 250px;
-  background-image: url("../img/inevitability-ellips@1x.png");
+  top: 84.72222vw;
+  right: -9.02778vw;
+  width: 18.05556vw;
+  height: 18.05556vw;
+  background-image: url("../img/inevitability-ellips.svg");
   background-repeat: no-repeat;
   background-size: contain;
-}
-
-.inevitability-block__cloud {
-  display: block;
-  position: absolute;
-}
-
-.inevitability-block__cloud_population {
-  z-index: -1;
-  top: 13.5%;
-  left: 0;
-  width: 1035px;
-  height: auto;
-}
-
-.inevitability-block__cloud_problems {
-  z-index: -2;
-  top: 33%;
-  right: 0;
-  width: 871px;
-  height: auto;
-}
-
-.inevitability-block__cloud_club {
-  z-index: -1;
-  top: 47%;
-  left: 0;
-  width: 500px;
-  height: auto;
-}
-
-.inevitability-block__cloud_technologies {
-  z-index: -1;
-  top: 61%;
-  left: 0;
-  width: 824px;
-  height: auto;
 }
 
 .inevitability-block__list {
@@ -1036,77 +1011,86 @@ ol {
   list-style-type: none;
 }
 
+.inevitability-block__item {
+  font-weight: 500;
+  line-height: 1.5em;
+}
+
 .inevitability-block__item_population {
-  margin-bottom: 180px;
+  margin-bottom: 6.66667vw;
   margin-right: auto;
-  max-width: 847px;
-  line-height: 30px;
-  font-size: 22px;
+  max-width: 58.33333vw;
+  font-size: 1.52778vw;
+  letter-spacing: 0.03em;
 }
 
 .inevitability-block__item_problems {
   margin-left: auto;
-  max-width: 690px;
-  line-height: 40px;
-  font-size: 26px;
+  margin-bottom: 3.47222vw;
+  max-width: 50vw;
+  font-size: 1.80556vw;
   color: #ffffff;
   text-align: right;
+  text-indent: 5.55556vw;
+  letter-spacing: -0.045em;
 }
 
 .inevitability-block__item_club {
-  margin-bottom: 200px;
+  margin-bottom: 6.94444vw;
   margin-left: auto;
-  max-width: 690px;
-  line-height: 40px;
-  font-size: 26px;
+  max-width: 47.91667vw;
+  font-size: 1.80556vw;
   color: #ffffff;
   text-align: right;
+  letter-spacing: -0.045em;
 }
 
 .inevitability-block__item_technologies {
   margin-right: auto;
-  max-width: 663px;
-  line-height: 40px;
-  font-size: 24px;
+  margin-bottom: 1.66667vw;
+  max-width: 47.22222vw;
+  font-size: 1.66667vw;
+  letter-spacing: 0.04em;
 }
 
 .inevitability-block__item_join-us {
   margin-left: auto;
-  max-width: 726px;
-  line-height: 42px;
-  font-size: 30px;
-  font-weight: 600;
+  width: 50.41667vw;
+  font-size: 2.08333vw;
+  font-weight: 700;
   text-align: right;
+  text-indent: 4.44444vw;
+}
+
+.inevitability-block__item_join-us .inevitability-block__founder {
+  font-weight: 600;
 }
 
 .inevitability-block__founder-name {
   margin: 0;
-  margin-top: 35px;
-  margin-bottom: 8px;
+  margin-top: 2.43056vw;
+  margin-bottom: 0.55556vw;
+  line-height: 1.1em;
+  font-size: 1.52778vw;
+  font-weight: 700;
+  text-align: right;
 }
 
 .inevitability-block__founder {
   margin: 0;
+  line-height: 1.1em;
+  font-size: 1.31944vw;
+  text-align: right;
 }
 
-.inevitability-block__bottom-bg {
-  position: absolute;
-  z-index: -1;
-  right: 0;
-  bottom: -100px;
-  left: 0;
-  width: 350px;
-  height: auto;
-  margin-left: auto;
-  margin-right: auto;
+html.webp .inevitability-block {
+  background: url("../img/inevitability-bg-1@1x.webp") top left no-repeat, url("../img/inevitability-bg-2@1x.webp") top right no-repeat, url("../img/inevitability-population.svg") top 18.75vw left -5.55556vw no-repeat, url("../img/inevitability-population-bg.svg") top 18.75vw left -3.47222vw no-repeat, url("../img/inevitability-problems.svg") top 41.66667vw right -14.58333vw no-repeat, url("../img/inevitability-join-us.svg") top 60.41667vw right -9.375vw no-repeat, url("../img/inevitability-technologies.svg") top 72.91667vw left -0.69444vw no-repeat, url("../img/inevitability-technologies-bg.svg") top 72.91667vw left 2.08333vw no-repeat, url("../img/block-bottom@1x.webp") bottom 2.77778vw left 0 no-repeat, linear-gradient(to bottom, #ffb700 37%, #e4e3e8 37%);
+  background-size: 34.9% auto, 54.56% auto, 74.30556vw auto, 74.30556vw auto, 73.61111vw auto, 47.22222vw auto, 54.16667vw auto, 54.16667vw auto, 100vw, auto, auto;
 }
 
-.inevitability-block__bottom {
-  position: absolute;
-  bottom: 1%;
-  left: 0;
-  width: 100vw;
-  height: auto;
+html.webp .inevitability-block__scientist {
+  background: url("../img/inevitability-scientist.svg") no-repeat, url("../img/inevitability-scientist-bg@1x.webp") top 1.38889vw left 1.38889vw no-repeat;
+  background-size: 27.77778vw auto;
 }
 
 .join-page {
@@ -1489,12 +1473,12 @@ html.webp .join-form__next-button::before {
 
 .our-ideas::before {
   content: "";
+  position: absolute;
+  z-index: 3;
+  bottom: 0;
+  left: 0;
   width: 35.76389vw;
   height: 35.06944vw;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  z-index: 3;
   background-image: url("../img/our-ideas-plant-4.svg");
   background-repeat: no-repeat;
   background-size: contain;
@@ -1522,8 +1506,8 @@ html.webp .join-form__next-button::before {
 }
 
 .our-ideas__first-wave {
-  position: relative;
   box-sizing: border-box;
+  position: relative;
   width: 56.59722vw;
   height: 52.77778vw;
   padding-top: 8.88889vw;
@@ -1547,16 +1531,16 @@ html.webp .join-form__next-button::before {
 }
 
 .our-ideas__second-wave {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-end;
   position: absolute;
   top: 18.33333vw;
   right: 0;
-  box-sizing: border-box;
   width: 56.25vw;
   height: 45.83333vw;
   padding-top: 15.97222vw;
   padding-right: 8.19444vw;
-  display: flex;
-  justify-content: flex-end;
   background-image: url("../img/our-ideas-wave-2.svg"), url("../img/our-ideas-wave-2-faded.svg");
   background-size: 63.19444vw auto;
   background-position: top left, top 2.29167vw left 0.69444vw;
@@ -1632,9 +1616,9 @@ html.webp .join-form__next-button::before {
 }
 
 .our-ideas__centered-title {
+  max-width: 40.27778vw;
   margin: 0 auto;
   margin-top: 3.33333vw;
-  max-width: 40.27778vw;
   font-size: 2.15278vw;
   line-height: 1.4em;
   text-align: center;
@@ -1714,10 +1698,10 @@ html.webp .join-form__next-button::before {
 }
 
 .our-ideas__item-wrapper--lipids::after {
-  width: 22.91667vw;
-  height: 22.91667vw;
   top: 16.25vw;
   left: 27.77778vw;
+  width: 22.91667vw;
+  height: 22.91667vw;
   transform: scaleX(-1);
   background-image: url("../img/our-ideas-figure-2.svg"), url("../img/our-ideas-figure-2-bg.svg");
   background-size: 14.58333vw auto, 100% auto;
@@ -1743,10 +1727,10 @@ html.webp .join-form__next-button::before {
 
 .our-ideas__item-wrapper--biosynthesis::after {
   z-index: 3;
-  width: 14.23611vw;
-  height: 22.22222vw;
   top: 3.33333vw;
   right: 8.33333vw;
+  width: 14.23611vw;
+  height: 22.22222vw;
   transform: scaleX(-1);
   background-image: url("../img/our-ideas-figure-3.svg");
 }
@@ -1775,10 +1759,10 @@ html.webp .join-form__next-button::before {
 }
 
 .our-ideas__item-wrapper--green-shelf::after {
-  width: 17.36111vw;
-  height: 20.83333vw;
   top: 12.5vw;
   left: 34.72222vw;
+  width: 17.36111vw;
+  height: 20.83333vw;
   transform: scaleX(-1);
   background-image: url("../img/our-ideas-figure-4.svg");
   background-size: contain;
@@ -1787,8 +1771,8 @@ html.webp .join-form__next-button::before {
 .our-ideas__biosynthesis-image {
   display: none;
   width: 25.71429vw;
-  padding: 2.85714vw;
   height: auto;
+  padding: 2.85714vw;
   float: left;
 }
 
@@ -1835,13 +1819,15 @@ html.webp .join-form__next-button::before {
   background-size: contain;
 }
 
-@media (min-width: 769px) {
-  .inevitability-block__cloud_club {
-    display: none;
+@media (min-width: 541px) and (min-resolution: 1.5dppx), (min-width: 541px) and (min-resolution: 144dpi) {
+  .inevitability-block__scientist {
+    background: url("../img/inevitability-scientist.svg") no-repeat, url("../img/inevitability-scientist-bg@2x.png") top 1.38889vw left 1.38889vw no-repeat;
+    background-size: 27.77778vw auto;
   }
 
-  .inevitability-block__bottom-bg {
-    display: none;
+  html.webp .inevitability-block__scientist {
+    background: url("../img/inevitability-scientist.svg") no-repeat, url("../img/inevitability-scientist-bg@2x.webp") top 1.38889vw left 1.38889vw no-repeat;
+    background-size: 27.77778vw auto;
   }
 }
 
@@ -1852,24 +1838,15 @@ html.webp .join-form__next-button::before {
   }
 }
 
-@media (min-width: 1441px) {
+@media (min-width: 1440px) and (min-resolution: 1.5dppx), (min-width: 1440px) and (min-resolution: 144dpi) {
   .inevitability-block {
-    background: url("../img/inevitability-bg-1@1x.png") top left no-repeat, url("../img/inevitability-bg-2@1x.png") top right no-repeat, #ffb700;
-    background-size: 34.9% auto, 54.56% auto, auto;
+    background: url("../img/inevitability-bg-1@2x.png") top left no-repeat, url("../img/inevitability-bg-2@2x.png") top right no-repeat, url("../img/inevitability-population.svg") top 18.75vw left -5.55556vw no-repeat, url("../img/inevitability-population-bg.svg") top 18.75vw left -3.47222vw no-repeat, url("../img/inevitability-problems.svg") top 41.66667vw right -14.58333vw no-repeat, url("../img/inevitability-join-us.svg") top 60.41667vw right -9.375vw no-repeat, url("../img/inevitability-technologies.svg") top 72.91667vw left -0.69444vw no-repeat, url("../img/inevitability-technologies-bg.svg") top 72.91667vw left 2.08333vw no-repeat, url("../img/block-bottom@2x.png") bottom 2.77778vw left 0 no-repeat, linear-gradient(to bottom, #ffb700 37%, #e4e3e8 37%);
+    background-size: 34.9% auto, 54.56% auto, 74.30556vw auto, 74.30556vw auto, 73.61111vw auto, 47.22222vw auto, 54.16667vw auto, 54.16667vw auto, 100vw auto, auto;
   }
-}
 
-@media (min-width: 1441px) and (min-resolution: 1.5dppx), (min-width: 1441px) and (min-resolution: 144dpi) {
-  .inevitability-block {
-    background: url("../img/inevitability-bg-1@2x.png") top left no-repeat, url("../img/inevitability-bg-2@2x.png") top right no-repeat, #ffb700;
-    background-size: 34.9% auto, 54.56% auto, auto;
-  }
-}
-
-@media (max-width: 1400px) and (min-resolution: 1.5dppx), (max-width: 1400px) and (min-resolution: 144dpi) {
-  .why-plant-based-food {
-    background: url("../img/why-plants-leaf@2x.png") bottom 310px left -130px no-repeat, url("../img/why-plants-leaf@2x.png") top 80px right 50px no-repeat, url("../img/why-plants-cow@2x.png") bottom 350px left 0 no-repeat, url("../img/inevitability-bottom@2x.png") bottom 90px left 0 no-repeat, url("../img/why-plants-culture@2x.png") top 1620px right -200px no-repeat, url("../img/why-plants-history.svg") top 85px left -120px no-repeat, url("../img/why-plants-progress@2x.png") top 560px right -150px no-repeat, #e4e3e9;
-    background-size: 405px auto, 405px auto, 600px auto, 100% auto, 1464px auto, 1044px auto, 1013px auto, auto;
+  html.webp .inevitability-block {
+    background: url("../img/inevitability-bg-1@2x.webp") top left no-repeat, url("../img/inevitability-bg-2@2x.webp") top right no-repeat, url("../img/inevitability-population.svg") top 18.75vw left -5.55556vw no-repeat, url("../img/inevitability-population-bg.svg") top 18.75vw left -3.47222vw no-repeat, url("../img/inevitability-problems.svg") top 41.66667vw right -14.58333vw no-repeat, url("../img/inevitability-join-us.svg") top 60.41667vw right -9.375vw no-repeat, url("../img/inevitability-technologies.svg") top 75vw left -1.66667vw no-repeat, url("../img/inevitability-technologies-bg.svg") top 74.72222vw left 0.27778vw no-repeat, url("../img/block-bottom@2x.webp") bottom 2.77778vw left 0 no-repeat, linear-gradient(to bottom, #ffb700 37%, #e4e3e8 37%);
+    background-size: 34.9% auto, 54.56% auto, 74.30556vw auto, 74.30556vw auto, 73.61111vw auto, 47.22222vw auto, 54.16667vw auto, 54.16667vw auto, 100vw auto, auto;
   }
 }
 
@@ -1897,15 +1874,10 @@ html.webp .join-form__next-button::before {
   }
 }
 
-@media (max-width: 1200px) and (min-resolution: 1.5dppx), (max-width: 1200px) and (min-resolution: 144dpi) {
-  .inevitability-block {
-    background: url("../img/inevitability-bg-1@2x.png") top left no-repeat, url("../img/inevitability-bg-2@2x.png") top right no-repeat, url("../img/inevitability-bottom@2x.png") bottom 1% left 0% no-repeat, linear-gradient(to bottom, #ffb700 36%, #e4e3e9 36%);
-    background-size: 34.9% auto, 54.56% auto, 100% auto, auto;
-  }
-
+@media (max-width: 1400px) and (min-resolution: 1.5dppx), (max-width: 1400px) and (min-resolution: 144dpi) {
   .why-plant-based-food {
-    background: url("../img/why-plants-leaf@2x.png") bottom 310px left -130px no-repeat, url("../img/why-plants-leaf@2x.png") top 0 right 20px no-repeat, url("../img/why-plants-cow@2x.png") bottom 350px left 0 no-repeat, url("../img/inevitability-bottom@2x.png") bottom 90px left 0 no-repeat, url("../img/why-plants-culture@2x.png") top 1300px right -200px no-repeat, url("../img/why-plants-history.svg") top 60px left -120px no-repeat, url("../img/why-plants-progress@2x.png") top 450px right -150px no-repeat, #e4e3e9;
-    background-size: 300px auto, 300px auto, 500px auto, 100% auto, 1100px auto, 980px auto, 850px auto, auto;
+    background: url("../img/why-plants-leaf@2x.png") bottom 310px left -130px no-repeat, url("../img/why-plants-leaf@2x.png") top 80px right 50px no-repeat, url("../img/why-plants-cow@2x.png") bottom 350px left 0 no-repeat, url("../img/inevitability-bottom@2x.png") bottom 90px left 0 no-repeat, url("../img/why-plants-culture@2x.png") top 1620px right -200px no-repeat, url("../img/why-plants-history.svg") top 85px left -120px no-repeat, url("../img/why-plants-progress@2x.png") top 560px right -150px no-repeat, #e4e3e9;
+    background-size: 405px auto, 405px auto, 600px auto, 100% auto, 1464px auto, 1044px auto, 1013px auto, auto;
   }
 }
 
@@ -1947,78 +1919,6 @@ html.webp .join-form__next-button::before {
 
   .header__icon-contact {
     opacity: 1;
-  }
-
-  .inevitability-block {
-    background: url("../img/inevitability-bg-1@1x.png") top left no-repeat, url("../img/inevitability-bg-2@1x.png") top right no-repeat, url("../img/inevitability-bottom@1x.png") bottom 1% left 0% no-repeat, linear-gradient(to bottom, #ffb700 36%, #e4e3e9 36%);
-    background-size: 34.9% auto, 54.56% auto, 100% auto, auto;
-  }
-
-  .inevitability-block__subtitle {
-    line-height: 30px;
-    font-size: 26px;
-  }
-
-  .inevitability-block__founder-image {
-    width: 27.57%;
-  }
-
-  .inevitability-block__scientist {
-    top: 720px;
-    left: 4%;
-    width: 25%;
-    height: 28%;
-  }
-
-  .inevitability-block__ellips {
-    top: 1150px;
-    width: 100px;
-    height: 200px;
-  }
-
-  .inevitability-block__cloud_population {
-    width: 900px;
-  }
-
-  .inevitability-block__cloud_problems {
-    width: 771px;
-  }
-
-  .inevitability-block__cloud_technologies {
-    top: 53%;
-    width: 724px;
-  }
-
-  .inevitability-block__item_population {
-    max-width: 747px;
-    line-height: 22px;
-    font-size: 20px;
-  }
-
-  .inevitability-block__item_problems {
-    line-height: 24px;
-    font-size: 22px;
-  }
-
-  .inevitability-block__item_club {
-    line-height: 24px;
-    font-size: 22px;
-  }
-
-  .inevitability-block__item_technologies {
-    max-width: 563px;
-    line-height: 28px;
-    font-size: 26px;
-  }
-
-  .inevitability-block__item_join-us {
-    margin-left: auto;
-    max-width: 526px;
-    line-height: 30px;
-    font-size: 26px;
-    font-weight: 600;
-    text-align: right;
-    margin-top: 150px;
   }
 
   .join-page__input-wrapper {
@@ -2063,70 +1963,24 @@ html.webp .join-form__next-button::before {
   }
 }
 
-@media (max-width: 900px) {
-  .inevitability-block {
+@media (max-width: 1200px) and (min-resolution: 1.5dppx), (max-width: 1200px) and (min-resolution: 144dpi) {
+  .why-plant-based-food {
+    background: url("../img/why-plants-leaf@2x.png") bottom 310px left -130px no-repeat, url("../img/why-plants-leaf@2x.png") top 0 right 20px no-repeat, url("../img/why-plants-cow@2x.png") bottom 350px left 0 no-repeat, url("../img/inevitability-bottom@2x.png") bottom 90px left 0 no-repeat, url("../img/why-plants-culture@2x.png") top 1300px right -200px no-repeat, url("../img/why-plants-history.svg") top 60px left -120px no-repeat, url("../img/why-plants-progress@2x.png") top 450px right -150px no-repeat, #e4e3e9;
+    background-size: 300px auto, 300px auto, 500px auto, 100% auto, 1100px auto, 980px auto, 850px auto, auto;
+  }
+}
+
+@media (max-width: 900px) and (min-resolution: 1.5dppx), (max-width: 900px) and (min-resolution: 144dpi) {
+  .why-plant-based-food {
+    padding-bottom: 200px;
     padding-left: 2%;
     padding-right: 2%;
-    background: url("../img/inevitability-bg-1@1x.png") top left no-repeat, url("../img/inevitability-bg-2@1x.png") top right no-repeat, linear-gradient(to bottom, #ffb700 34%, #e4e3e9 34%);
-    background-size: 34.9% auto, 54.56% auto, auto;
+    background: url("../img/why-plants-leaf@2x.png") bottom 310px left -30px no-repeat, url("../img/why-plants-leaf@2x.png") top 0 right 20px no-repeat, url("../img/why-plants-cow@2x.png") bottom 350px left 0 no-repeat, url("../img/inevitability-bottom@2x.png") bottom 90px left 0 no-repeat, url("../img/why-plants-culture@2x.png") top 1300px right -200px no-repeat, url("../img/why-plants-history.svg") top 60px left -120px no-repeat, url("../img/why-plants-progress@2x.png") top 450px right -150px no-repeat, #e4e3e9;
+    background-size: 200px auto, 200px auto, 400px auto, 100% auto, 1100px auto, 980px auto, 850px auto, auto;
   }
+}
 
-  .inevitability-block__title {
-    margin-bottom: 140px;
-  }
-
-  .inevitability-block__subtitle {
-    margin-bottom: 15px;
-  }
-
-  .inevitability-block__scientist {
-    top: 670px;
-  }
-
-  .inevitability-block__cloud_population {
-    top: 15.5%;
-    width: 700px;
-  }
-
-  .inevitability-block__cloud_problems {
-    top: 30%;
-    width: 550px;
-  }
-
-  .inevitability-block__cloud_technologies {
-    top: 53.8%;
-    width: 600px;
-  }
-
-  .inevitability-block__item_population {
-    margin-bottom: 70px;
-    max-width: 600px;
-  }
-
-  .inevitability-block__item_problems {
-    max-width: 500px;
-    line-height: 22px;
-    font-size: 20px;
-  }
-
-  .inevitability-block__item_club {
-    max-width: 500px;
-    line-height: 22px;
-    font-size: 20px;
-  }
-
-  .inevitability-block__item_technologies {
-    max-width: 480px;
-    line-height: 26px;
-    font-size: 24px;
-  }
-
-  .inevitability-block__item_join-us {
-    margin-top: 100px;
-    line-height: 26px;
-    font-size: 24px;
-  }
-
+@media (max-width: 900px) {
   .why-plant-based-food {
     padding-bottom: 200px;
     padding-left: 2%;
@@ -2140,18 +1994,31 @@ html.webp .join-form__next-button::before {
   }
 }
 
-@media (max-width: 900px) and (min-resolution: 1.5dppx), (max-width: 900px) and (min-resolution: 144dpi) {
-  .inevitability-block {
-    background: url("../img/inevitability-bg-1@2x.png") top left no-repeat, url("../img/inevitability-bg-2@2x.png") top right no-repeat, linear-gradient(to bottom, #ffb700 34%, #e4e3e9 34%);
-    background-size: 34.9% auto, 54.56% auto, auto;
+@media (max-width: 768px) and (min-resolution: 1.5dppx), (max-width: 768px) and (min-resolution: 144dpi) {
+  .why-plant-based-food {
+    padding-bottom: 120px;
+    padding-left: 3%;
+    padding-right: 3%;
+    background: url("../img/why-plants-cow-mobile@2x.png") top 1080px left 300px no-repeat, url("../img/inevitability-bottom@2x.png") bottom 50px left 0 no-repeat, url("../img/why-plants-progress-mobile@2x.png") top 640px right -50px no-repeat, url("../img/why-plants-culture-mobile@2x.png") top 1270px right -100px no-repeat, url("../img/why-plants-health-mobile@2x.png") top 870px left -50px no-repeat, url("../img/why-plants-history-mobile@2x.png") top 100px left -170px no-repeat, url("../img/why-plants-bottom-bg@2x.png") bottom -50px right -100px no-repeat, #e4e3e9;
+    background-size: 300px auto, 100% auto, 600px auto, 640px auto, 577px auto, 800px auto, 239px auto, auto;
+  }
+}
+
+@media (min-resolution: 1.5dppx) and (max-width: 768px), (min-resolution: 144dpi) and (max-width: 768px) {
+  .join-page {
+    background-image: url("../img/form-bg-tablet@2x.png") !important;
   }
 
-  .why-plant-based-food {
-    padding-bottom: 200px;
-    padding-left: 2%;
-    padding-right: 2%;
-    background: url("../img/why-plants-leaf@2x.png") bottom 310px left -30px no-repeat, url("../img/why-plants-leaf@2x.png") top 0 right 20px no-repeat, url("../img/why-plants-cow@2x.png") bottom 350px left 0 no-repeat, url("../img/inevitability-bottom@2x.png") bottom 90px left 0 no-repeat, url("../img/why-plants-culture@2x.png") top 1300px right -200px no-repeat, url("../img/why-plants-history.svg") top 60px left -120px no-repeat, url("../img/why-plants-progress@2x.png") top 450px right -150px no-repeat, #e4e3e9;
-    background-size: 200px auto, 200px auto, 400px auto, 100% auto, 1100px auto, 980px auto, 850px auto, auto;
+  .join-page::after {
+    background-image: url("../img/thanks-bg-tablet@2x.png") !important;
+  }
+
+  html.webp .join-form {
+    background-image: url("../img/form-bg-tablet@1x.webp") !important;
+  }
+
+  html.webp .join-form::after {
+    background-image: url("../img/thanks-bg-tablet@1x.webp") !important;
   }
 }
 
@@ -2288,105 +2155,8 @@ html.webp .join-form__next-button::before {
     height: 23px;
   }
 
-  .inevitability-block {
-    padding-left: 3%;
-    padding-right: 3%;
-    background: url("../img/inevitability-top-bg@1x.png") top no-repeat, linear-gradient(to bottom, #ffb700 30%, #e4e3e9 30%);
-    background-size: 100% auto, auto;
-  }
-
-  .inevitability-block__title {
-    margin-bottom: 250px;
-  }
-
-  .inevitability-block__subtitle {
-    line-height: 24px;
-    font-size: 22px;
-  }
-
-  .inevitability-block__founder-image {
-    top: 700px;
-    right: 0;
-    width: 230px;
-  }
-
-  .inevitability-block__scientist {
-    top: 1450px;
-    width: 180px;
-    background-image: url("../img/inevitability-scientist-mobile@1x.png");
-  }
-
   .inevitability-block__ellips {
     display: none;
-  }
-
-  .inevitability-block__cloud_population {
-    top: 10%;
-    left: -50px;
-    width: 750px;
-    height: auto;
-  }
-
-  .inevitability-block__cloud_problems {
-    top: 20%;
-  }
-
-  .inevitability-block__cloud_technologies {
-    top: 61%;
-    right: 0;
-    left: auto;
-    width: 500px;
-  }
-
-  .inevitability-block__item_population {
-    line-height: 20px;
-    font-size: 18px;
-    margin-bottom: 270px;
-    width: 72%;
-  }
-
-  .inevitability-block__item_problems {
-    margin-bottom: 200px;
-    line-height: 20px;
-    font-size: 18px;
-  }
-
-  .inevitability-block__item_club {
-    margin-left: 0;
-    margin-right: auto;
-    max-width: 300px;
-    line-height: 20px;
-    font-size: 18px;
-    color: inherit;
-    font-weight: 600;
-    text-align: left;
-  }
-
-  .inevitability-block__item_technologies {
-    margin-right: 0;
-    margin-left: auto;
-    max-width: 400px;
-    line-height: 20px;
-    font-size: 18px;
-    text-align: right;
-  }
-
-  .inevitability-block__item_join-us {
-    max-width: 100%;
-    margin-top: 300px;
-    margin-right: auto;
-    line-height: 20px;
-    font-size: 18px;
-    text-align: inherit;
-  }
-
-  .inevitability-block__founder-name {
-    margin-top: 55px;
-    text-align: right;
-  }
-
-  .inevitability-block__founder {
-    text-align: right;
   }
 
   .join-page {
@@ -2522,43 +2292,6 @@ html.webp .join-form__next-button::before {
   }
 }
 
-@media (max-width: 768px) and (min-resolution: 1.5dppx), (max-width: 768px) and (min-resolution: 144dpi) {
-  .inevitability-block {
-    background: url("../img/inevitability-top-bg@2x.png") top no-repeat, linear-gradient(to bottom, #ffb700 30%, #e4e3e9 30%);
-    background-size: 100% auto, auto;
-  }
-
-  .inevitability-block__scientist {
-    background-image: url("../img/inevitability-scientist-mobile@2x.png");
-  }
-
-  .why-plant-based-food {
-    padding-bottom: 120px;
-    padding-left: 3%;
-    padding-right: 3%;
-    background: url("../img/why-plants-cow-mobile@2x.png") top 1080px left 300px no-repeat, url("../img/inevitability-bottom@2x.png") bottom 50px left 0 no-repeat, url("../img/why-plants-progress-mobile@2x.png") top 640px right -50px no-repeat, url("../img/why-plants-culture-mobile@2x.png") top 1270px right -100px no-repeat, url("../img/why-plants-health-mobile@2x.png") top 870px left -50px no-repeat, url("../img/why-plants-history-mobile@2x.png") top 100px left -170px no-repeat, url("../img/why-plants-bottom-bg@2x.png") bottom -50px right -100px no-repeat, #e4e3e9;
-    background-size: 300px auto, 100% auto, 600px auto, 640px auto, 577px auto, 800px auto, 239px auto, auto;
-  }
-}
-
-@media (min-resolution: 1.5dppx) and (max-width: 768px), (min-resolution: 144dpi) and (max-width: 768px) {
-  .join-page {
-    background-image: url("../img/form-bg-tablet@2x.png") !important;
-  }
-
-  .join-page::after {
-    background-image: url("../img/thanks-bg-tablet@2x.png") !important;
-  }
-
-  html.webp .join-form {
-    background-image: url("../img/form-bg-tablet@1x.webp") !important;
-  }
-
-  html.webp .join-form::after {
-    background-image: url("../img/thanks-bg-tablet@1x.webp") !important;
-  }
-}
-
 @media (max-width: 767px) {
   .join-page__back-link {
     display: flex;
@@ -2567,8 +2300,31 @@ html.webp .join-form__next-button::before {
 
 @media (max-width: 540px) and (min-resolution: 1.5dppx), (max-width: 540px) and (min-resolution: 144dpi) {
   .inevitability-block {
-    background: url("../img/inevitability-top-bg@2x.png") top no-repeat, linear-gradient(to bottom, #ffb700 30%, #e4e3e9 30%);
-    background-size: 100% auto, auto;
+    padding-top: 37.14286vw;
+    padding-bottom: 20vw;
+    padding-left: 5.71429vw;
+    padding-right: 5.71429vw;
+    background: url("../img/inevitability-top-bg@2x.png") top no-repeat, url("../img/inevitability-population-mobile.svg") top 48.57143vw left -20vw no-repeat, url("../img/inevitability-population-mobile-bg.svg") top 46.85714vw left -14.28571vw no-repeat, url("../img/inevitability-club-mobile.svg") top 258.85714vw left -25.14286vw no-repeat, url("../img/inevitability-club-mobile-bg.svg") top 257.14286vw left -20.57143vw no-repeat, url("../img/inevitability-problems-mobile.svg") top 148.57143vw right -20vw no-repeat, url("../img/inevitability-technologies-mobile.svg") top 348.57143vw right -20vw no-repeat, url("../img/inevitability-technologies-mobile-bg.svg") top 354.28571vw right -22.85714vw no-repeat, url("../img/block-bottom-mobile@2x.png") bottom 5.71429vw left 0 no-repeat, url("../img/inevitability-bottom-bg@2x.png") bottom no-repeat, linear-gradient(to bottom, #ffb700 30%, #e4e3e8 30%);
+    background-size: 100% auto, 134.28571vw auto, 134.28571vw auto, 114.28571vw auto, 117.14286vw auto, 117.14286vw auto, 114.28571vw auto, 114.28571vw auto, 100vw auto, 95% auto, auto;
+  }
+
+  .inevitability-block__scientist {
+    background: url("../img/inevitability-scientist.svg") top 2.28571vw left 2.28571vw no-repeat, url("../img/inevitability-scientist-bg@2x.png") no-repeat;
+    background-size: 54.28571vw auto;
+    top: 314.28571vw;
+    left: 0;
+    width: 57.14286vw;
+    height: 65.71429vw;
+  }
+
+  html.webp .inevitability-block {
+    background: url("../img/inevitability-top-bg@2x.webp") top no-repeat, url("../img/inevitability-population-mobile.svg") top 48.57143vw left -20vw no-repeat, url("../img/inevitability-population-mobile-bg.svg") top 46.85714vw left -14.28571vw no-repeat, url("../img/inevitability-club-mobile.svg") top 258.85714vw left -25.14286vw no-repeat, url("../img/inevitability-club-mobile-bg.svg") top 257.14286vw left -20.57143vw no-repeat, url("../img/inevitability-problems-mobile.svg") top 148.57143vw right -20vw no-repeat, url("../img/inevitability-technologies-mobile.svg") top 348.57143vw right -20vw no-repeat, url("../img/inevitability-technologies-mobile-bg.svg") top 354.28571vw right -22.85714vw no-repeat, url("../img/block-bottom-mobile@2x.webp") bottom 5.71429vw left 0 no-repeat, url("../img/inevitability-bottom-bg@2x.webp") bottom no-repeat, linear-gradient(to bottom, #ffb700 20%, #e4e3e8 20%);
+    background-size: 100% auto, 134.28571vw auto, 134.28571vw auto, 114.28571vw auto, 117.14286vw auto, 117.14286vw auto, 114.28571vw auto, 114.28571vw auto, 100vw auto, 95% auto, auto;
+  }
+
+  html.webp .inevitability-block__scientist {
+    background: url("../img/inevitability-scientist.svg") top 2.28571vw left 2.28571vw no-repeat, url("../img/inevitability-scientist-bg@2x.webp") no-repeat;
+    background-size: 54.28571vw auto;
   }
 
   .why-plant-based-food {
@@ -2636,90 +2392,108 @@ html.webp .join-form__next-button::before {
   }
 
   .inevitability-block {
-    padding-bottom: 70px;
-    padding-left: 20px;
-    padding-right: 20px;
-    background: url("../img/inevitability-top-bg@1x.png") top no-repeat, linear-gradient(to bottom, #ffb700 30%, #e4e3e9 30%);
-    background-size: 100% auto, 95% auto, auto;
+    padding-top: 37.14286vw;
+    padding-bottom: 20vw;
+    padding-left: 5.71429vw;
+    padding-right: 5.71429vw;
+    background: url("../img/inevitability-top-bg@1x.png") top no-repeat, url("../img/inevitability-population-mobile.svg") top 48.57143vw left -20vw no-repeat, url("../img/inevitability-population-mobile-bg.svg") top 46.85714vw left -14.28571vw no-repeat, url("../img/inevitability-club-mobile.svg") top 258.85714vw left -25.14286vw no-repeat, url("../img/inevitability-club-mobile-bg.svg") top 257.14286vw left -20.57143vw no-repeat, url("../img/inevitability-problems-mobile.svg") top 148.57143vw right -20vw no-repeat, url("../img/inevitability-technologies-mobile.svg") top 348.57143vw right -20vw no-repeat, url("../img/inevitability-technologies-mobile-bg.svg") top 354.28571vw right -22.85714vw no-repeat, url("../img/block-bottom-mobile@1x.png") bottom 5.71429vw left 0 no-repeat, url("../img/inevitability-bottom-bg@1x.png") bottom no-repeat, linear-gradient(to bottom, #ffb700 30%, #e4e3e8 30%);
+    background-size: 100% auto, 134.28571vw auto, 134.28571vw auto, 114.28571vw auto, 117.14286vw auto, 117.14286vw auto, 114.28571vw auto, 114.28571vw auto, 100vw auto, 95% auto, auto;
   }
 
   .inevitability-block__title {
-    margin-bottom: 75px;
-    padding-top: 130px;
+    margin-bottom: 21.42857vw;
   }
 
   .inevitability-block__subtitle {
-    line-height: 21px;
-    font-size: 16px;
+    margin-bottom: 4.28571vw;
+    font-size: 4.57143vw;
   }
 
   .inevitability-block__founder-image {
-    top: 470px;
-    right: -10px;
-    width: 160px;
+    top: 154.85714vw;
+    right: -2.85714vw;
+    width: 60vw;
     overflow-x: hidden;
   }
 
+  .inevitability-block__founder-caption {
+    display: none;
+  }
+
   .inevitability-block__scientist {
-    top: 1000px;
-    height: 220px;
-  }
-
-  .inevitability-block__cloud_population {
-    top: 160px;
-    width: 450px;
-  }
-
-  .inevitability-block__cloud_problems {
-    top: 370px;
-    width: 340px;
-  }
-
-  .inevitability-block__cloud_club {
-    top: 750px;
-    width: 330px;
-  }
-
-  .inevitability-block__cloud_technologies {
-    top: 1070px;
-    width: 330px;
+    background: url("../img/inevitability-scientist.svg") top 2.28571vw left 2.28571vw no-repeat, url("../img/inevitability-scientist-bg@1x.png") no-repeat;
+    background-size: 54.28571vw auto;
+    top: 314.28571vw;
+    left: 0;
+    width: 57.14286vw;
+    height: 65.71429vw;
   }
 
   .inevitability-block__item_population {
-    margin-bottom: 170px;
-    width: 250px;
-    line-height: 16px;
-    font-size: 14px;
+    margin-bottom: 60vw;
+    max-width: 80vw;
+    line-height: 1.6em;
+    font-size: 4vw;
+    letter-spacing: 0.02em;
   }
 
   .inevitability-block__item_problems {
-    margin-bottom: 130px;
-    width: 300px;
-    line-height: 16px;
-    font-size: 14px;
+    margin-bottom: 22.85714vw;
+    max-width: 85.71429vw;
+    text-indent: 0;
+    letter-spacing: 0.01em;
   }
 
   .inevitability-block__item_club {
-    margin-bottom: 220px;
-    line-height: 16px;
-    font-size: 14px;
+    margin-bottom: 61.14286vw;
+    margin-right: auto;
+    margin-left: 0;
+    max-width: 80vw;
+    color: inherit;
+    text-align: left;
+    font-weight: 600;
+    letter-spacing: 0.04em;
   }
 
   .inevitability-block__item_technologies {
-    margin-bottom: 110px;
-    width: 280px;
-    line-height: 16px;
-    font-size: 14px;
+    margin-bottom: 20.57143vw;
+    margin-right: 0;
+    margin-left: auto;
+    max-width: 80vw;
+    text-align: right;
+    letter-spacing: 0.01em;
   }
 
   .inevitability-block__item_join-us {
     margin-top: 0;
-    line-height: 16px;
-    font-size: 14px;
+    margin-right: auto;
+    width: 100%;
+    text-align: justify;
+    text-indent: 0;
+  }
+
+  .inevitability-block__item {
+    font-size: 4vw;
   }
 
   .inevitability-block__founder-name {
-    margin-top: 30px;
+    margin-top: 8.57143vw;
+    margin-bottom: 3.42857vw;
+    font-size: 4vw;
+  }
+
+  .inevitability-block__founder {
+    font-size: 2.85714vw;
+  }
+
+  html.webp .inevitability-block {
+    background: url("../img/inevitability-top-bg@1x.webp") top no-repeat, url("../img/inevitability-population-mobile.svg") top 48.57143vw left -20vw no-repeat, url("../img/inevitability-population-mobile-bg.svg") top 46.85714vw left -14.28571vw no-repeat, url("../img/inevitability-club-mobile.svg") top 258.85714vw left -25.14286vw no-repeat, url("../img/inevitability-club-mobile-bg.svg") top 257.14286vw left -20.57143vw no-repeat, url("../img/inevitability-problems-mobile.svg") top 148.57143vw right -20vw no-repeat, url("../img/inevitability-technologies-mobile.svg") top 348.57143vw right -20vw no-repeat, url("../img/inevitability-technologies-mobile-bg.svg") top 354.28571vw right -22.85714vw no-repeat, url("../img/block-bottom-mobile@1x.png") bottom 5.71429vw left 0 no-repeat, url("../img/inevitability-bottom-bg@1x.webp") bottom no-repeat, linear-gradient(to bottom, #ffb700 20%, #e4e3e8 20%);
+    background-size: 100% auto, 134.28571vw auto, 134.28571vw auto, 114.28571vw auto, 117.14286vw auto, 117.14286vw auto, 114.28571vw auto, 114.28571vw auto, 100vw auto, 95% auto, auto;
+  }
+
+  html.webp .inevitability-block__scientist {
+    background: url("../img/inevitability-scientist.svg") top 2.28571vw left 2.28571vw no-repeat, url("../img/inevitability-scientist-bg@1x.webp") no-repeat;
+    background-size: 54.28571vw auto;
   }
 
   .join-page__input-wrapper {
@@ -2862,9 +2636,9 @@ html.webp .join-form__next-button::before {
   }
 
   .our-ideas__third-wave {
+    box-sizing: border-box;
     position: relative;
     top: -48.57143vw;
-    box-sizing: border-box;
     height: 71.42857vw;
     padding-left: 6.28571vw;
     padding-top: 20vw;
@@ -2881,8 +2655,8 @@ html.webp .join-form__next-button::before {
   }
 
   .our-ideas__second-plant {
-    left: auto;
     right: 0;
+    left: auto;
     width: 27.14286vw;
     height: 100%;
   }
@@ -2893,9 +2667,9 @@ html.webp .join-form__next-button::before {
   }
 
   .our-ideas__centered-title {
+    max-width: 100%;
     margin-top: 0;
     margin-bottom: 6.85714vw;
-    max-width: 100%;
     font-size: 4.57143vw;
     line-height: 1.3em;
   }
@@ -2926,10 +2700,10 @@ html.webp .join-form__next-button::before {
   }
 
   .our-ideas__item-wrapper--lipids {
-    margin-top: 4vw;
-    padding: 18.28571vw 0 0 6.28571vw;
-    text-align: left;
     align-items: flex-start;
+    padding: 18.28571vw 0 0 6.28571vw;
+    margin-top: 4vw;
+    text-align: left;
   }
 
   .our-ideas__item-wrapper--lipids .our-ideas__item-description {
@@ -2950,9 +2724,9 @@ html.webp .join-form__next-button::before {
 
   .our-ideas__item-wrapper--lipids::after {
     top: auto;
-    left: auto;
-    bottom: 6.85714vw;
     right: 16vw;
+    bottom: 6.85714vw;
+    left: auto;
     width: 28.57143vw;
     height: 38.85714vw;
     background-image: url("../img/our-ideas-figure-2.svg");
@@ -2983,8 +2757,8 @@ html.webp .join-form__next-button::before {
   }
 
   .our-ideas__item-wrapper--green-shelf {
-    padding: 18.85714vw 6.28571vw 40vw 6.28571vw;
     align-items: flex-start;
+    padding: 18.85714vw 6.28571vw 40vw 6.28571vw;
     text-align: left;
   }
 
@@ -3003,11 +2777,11 @@ html.webp .join-form__next-button::before {
   }
 
   .our-ideas__item-wrapper--green-shelf::after {
+    top: 27.42857vw;
+    right: 6.28571vw;
+    left: auto;
     width: 33.14286vw;
     height: 38.85714vw;
-    top: 27.42857vw;
-    left: auto;
-    right: 6.28571vw;
     transform: none;
   }
 
@@ -3037,14 +2811,6 @@ html.webp .join-form__next-button::before {
 }
 
 @media (min-resolution: 1.5dppx), (min-resolution: 144dpi) {
-  .inevitability-block__scientist {
-    background-image: url("../img/inevitability-scientist@2x.png");
-  }
-
-  .inevitability-block__ellips {
-    background-image: url("../img/inevitability-ellips@2x.png");
-  }
-
   .join-page {
     background-image: url("../img/form-bg-desktop@2x.png");
   }

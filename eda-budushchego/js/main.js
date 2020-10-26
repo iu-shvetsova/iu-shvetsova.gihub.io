@@ -244,6 +244,31 @@ if (header) {
 
 /***/ }),
 
+/***/ "./src/blocks/modules/inevitability-block/inevitability-block.js":
+/*!***********************************************************************!*\
+  !*** ./src/blocks/modules/inevitability-block/inevitability-block.js ***!
+  \***********************************************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var rellax__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! rellax */ "./node_modules/rellax/rellax.js");
+/* harmony import */ var rellax__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(rellax__WEBPACK_IMPORTED_MODULE_0__);
+
+var inevitabilityBlock = document.querySelector(".inevitability-block");
+
+if (inevitabilityBlock) {
+  var parallaxImage_1 = inevitabilityBlock.querySelector(".inevitability-block__founder-image");
+  var parallaxImage_2 = inevitabilityBlock.querySelector(".inevitability-block__scientist");
+  var parallaxImage_3 = inevitabilityBlock.querySelector(".inevitability-block__ellips");
+  new rellax__WEBPACK_IMPORTED_MODULE_0___default.a(parallaxImage_1);
+  new rellax__WEBPACK_IMPORTED_MODULE_0___default.a(parallaxImage_2);
+  new rellax__WEBPACK_IMPORTED_MODULE_0___default.a(parallaxImage_3);
+}
+
+/***/ }),
+
 /***/ "./src/blocks/modules/join-form/join-form.js":
 /*!***************************************************!*\
   !*** ./src/blocks/modules/join-form/join-form.js ***!
@@ -516,7 +541,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_footer_footer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! %modules%/footer/footer */ "./src/blocks/modules/footer/footer.js");
 /* harmony import */ var _modules_footer_footer__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modules_footer_footer__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _modules_join_form_join_form__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! %modules%/join-form/join-form */ "./src/blocks/modules/join-form/join-form.js");
-/* harmony import */ var _modules_our_ideas_our_ideas__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! %modules%/our-ideas/our-ideas */ "./src/blocks/modules/our-ideas/our-ideas.js");
+/* harmony import */ var _modules_inevitability_block_inevitability_block__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! %modules%/inevitability-block/inevitability-block */ "./src/blocks/modules/inevitability-block/inevitability-block.js");
+/* harmony import */ var _modules_our_ideas_our_ideas__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! %modules%/our-ideas/our-ideas */ "./src/blocks/modules/our-ideas/our-ideas.js");
+
 
 
 
