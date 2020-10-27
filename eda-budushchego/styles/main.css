@@ -462,6 +462,7 @@ ol {
 
 main {
   counter-reset: section;
+  overflow: hidden;
 }
 
 .visually-hidden {
@@ -1471,28 +1472,43 @@ html.webp .join-form__next-button::before {
   background-image: linear-gradient(to bottom, #6b1b6a 34.72222vw, #184382 34.72222vw);
 }
 
-.our-ideas::before {
+.our-ideas::before,
+.our-ideas::after {
   content: "";
   position: absolute;
+  background-repeat: no-repeat;
+}
+
+.our-ideas::before {
   z-index: 3;
   bottom: 0;
   left: 0;
   width: 35.76389vw;
   height: 35.06944vw;
   background-image: url("../img/our-ideas-plant-4.svg");
-  background-repeat: no-repeat;
   background-size: contain;
+}
+
+.our-ideas::after {
+  z-index: 1;
+  top: -6.38889vw;
+  width: 100%;
+  height: 33.33333vw;
+  background-image: url("../img/block-bottom@1x.png"), url("../img/our-ideas-wave-0.svg");
+  background-size: 100% auto, 47.22222vw auto;
+  background-position: top left, top 1.38889vw right -7.63889vw;
 }
 
 .our-ideas__top-container {
   position: relative;
-  padding-top: 10.13889vw;
+  padding-top: 4.44444vw;
 }
 
 .our-ideas__first-wave,
 .our-ideas__second-wave,
 .our-ideas__third-wave,
 .our-ideas__third-plant {
+  z-index: 2;
   background-repeat: no-repeat;
 }
 
@@ -1535,7 +1551,7 @@ html.webp .join-form__next-button::before {
   display: flex;
   justify-content: flex-end;
   position: absolute;
-  top: 18.33333vw;
+  top: 12.63889vw;
   right: 0;
   width: 56.25vw;
   height: 45.83333vw;
@@ -1580,7 +1596,7 @@ html.webp .join-form__next-button::before {
 
 .our-ideas__third-wave {
   position: absolute;
-  top: 38.19444vw;
+  top: 32.5vw;
   padding-left: 8.88889vw;
   padding-top: 6.66667vw;
   color: #000000;
@@ -1819,6 +1835,305 @@ html.webp .join-form__next-button::before {
   background-size: contain;
 }
 
+html.webp .our-ideas::after {
+  background-image: url("../img/block-bottom@1x.webp"), url("../img/our-ideas-wave-0.svg");
+}
+
+.our-product {
+  position: relative;
+  padding-top: 15.97222vw;
+  padding-bottom: 6.25vw;
+  color: #ffffff;
+  background-color: #6c1b6a;
+  background-image: url("../img/our-product-dots.svg"), url("../img/our-product-bg-wave.png");
+  background-repeat: no-repeat;
+  background-size: 67.98611vw auto, 100% auto;
+  background-position: bottom 54.16667vw left, top 74.44444vw left;
+}
+
+.our-product::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  bottom: -4.16667vw;
+  width: 26.11111vw;
+  height: 45vw;
+  transform: scaleX(-1);
+  background-image: url("../img/our-ideas-plant-0.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.our-product__title {
+  margin-bottom: 1.38889vw;
+  margin-left: 3.88889vw;
+  max-width: 41.66667vw;
+}
+
+.our-product__waves-wrapper {
+  position: relative;
+}
+
+.our-product__first-wave,
+.our-product__second-wave {
+  box-sizing: border-box;
+  color: #000000;
+}
+
+.our-product__first-wave::before,
+.our-product__second-wave::before {
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+}
+
+.our-product__first-wave {
+  padding-top: 9.72222vw;
+  padding-left: 3.88889vw;
+  width: 52.77778vw;
+  height: 47.56944vw;
+  font-size: 1.66667vw;
+  line-height: 1.5em;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.our-product__first-wave::before {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/our-product-wave-1.svg"), url("../img/our-product-wave-1-faded.svg");
+  background-size: 52.77778vw auto;
+  background-position: left -2.77778vw top, left top 1.11111vw;
+}
+
+.our-product__second-wave {
+  position: absolute;
+  top: 4.44444vw;
+  right: 0;
+  padding-top: 14.23611vw;
+  padding-right: 7.08333vw;
+  text-align: right;
+  font-size: 2.08333vw;
+  line-height: 1.6em;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.our-product__second-wave::before {
+  z-index: 2;
+  right: 0;
+  bottom: -13.88889vw;
+  width: 56.59722vw;
+  height: 63.54167vw;
+  background-image: url("../img/our-product-wave-2.svg"), url("../img/our-product-wave-2-faded.svg");
+  background-size: 59.72222vw auto;
+  background-position: top left, top 1.66667vw left 1.11111vw;
+}
+
+.our-product__second-wave::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: -22.63889vw;
+  right: 0;
+  width: 43.75vw;
+  height: 46.94444vw;
+  background-image: url("../img/our-product-figure-1@1x.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.our-product__first-thesis-paragraph,
+.our-product__second-thesis {
+  position: relative;
+  z-index: 3;
+  margin: 0;
+}
+
+.our-product__first-thesis-paragraph {
+  max-width: 36.80556vw;
+  margin-bottom: 1.66667vw;
+}
+
+.our-product__first-thesis-paragraph:last-child {
+  margin-bottom: 0;
+}
+
+.our-product__second-thesis {
+  max-width: 43.05556vw;
+}
+
+.our-product__goods-wrapper {
+  padding-top: 23.61111vw;
+}
+
+.our-product__goods-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: #000000;
+}
+
+.our-product__good-wrapper {
+  position: relative;
+  margin-bottom: 22.91667vw;
+}
+
+.our-product__good-wrapper .our-product__good-preview {
+  height: auto;
+}
+
+.our-product__good-wrapper--cutlets,
+.our-product__good-wrapper--hiburger {
+  padding-left: 17.36111vw;
+  left: -2.22222vw;
+}
+
+.our-product__good-wrapper--cutlets .our-product__good-image-wrapper {
+  top: 100%;
+  right: calc(100% - 9.72222vw);
+  transform: translateY(-46%);
+}
+
+.our-product__good-wrapper--cutlets .our-product__good-image-wrapper::before {
+  top: -1.11111vw;
+  left: 52%;
+  width: 7.70833vw;
+  height: 7.08333vw;
+  background-image: url("../img/our-product-non-gmo.svg");
+  animation: rotate-1 4.2s alternate ease-in-out infinite;
+}
+
+.our-product__good-wrapper--cutlets .our-product__good-image-wrapper::after {
+  top: 2.77778vw;
+  right: 0.55556vw;
+  width: 10.625vw;
+  height: 9.44444vw;
+  background-image: url("../img/our-product-vegan.svg");
+  animation: rotate-2 2.2s alternate-reverse linear infinite;
+}
+
+.our-product__good-wrapper--cutlets .our-product__good-preview {
+  width: 39.16667vw;
+}
+
+.our-product__good-wrapper--hiburger .our-product__good-image-wrapper {
+  top: 50%;
+  right: calc(100% - 12.5vw);
+  transform: translateY(-50%);
+}
+
+.our-product__good-wrapper--hiburger .our-product__good-image-wrapper::before {
+  top: 5.55556vw;
+  right: 0;
+  width: 10.20833vw;
+  height: 8.95833vw;
+  background-image: url("../img/our-product-omega.svg");
+  animation: rotate-1 3.2s alternate linear infinite;
+}
+
+.our-product__good-wrapper--hiburger .our-product__good-image-wrapper::after {
+  bottom: 7.22222vw;
+  left: 1.11111vw;
+  width: 12.70833vw;
+  height: 11.25vw;
+  background-image: url("../img/our-product-fiber.svg");
+  animation: rotate-2 2.2s alternate linear infinite;
+}
+
+.our-product__good-wrapper--hiburger .our-product__good-preview {
+  width: 40.20833vw;
+}
+
+.our-product__good-wrapper--higgets {
+  padding-right: 17.36111vw;
+}
+
+.our-product__good-wrapper--higgets .our-product__good-image-wrapper {
+  top: 50%;
+  left: calc(100% - 14.58333vw);
+  transform: translateY(-60%);
+}
+
+.our-product__good-wrapper--higgets .our-product__good-image-wrapper::before {
+  top: 5.55556vw;
+  right: 5.55556vw;
+  width: 12.15278vw;
+  height: 10.83333vw;
+  background-image: url("../img/our-product-b12.svg");
+  animation: rotate-1 4.2s alternate linear infinite;
+}
+
+.our-product__good-wrapper--higgets .our-product__good-preview {
+  width: 44.86111vw;
+}
+
+.our-product__good-name-wrapper {
+  display: grid;
+  margin: 0;
+}
+
+.our-product__good-type {
+  font-size: 3.05556vw;
+  line-height: 1em;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+.our-product__good-addition {
+  font-size: 2.63889vw;
+  line-height: 1.1em;
+  font-weight: 600;
+  text-transform: lowercase;
+}
+
+.our-product__good-image-wrapper {
+  position: absolute;
+}
+
+.our-product__good-image-wrapper::before,
+.our-product__good-image-wrapper::after {
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+html.webp .our-product {
+  background-image: url("../img/our-product-dots.svg"), url("../img/our-product-bg-wave.webp");
+}
+
+html.webp .our-product__second-wave::after {
+  background-image: url("../img/our-product-figure-1@1x.webp");
+}
+
+@keyframes rotate-1 {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(10deg);
+  }
+}
+
+@keyframes rotate-2 {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(4deg);
+  }
+}
+
 @media (min-width: 541px) and (min-resolution: 1.5dppx), (min-width: 541px) and (min-resolution: 144dpi) {
   .inevitability-block__scientist {
     background: url("../img/inevitability-scientist.svg") no-repeat, url("../img/inevitability-scientist-bg@2x.png") top 1.38889vw left 1.38889vw no-repeat;
@@ -1828,6 +2143,10 @@ html.webp .join-form__next-button::before {
   html.webp .inevitability-block__scientist {
     background: url("../img/inevitability-scientist.svg") no-repeat, url("../img/inevitability-scientist-bg@2x.webp") top 1.38889vw left 1.38889vw no-repeat;
     background-size: 27.77778vw auto;
+  }
+
+  html.webp .our-ideas::after {
+    background-image: url("../img/block-bottom@2x.webp"), url("../img/our-ideas-wave-0.svg");
   }
 }
 
@@ -2334,6 +2653,14 @@ html.webp .join-form__next-button::before {
     background: url("../img/why-plants-cow-mobile@2x.png") top 1080px left 200px no-repeat, url("../img/inevitability-bottom@2x.png") bottom 50px left 0 no-repeat, url("../img/why-plants-progress-mobile@2x.png") top 640px right -50px no-repeat, url("../img/why-plants-culture-mobile@2x.png") top 1300px right -100px no-repeat, url("../img/why-plants-health-mobile@2x.png") top 950px left -50px no-repeat, url("../img/why-plants-history-mobile@2x.png") top 245px left -160px no-repeat, url("../img/why-plants-bottom-bg@2x.png") bottom -50px right -100px no-repeat, #e4e3e9;
     background-size: 300px auto, 100% auto, 400px auto, 440px auto, 377px auto, 524px auto, 239px auto, auto;
   }
+
+  .our-ideas::after {
+    background-image: url("../img/block-bottom-mobile@2x.png");
+  }
+
+  html.webp .our-ideas::after {
+    background-image: url("../img/block-bottom-mobile@2x.webp");
+  }
 }
 
 @media (max-width: 540px) {
@@ -2584,6 +2911,13 @@ html.webp .join-form__next-button::before {
     content: none;
   }
 
+  .our-ideas::after {
+    top: -4.57143vw;
+    background-image: url("../img/block-bottom-mobile@1x.png");
+    background-size: 100% auto;
+    background-position: top left;
+  }
+
   .our-ideas__top-container {
     position: absolute;
     padding-top: 0;
@@ -2639,11 +2973,11 @@ html.webp .join-form__next-button::before {
     box-sizing: border-box;
     position: relative;
     top: -48.57143vw;
-    height: 71.42857vw;
+    height: 77.14286vw;
     padding-left: 6.28571vw;
     padding-top: 20vw;
     background-image: url("../img/our-ideas-wave-3.svg"), url("../img/our-ideas-wave-3-faded.svg");
-    background-size: 335px auto;
+    background-size: 95.71429vw auto;
     background-position: top left -14.28571vw, top 4.57143vw left -11.42857vw;
   }
 
@@ -2808,6 +3142,202 @@ html.webp .join-form__next-button::before {
   .our-ideas__third-plant {
     display: none;
   }
+
+  html.webp .our-ideas::after {
+    background-image: url("../img/block-bottom-mobile@1x.webp");
+  }
+
+  .our-product {
+    padding-top: 8vw;
+    padding-bottom: 10.28571vw;
+    background-image: url("../img/our-product-dots.svg"), url("../img/our-product-bg-wave-mobile.png");
+    background-size: 100% auto;
+    background-position: bottom 96vw left, bottom 6.85714vw left;
+  }
+
+  .our-product::after {
+    bottom: -27.42857vw;
+    width: 38.28571vw;
+    height: 76vw;
+  }
+
+  .our-product__title {
+    margin-left: 6.28571vw;
+    margin-bottom: 1.71429vw;
+    max-width: 68.57143vw;
+  }
+
+  .our-product__first-wave {
+    padding-top: 18.28571vw;
+    padding-left: 6.28571vw;
+    width: 100%;
+    height: 105.42857vw;
+    font-size: 4vw;
+    letter-spacing: 0;
+  }
+
+  .our-product__first-wave::before {
+    background-image: url("../img/our-product-wave-1-mobile.svg");
+    background-size: 116.28571vw auto;
+    background-position: top right;
+  }
+
+  .our-product__second-wave {
+    position: relative;
+    top: -14.28571vw;
+    padding: 27.42857vw 6.28571vw 22.85714vw;
+    font-size: 4vw;
+    font-weight: 500;
+    letter-spacing: 0;
+  }
+
+  .our-product__second-wave::before {
+    top: 0;
+    bottom: auto;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/our-product-wave-2-mobile.svg"), url("../img/our-product-wave-2-mobile-faded.svg");
+    background-size: 114.85714vw auto;
+    background-position: top 4.57143vw right -13.71429vw, top 8vw right -18.28571vw;
+  }
+
+  .our-product__second-wave::after {
+    top: -32vw;
+    right: -11.42857vw;
+    width: 70.28571vw;
+    height: 81.71429vw;
+  }
+
+  .our-product__first-thesis-paragraph {
+    max-width: 85.71429vw;
+  }
+
+  .our-product__first-thesis-paragraph:last-child {
+    max-width: 57.14286vw;
+  }
+
+  .our-product__second-thesis {
+    max-width: 100%;
+  }
+
+  .our-product__second-thesis-bottom {
+    display: inline-block;
+    max-width: 68.57143vw;
+  }
+
+  .our-product__goods-wrapper {
+    padding-top: 16vw;
+  }
+
+  .our-product__goods-list {
+    align-items: stretch;
+  }
+
+  .our-product__good-wrapper {
+    margin-bottom: 53.71429vw;
+  }
+
+  .our-product__good-wrapper .our-product__good-name-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .our-product__good-wrapper--cutlets,
+  .our-product__good-wrapper--hiburger {
+    left: 0;
+    padding-left: 0;
+    padding-right: 4.57143vw;
+  }
+
+  .our-product__good-wrapper--cutlets .our-product__good-image-wrapper {
+    top: 50%;
+    right: auto;
+    left: 0;
+    transform: translateY(-50%);
+  }
+
+  .our-product__good-wrapper--cutlets .our-product__good-image-wrapper::before {
+    top: 6.85714vw;
+    width: 13.14286vw;
+    height: 12vw;
+  }
+
+  .our-product__good-wrapper--cutlets .our-product__good-image-wrapper::after {
+    top: 16vw;
+    right: -2.28571vw;
+    width: 18.28571vw;
+    height: 16.28571vw;
+  }
+
+  .our-product__good-wrapper--cutlets .our-product__good-preview {
+    width: 56.57143vw;
+  }
+
+  .our-product__good-wrapper--hiburger .our-product__good-image-wrapper {
+    right: auto;
+    left: 0;
+  }
+
+  .our-product__good-wrapper--hiburger .our-product__good-image-wrapper::before {
+    top: auto;
+    right: auto;
+    bottom: 6.85714vw;
+    left: 2.28571vw;
+    width: 17.42857vw;
+    height: 15.42857vw;
+  }
+
+  .our-product__good-wrapper--hiburger .our-product__good-image-wrapper::after {
+    top: 2.28571vw;
+    right: 1.71429vw;
+    bottom: auto;
+    left: auto;
+    width: 21.71429vw;
+    height: 19.14286vw;
+  }
+
+  .our-product__good-wrapper--hiburger .our-product__good-preview {
+    width: 59.42857vw;
+  }
+
+  .our-product__good-wrapper--higgets {
+    padding-right: 0;
+    padding-left: 4.57143vw;
+  }
+
+  .our-product__good-wrapper--higgets .our-product__good-name-wrapper {
+    align-items: flex-start;
+  }
+
+  .our-product__good-wrapper--higgets .our-product__good-image-wrapper {
+    right: 0;
+    left: auto;
+    transform: translateY(-50%);
+  }
+
+  .our-product__good-wrapper--higgets .our-product__good-image-wrapper::before {
+    top: 0;
+    right: 2.28571vw;
+    width: 20.85714vw;
+    height: 19.71429vw;
+  }
+
+  .our-product__good-wrapper--higgets .our-product__good-preview {
+    width: 64vw;
+  }
+
+  .our-product__good-type {
+    font-size: 5.42857vw;
+  }
+
+  .our-product__good-addition {
+    font-size: 4.57143vw;
+  }
+
+  html.webp .our-product {
+    background-image: url("../img/our-product-dots.svg"), url("../img/our-product-bg-wave-mobile.webp");
+  }
 }
 
 @media (min-resolution: 1.5dppx), (min-resolution: 144dpi) {
@@ -2837,6 +3367,18 @@ html.webp .join-form__next-button::before {
 
   .why-plant-based-food__circle {
     background-image: url("../img/why-plants-circle@2x.png");
+  }
+
+  .our-ideas::after {
+    background-image: url("../img/block-bottom@2x.png"), url("../img/our-ideas-wave-0.svg");
+  }
+
+  .our-product__second-wave::after {
+    background-image: url("../img/our-product-figure-1@2x.png");
+  }
+
+  html.webp .our-product__second-wave::after {
+    background-image: url("../img/our-product-figure-1@2x.webp");
   }
 }
 /*# sourceMappingURL=maps/main.css.map */
