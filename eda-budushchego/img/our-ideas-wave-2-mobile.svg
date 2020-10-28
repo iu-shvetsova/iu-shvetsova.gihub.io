@@ -1,17 +1,1 @@
-<svg 
- xmlns="http://www.w3.org/2000/svg"
- xmlns:xlink="http://www.w3.org/1999/xlink"
- width="391px" height="272px">
-<defs>
-<filter id="Filter_0">
-    <feFlood flood-color="rgb(179, 215, 202)" flood-opacity="1" result="floodOut" />
-    <feComposite operator="atop" in="floodOut" in2="SourceGraphic" result="compOut" />
-    <feBlend mode="normal" in="compOut" in2="SourceGraphic" />
-</filter>
-
-</defs>
-<g filter="url(#Filter_0)">
-<path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
- d="M326.804,2.612 C256.321,-10.097 267.473,34.858 139.674,26.697 C-47.627,14.736 -28.844,187.359 95.968,246.845 C163.935,279.238 221.595,271.446 266.509,270.037 C324.484,268.219 379.565,229.392 385.316,177.982 C394.114,99.331 400.430,15.888 326.804,2.612 Z"/>
-</g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="391" height="272"><defs><filter id="Filter_0"><feFlood flood-color="#B3D7CA" flood-opacity="1" result="floodOut"/><feComposite operator="atop" in="floodOut" in2="SourceGraphic" result="compOut"/><feBlend in="compOut" in2="SourceGraphic"/></filter></defs><g filter="url(#Filter_0)"><path fill-rule="evenodd" fill="#FFF" d="M326.804 2.612c-70.483-12.709-59.331 32.246-187.13 24.085C-47.627 14.736-28.844 187.359 95.968 246.845c67.967 32.393 125.627 24.601 170.541 23.192 57.975-1.818 113.056-40.645 118.807-92.055 8.798-78.651 15.114-162.094-58.512-175.37z"/></g></svg>

@@ -23,7 +23,7 @@
     <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
     <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/main.min.css">
   </head>
   <body>
     <header class="header"><a class="header__instagram-link" href="#"><span class="visually-hidden">Мы в инстаграме</span></a>
@@ -35,17 +35,15 @@
           <button class="header__mobile-close-button" type="button" aria-label="Закрыть меню"></button>
           <nav class="header__nav-wrapper">
             <ul class="header__nav-list">
-              <li class="header__nav-item"><a class="header__nav-link" href="#">Неотвратимость</a></li>
-              <li class="header__nav-item"><a class="header__nav-link" href="#">Почему растительная еда?</a></li>
-              <li class="header__nav-item"><a class="header__nav-link" href="#">Кому это может быть интересно?</a></li>
-              <li class="header__nav-item"><a class="header__nav-link" href="#">Что у нас уже получилось?</a></li>
-              <li class="header__nav-item"><a class="header__nav-link" href="#">Идеи, приближающие нас к мечте</a></li>
+              <li class="header__nav-item"><a class="header__nav-link" href="/#inevitability">Неотвратимость</a></li>
+              <li class="header__nav-item"><a class="header__nav-link" href="/#why-plant-based-food">Почему растительная еда?</a></li>
+              <li class="header__nav-item"><a class="header__nav-link" href="/#our-themes">Кому это может быть интересно?</a></li>
+              <li class="header__nav-item"><a class="header__nav-link" href="/#our-product">Что у нас уже получилось?</a></li>
+              <li class="header__nav-item"><a class="header__nav-link" href="/#our-ideas">Идеи, приближающие нас к мечте</a></li>
             </ul>
           </nav>
           <div class="header__contacts-wrapper">
             <ul class="header__contacts-list">
-              <li class="header__contacts-item header__contacts-item--separate"><a class="header__text-contact" href="mailto:regregawef.@efewf.ru">regregawef.@efewf.ru</a></li>
-              <li class="header__contacts-item header__contacts-item--separate"><a class="header__text-contact" href="mailto:+79658494874">+7 965 849 48 74</a></li>
               <li class="header__contacts-item"><a class="header__icon-contact header__icon-contact--fb" href="#"><span class="visually-hidden">Мы в фейсбуке</span></a></li>
               <li class="header__contacts-item"><a class="header__icon-contact header__icon-contact--vk" href="#"><span class="visually-hidden">Мы во вконтакте</span></a></li>
               <li class="header__contacts-item"><a class="header__icon-contact header__icon-contact--tg" href="#"><span class="visually-hidden">Мы в телеграме</span></a></li>
@@ -55,15 +53,17 @@
       </div>
     </header>
     <main>
-      <picture class="intro-block">
-        <source type="image/webp" media="(max-width: 540px)" srcset="img/main-bg-tablet@1x.webp 1x, img/main-bg-tablet@2x.webp 2x">
-        <source type="image/png" media="(max-width: 540px)" srcset="img/main-bg-tablet@1x.png 1x, img/main-bg-tablet@2x.png 2x">
-        <source type="image/webp" srcset="img/main-bg-desktop@1x.webp 1x, img/main-bg-desktop@2x.webp 2x"><img src="img/main-bg-desktop@1x.png" srcset="img/main-bg-desktop@2x.png 2x" alt="Клуб &quot;Еда будущего&quot;">
-      </picture>
-      <section class="inevitability-block block-container">
+      <section class="intro-block">
+        <picture>
+          <source type="image/webp" media="(max-width: 540px)" srcset="img/main-bg-tablet@1x.webp 1x, img/main-bg-tablet@2x.webp 2x">
+          <source type="image/png" media="(max-width: 540px)" srcset="img/main-bg-tablet@1x.png 1x, img/main-bg-tablet@2x.png 2x">
+          <source type="image/webp" srcset="img/main-bg-desktop@1x.webp 1x, img/main-bg-desktop@2x.webp 2x"><img src="img/main-bg-desktop@1x.png" srcset="img/main-bg-desktop@2x.png 2x" alt="Клуб &quot;Еда будущего&quot;">
+        </picture>
+      </section>
+      <section class="inevitability-block block-container" id="inevitability">
         <picture>
           <source type="image/webp" media="(max-width: 768px)" srcset="img/inevitability-founder@1x.webp 1x, img/inevitability-founder@2x.webp 2x">
-          <source type="image/png" media="(max-width: 768px)" srcset="img/inevitability-founder@1x.png 1x, img/inevitability-founder@2x.png 2x">
+          <source type="image/png" media="(max-width: 768px)" srcset="inevitability-founder@1x.png 1x, img/inevitability-founder@2x.png 2x">
           <source type="image/webp" srcset="img/inevitability-founder@1x.webp 1x, img/inevitability-founder@2x.webp 2x"><img class="inevitability-block__cloud inevitability-block__founder-image" src="img/inevitability-founder@1x.png" srcset="img/inevitability-founder@2x.png 2x" alt="Сергей Иванов, со-основатель &quot;Еда Будущего&quot;" data-rellax-speed="-1" data-rellax-percentage="0.7">
         </picture>
         <div class="inevitability-block__founder-caption">
@@ -85,7 +85,48 @@
           </li>
         </ul>
       </section>
-      <section class="our-product block-container">
+      <section class="why-plant-based-food block-container" id="why-plant-based-food">
+        <div class="why-plant-based-food__circle" data-rellax-speed="3" data-rellax-percentage="0.6"></div>
+        <div class="why-plant-based-food__leaf why-plant-based-food__leaf--top" data-rellax-speed="2" data-rellax-percentage="0.4"></div>
+        <div class="why-plant-based-food__leaf why-plant-based-food__leaf--bottom" data-rellax-speed="2" data-rellax-percentage="0.4"></div>
+        <h2 class="why-plant-based-food__title block-container__title">Почему растительная еда?</h2>
+        <ul class="why-plant-based-food__list">
+          <li class="why-plant-based-food__item why-plant-based-food__item--history">Традиционные мясо и&nbsp;молоко уже давно не&nbsp;те&nbsp;здоровые и&nbsp;органические продукты, которыми питались наши предки. Домашнее животное тогда решало проблему сохранения необходимых для выживания человека аминокислот, по&nbsp;факту было для человека бесплатным &laquo;холодильником&raquo;, в&nbsp;котором не&nbsp;портились полезные вещества. При этом человек находил применение и&nbsp;поочным продуктам животных&nbsp;&mdash; использовал шкуру для утепления, кости для различных орудий, а&nbsp;отходы жизнедеятельности использовал для их&nbsp;корма.</li>
+          <li class="why-plant-based-food__item why-plant-based-food__item--progress">С&nbsp;приходом научно-технического прогресса, сельскохозяйственное животное (курица, свинья, крупный рогатый скот) превратилось в&nbsp;промышленный биологический объект, и&nbsp;сегодняшнее мясо и&nbsp;молоко при всем желании нельзя назвать традиционными продуктами, котороые дают человеку все необходимые для здоровья компоненты.</li>
+          <li class="why-plant-based-food__item why-plant-based-food__item--health">Правильнее называть современную курицу, свинину и&nbsp;говядину промышленными эквивалентами белков и&nbsp;жиров животного происхождения, выращенных с&nbsp;использованием гормонов роста и&nbsp;антибиотиков, влияние которых на&nbsp;здоровье человека не&nbsp;до&nbsp;конца исследовано, но&nbsp;не&nbsp;имеет ничего общего с&nbsp;пользой.</li>
+          <li class="why-plant-based-food__item why-plant-based-food__item--culture">Человечество потеряло способность к целостному и&nbsp;критичному восприятию культуры питания. Мы&nbsp;видим свою тарелку, но&nbsp;в&nbsp;подавляющем большинстве не&nbsp;думаем, как продукт попадает к&nbsp;нам на&nbsp;стол.</li>
+          <li class="why-plant-based-food__item why-plant-based-food__item--answer">Растительная еда&nbsp;&mdash; это естественный ответ зашедшему в&nbsp;тупик промышленному животноводству. Здоровая альтернатива белков и&nbsp;жиров животного происхождения.</li>
+        </ul>
+      </section>
+      <section class="our-themes block-container" id="our-themes">
+        <h2 class="our-themes__title block-container__title">Кому это может быть интересно?</h2>
+        <p class="our-themes__top-description">
+           Мы&nbsp;приглашаем всех, кому интересна ЕДА. Вкусная, полезная, здоровая и&nbsp;доступная.</p>
+        <div class="our-themes__first-wave"> 
+          <p class="our-themes__subtitle">Если вы&nbsp;задаетесь такими вопросами:</p>
+          <ul class="our-themes__list">
+            <li class="our-themes__item">Какой будет еда будущего?</li>
+            <li class="our-themes__item">Как накормить человечество, сохранив экологию планеты?</li>
+            <li class="our-themes__item">Как еду будущего сделать полезной и&nbsp;доступной?</li>
+          </ul>
+          <div class="our-themes__top-leaves" data-rellax-speed="-1" data-rellax-percentage="0.7"></div>
+        </div>
+        <div class="our-themes__bottom-wrapper">
+          <div class="our-themes__second-wave"> 
+            <p class="our-themes__subtitle">Для нас важны следующие темы:</p>
+            <ul class="our-themes__list">
+              <li class="our-themes__item">Экология;</li>
+              <li class="our-themes__item">Нутрициология;</li>
+              <li class="our-themes__item">Бизнес-модели в&nbsp;создании еды;</li>
+              <li class="our-themes__item">Рынки сырья;</li>
+              <li class="our-themes__item">Изменение социальной среды.</li>
+            </ul>
+            <div class="our-themes__bottom-leaves" data-rellax-speed="-1" data-rellax-percentage="0.7"></div>
+          </div>
+          <p class="our-themes__bottom-description">Если вы&nbsp;интересуетесь такими темами и&nbsp;если вы&nbsp;готовы участвовать в&nbsp;создании Еды Будущего&nbsp;&mdash; вступайте в&nbsp;клуб, будем менять будущее вместе!</p>
+        </div>
+      </section>
+      <section class="our-product block-container" id="our-product">
         <h2 class="our-product__title block-container__title">Что у&nbsp;нас уже получилось?</h2>
         <div class="our-product__waves-wrapper">
           <div class="our-product__first-wave">
@@ -132,7 +173,7 @@
           </ul>
         </div>
       </section>
-      <section class="our-ideas block-container">
+      <section class="our-ideas block-container" id="our-ideas">
         <div class="our-ideas__top-container">
           <div class="our-ideas__first-wave">
             <h2 class="our-ideas__title block-container__title">Идеи, которые приближают нас к&nbsp;мечте.</h2>
@@ -180,7 +221,7 @@
       </section>
     </main>
     <footer class="footer"><a class="footer__logo-link" href="/"> <span class="visually-hidden">Еда будущего</span><img class="footer__logo-image" src="img/footer-logo.svg" width="198"></a>
-      <div class="footer__links-wrapper"><a class="footer__email-link" href="mailto:regregawef.@efewf.ru">regregawef.@efewf.ru</a>
+      <div class="footer__links-wrapper">
         <ul class="footer__social-list">
           <li class="footer__social-item"><a class="footer__social-link footer__social-link--fb" href="#"><span class="visually-hidden">Мы в фейсбуке</span></a></li>
           <li class="footer__social-item"><a class="footer__social-link footer__social-link--vk" href="#"><span class="visually-hidden">Мы во вконтакте</span></a></li>
@@ -189,7 +230,7 @@
         </ul>
       </div>
     </footer>
-    <script src="js/main.js"></script>
-    <script src="js/vendor.js"></script>
+    <script src="js/main.min.js"></script>
+    <script src="js/vendor.min.js"></script>
   </body>
 </html>
