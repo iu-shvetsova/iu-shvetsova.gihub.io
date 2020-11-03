@@ -1,1 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="460" height="641"><defs><filter id="Filter_0"><feFlood flood-color="#6F1B6C" flood-opacity="1" result="floodOut"/><feComposite operator="atop" in="floodOut" in2="SourceGraphic" result="compOut"/><feBlend in="compOut" in2="SourceGraphic"/></filter></defs><g filter="url(#Filter_0)"><path fill-rule="evenodd" fill="#4E202A" d="M189.477 32.04S-102.858 332.539 38.916 432.866c49.991 35.376 114.363-51.278 187.666 8.384 56.869 46.285-62.342 191.64 48.879 198.361C617.609 660.288 378.964.286 378.964.286s-39.833 6.748-82.931 23.981c-30.58 12.228-106.556 7.773-106.556 7.773z"/></g></svg>
+<svg 
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="460px" height="641px">
+<defs>
+<filter id="Filter_0">
+    <feFlood flood-color="rgb(111, 27, 108)" flood-opacity="1" result="floodOut" />
+    <feComposite operator="atop" in="floodOut" in2="SourceGraphic" result="compOut" />
+    <feBlend mode="normal" in="compOut" in2="SourceGraphic" />
+</filter>
+
+</defs>
+<g filter="url(#Filter_0)">
+<path fill-rule="evenodd" fill="rgb(78, 32, 42)" d="M189.477,32.040 C189.477,32.040 -102.858,332.539 38.916,432.866 C88.907,468.242 153.279,381.588 226.582,441.250 C283.451,487.535 164.240,632.890 275.461,639.611 C617.609,660.288 378.964,0.286 378.964,0.286 C378.964,0.286 339.131,7.034 296.033,24.267 C265.453,36.495 189.477,32.040 189.477,32.040 Z"/>
+</g>
+</svg>
