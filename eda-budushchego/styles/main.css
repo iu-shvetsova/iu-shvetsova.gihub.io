@@ -624,7 +624,7 @@ main {
   top: 0;
   right: 0;
   width: 82%;
-  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   overflow: scroll;
   transform: translateX(100vw);
   transition: transform 1s ease-out;
@@ -1485,7 +1485,7 @@ html.webp .why-plant-based-food {
 
 .our-ideas::before,
 .our-ideas::after {
-  content: '';
+  content: "";
   position: absolute;
   background-repeat: no-repeat;
 }
@@ -1582,7 +1582,7 @@ html.webp .why-plant-based-food {
 }
 
 .our-ideas__first-plant::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -1630,7 +1630,7 @@ html.webp .why-plant-based-food {
 }
 
 .our-ideas__second-plant::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -1665,7 +1665,7 @@ html.webp .why-plant-based-food {
 
 .our-ideas__item-wrapper::before,
 .our-ideas__item-wrapper::after {
-  content: '';
+  content: "";
   position: absolute;
   background-repeat: no-repeat;
 }
@@ -1864,7 +1864,7 @@ html.webp .our-ideas::after {
 
 .our-product::before,
 .our-product::after {
-  content: '';
+  content: "";
   position: absolute;
   background-repeat: no-repeat;
 }
@@ -1909,7 +1909,7 @@ html.webp .our-ideas::after {
 
 .our-product__first-wave::before,
 .our-product__second-wave::before {
-  content: '';
+  content: "";
   position: absolute;
   background-repeat: no-repeat;
 }
@@ -1960,7 +1960,7 @@ html.webp .our-ideas::after {
 }
 
 .our-product__second-wave::after {
-  content: '';
+  content: "";
   position: absolute;
   z-index: 2;
   top: -22.63889vw;
@@ -2126,7 +2126,7 @@ html.webp .our-ideas::after {
 
 .our-product__good-image-wrapper::before,
 .our-product__good-image-wrapper::after {
-  content: '';
+  content: "";
   position: absolute;
   background-repeat: no-repeat;
   background-size: contain;
@@ -2451,6 +2451,10 @@ html.webp .our-themes__bottom-leaves {
     position: fixed;
     top: 50%;
     min-height: 114px;
+    min-width: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     transform: translateY(-50%) rotate(180deg);
     font-size: 8px;
     text-transform: uppercase;
@@ -2464,6 +2468,7 @@ html.webp .our-themes__bottom-leaves {
   .header__button-text {
     writing-mode: vertical-lr;
     text-orientation: mixed;
+    line-height: 1em;
   }
 
   .header__join-link {

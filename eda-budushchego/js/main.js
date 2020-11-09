@@ -189,6 +189,8 @@ if (header) {
   var navItems = header.querySelectorAll(".header__nav-item");
   var navLinks = document.querySelectorAll(".header__nav-link[href*='#']");
   var joinPage = document.querySelector(".join-page");
+  var vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty("--vh", "".concat(vh, "px"));
 
   if (joinPage) {
     joinLink.classList.add("header__menu-button--hidden");
