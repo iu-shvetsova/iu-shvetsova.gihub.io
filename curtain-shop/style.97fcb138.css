@@ -366,10 +366,13 @@ body {
   padding-bottom: 145px;
   font-size: 21px;
   text-align: center;
-  background-image: url("intro-bg@2x.bc233efa.jpg");
+  background-image: url("intro-bg@1x.a7f9a396.jpg");
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover; }
+  @media (min-resolution: 1.5dppx), (min-resolution: 144dpi) {
+    .intro-block {
+      background-image: url("intro-bg@2x.bc233efa.jpg"); } }
   @media (max-width: 540px) {
     .intro-block {
       padding-top: 96px;
@@ -553,10 +556,13 @@ body {
   min-height: 177px;
   padding: 40px 70px;
   display: flex;
-  background-image: url("note-bg@2x.c5463ca7.png");
+  background-image: url("note-bg@1x.464e7d2f.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center; }
+  @media (min-resolution: 1.5dppx), (min-resolution: 144dpi) {
+    .note-block {
+      background-image: url("note-bg@2x.c5463ca7.png"); } }
   @media (max-width: 1024px) {
     .note-block {
       min-height: 168px; } }
@@ -688,10 +694,13 @@ body {
 
 .offer-block {
   margin-top: 80px;
-  background-image: url("offer-bg@2x.825aa94d.jpg");
+  background-image: url("offer-bg@1x.7498add6.jpg");
   background-repeat: no-repeat;
   background-size: 1920px auto;
   background-position: center center; }
+  @media (min-resolution: 1.5dppx), (min-resolution: 144dpi) {
+    .offer-block {
+      background-image: url("offer-bg@2x.825aa94d.jpg"); } }
   @media (max-width: 1024px) {
     .offer-block {
       background-size: cover; } }
