@@ -10690,45 +10690,27 @@ if (productsBlock) {
     var mapWrapper = document.querySelector('.address-block__map-wrapper');
 
     var initDesktopMap = function initDesktopMap() {
-      var map = new google.maps.Map(mapWrapper, {
-        center: {
-          lat: 56.838118,
-          lng: 35.911645
-        },
-        zoom: 16,
-        scrollwheel: false
+      var map = new ymaps.Map(mapWrapper, {
+        center: [56.838736, 35.91475],
+        zoom: 16
       });
-      var marker = new google.maps.Marker({
-        position: {
-          lat: 56.8384086,
-          lng: 35.9064947
-        },
-        map: map
-      });
+      var marker = new ymaps.Placemark([56.838493, 35.909162]);
+      map.geoObjects.add(marker);
     };
 
     var initMobileMap = function initMobileMap() {
-      var map = new google.maps.Map(mapWrapper, {
-        center: {
-          lat: 56.8384086,
-          lng: 35.9064947
-        },
-        zoom: 16,
-        scrollwheel: false
+      var map = new ymaps.Map(mapWrapper, {
+        center: [56.838493, 35.909162],
+        zoom: 16
       });
-      var marker = new google.maps.Marker({
-        position: {
-          lat: 56.8384086,
-          lng: 35.9064947
-        },
-        map: map
-      });
+      var marker = new ymaps.Placemark([56.838493, 35.909162]);
+      map.geoObjects.add(marker);
     };
 
     if (window.matchMedia('(max-width: 767px)').matches) {
-      initMobileMap();
+      ymaps.ready(initMobileMap);
     } else {
-      initDesktopMap();
+      ymaps.ready(initDesktopMap);
     }
   }
 }
@@ -10760,7 +10742,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56082" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60092" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
