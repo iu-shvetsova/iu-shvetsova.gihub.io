@@ -1137,7 +1137,10 @@ body {
         padding: 11% 0;
         font-size: 15px;
         background-image: none; } }
-    @media (max-width: 540px) {
+    @media (max-width: 425px) {
+      .own-production__text-block {
+        font-size: 21px; } }
+    @media (max-width: 340px) {
       .own-production__text-block {
         padding: 16px 0;
         font-size: 18px; } }
