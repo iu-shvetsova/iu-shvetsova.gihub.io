@@ -2508,7 +2508,7 @@ main {
 }
 
 .our-features__item_certificate {
-  background-image: url("../../img/features-bg-1.png");
+  background-image: url("../img/features-bg-1.png");
 }
 
 .our-features__item_certificate::after {
@@ -2518,7 +2518,7 @@ main {
 }
 
 .our-features__item_laboratories {
-  background-image: url("../../img/features-bg-2.png");
+  background-image: url("../img/features-bg-2.png");
 }
 
 .our-features__item_laboratories::after {
@@ -2527,7 +2527,7 @@ main {
 }
 
 .our-features__item_warranty {
-  background-image: url("../../img/features-bg-3.png");
+  background-image: url("../img/features-bg-3.png");
 }
 
 .our-features__item_warranty::after {
