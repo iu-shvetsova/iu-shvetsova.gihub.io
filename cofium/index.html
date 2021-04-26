@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Cofium</title>
+    <meta name="theme-color" content="#fff" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <link
+      rel="shortcut icon"
+      href="img/favicons/favicon.ico"
+      type="image/x-icon"
+    />
+    <link
+      rel="icon"
+      sizes="16x16"
+      href="img/favicons/favicon-16x16.png"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      sizes="32x32"
+      href="img/favicons/favicon-32x32.png"
+      type="image/png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      href="img/favicons/apple-touch-icon-precomposed.png"
+    />
+    <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="img/favicons/apple-touch-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="img/favicons/apple-touch-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="img/favicons/apple-touch-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="img/favicons/apple-touch-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="img/favicons/apple-touch-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="img/favicons/apple-touch-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="img/favicons/apple-touch-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="img/favicons/apple-touch-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="167x167"
+      href="img/favicons/apple-touch-icon-167x167.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img/favicons/apple-touch-icon-180x180.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="1024x1024"
+      href="img/favicons/apple-touch-icon-1024x1024.png"
+    />
+    <link rel="stylesheet" href="styles/main.min.css" />
+  </head>
+  <body>
+    <header class="header" id="main">
+  <div class="container header__container">
+    <div class="header__wrap">
+      <a class="header__link" href="#main"
+        ><img
+          class="header__company-name"
+          alt="Кофиум."
+          src="img/logo.png"
+          width="153"
+          height="21"
+      /></a>
+      <button
+        class="header__nav-button"
+        type="button"
+        aria-label="Открыть меню"
+      >
+        <span class="header__button-line"></span>
+      </button>
+      <nav class="header__nav">
+        <ul class="header__list">
+          <li class="header__item">
+            <a class="header__link" href="#main">Главная</a>
+          </li>
+          <li class="header__item">
+            <a class="header__link" href="#food">Еда</a>
+          </li>
+          <li class="header__item">
+            <a class="header__link" href="#drinks">Напитки</a>
+          </li>
+          <li class="header__item">
+            <a class="header__link" href="#market">Маркет</a>
+          </li>
+          <li class="header__item">
+            <a class="header__link" href="#contacts">Контакты</a>
+          </li>
+        </ul>
+        <div class="social header__nav-social">
+          <ul class="social__list">
+            <li class="social__item header__social-item">
+              <a class="social__link" aria-label="instagram" href="#"></a>
+            </li>
+            <li class="social__item header__social-item">
+              <a
+                class="social__link social__link_vk"
+                aria-label="vk"
+                href="#"
+              ></a>
+            </li>
+            <li class="social__item header__social-item">
+              <a
+                class="social__link social__link_fb"
+                aria-label="facebook"
+                href="#"
+              ></a>
+            </li>
+          </ul>
+        </div>
+        <div class="contacts header__nav-contacts">
+          <ul class="contacts__list">
+            <li class="contacts__item header__contacts-item">
+              <a class="contacts__link" href="tel:+79000000000"
+                >+7 (900) 000 00 00</a
+              >
+            </li>
+            <li class="contacts__item header__contacts-item">
+              <a class="contacts__link" href="tel:+79000000000"
+                >+7 (900) 000 00 00</a
+              >
+            </li>
+            <li class="contacts__item header__contacts-item">
+              <a class="contacts__link" href="mailto:email@email"
+                >email@email</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="header__content">
+      <img class="header__content-img" src="img/logo-img.png" alt="Кофиум" />
+      <p class="header__content-text">
+        Теперь в&nbsp;Санкт-Петербурге<br />
+        делаем крупно и&nbsp;заметно, убираем дым
+      </p>
+    </div>
+  </div>
+  <video class="header__bg-video" loop autoplay muted>
+    <source src="./video/main.mp4" type="video/mp4" />
+  </video>
+</header>
+
+    <main class="main-wrapper">
+      <section class="advantages">
+  <div class="advantages__wrap container">
+    <div class="advantages__name">
+      <h1 class="advantages__logo">Cofium</h1>
+      <p class="advantages__slogan">Кофе и&nbsp;умная еда</p>
+    </div>
+    <h2 class="visually-hidden">Наши продукты</h2>
+    <ul class="advantages__list">
+      <li class="advantages__item">
+        <h3 class="advantages__subtitle">Cвежие блюда to&nbsp;go</h3>
+        <p class="advantages__description">
+          Ресторанное меню в&nbsp;to&nbsp;go формате. Блюда от&nbsp;нашего
+          бренд-шефа: синтез гастрономии, пользы и&nbsp;баланса. Для тех, кто
+          думает что он&nbsp;ест!
+        </p>
+      </li>
+      <li class="advantages__item">
+        <h3 class="advantages__subtitle">Напитки от&nbsp;бариста</h3>
+        <p class="advantages__description">
+          Кофейная культура в превосходной степени. Карта из&nbsp;классических
+          кофейных, сезонных и&nbsp;специальных напитков Cofium. Taste&nbsp;it!
+        </p>
+      </li>
+      <li class="advantages__item">
+        <h3 class="advantages__subtitle">Маркет</h3>
+        <p class="advantages__description">
+          полезные и&nbsp;умные снеки, напитки, то, что не&nbsp;так просто найти
+          в&nbsp;супермаркетах!
+        </p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+      <section class="values">
+  <div class="values__wrap container">
+    <div class="statement">
+      <p class="values__subtitle site-title site-title_bold site-title_small">
+        Кофе и&nbsp;умная еда
+      </p>
+      <div class="statement__text-wrap">
+        <p class="statement__text values__text">
+          Современные реалии предполагают высокий темп жизни, многозадачность;
+          и&nbsp;каждый, чтобы оставаться на&nbsp;плаву в&nbsp;этом беспокойном
+          мире, хочет и&nbsp;должен позаботиться о&nbsp;себе, сохранив при этом
+          драгоценное время.
+        </p>
+        <p class="statement__text values__text">
+          Cofium&nbsp;&mdash; для тех, кто думает о&nbsp;том, что он&nbsp;ест!
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section class="to-go" id="food">
+  <div class="to-go__wrap container">
+    <h2 class="to-go__title">Свежие блюда to go</h2>
+    <div class="swiper-container to-go__slider">
+      <ul class="swiper-wrapper to-go__slider-wrapper">
+        <li class="swiper-slide to-go__slide">
+          <img
+            class="to-go__img"
+            src="./img/sandwich.jpg"
+            alt="Сэндвич с ветчиной"
+          />
+          <p class="to-go__sticker">
+            Chief&rsquo;s<br />
+            special
+          </p>
+          <div class="to-go__content">
+            <h3 class="to-go__content-name">
+              сэндвич с&nbsp;ветчиной из&nbsp;ягнятины су-вид
+            </h3>
+            <p class="to-go__content-description">
+              Наш суперстар: идеальная мягчайшая ягнятина су-вид
+              (ее&nbsp;готовят 8&nbsp;часов!) с&nbsp;луковым мармеладом
+              в&nbsp;хрустящем багете&nbsp;&mdash; must eat!
+            </p>
+          </div>
+        </li>
+        <li class="swiper-slide to-go__slide">
+          <img
+            class="to-go__img"
+            src="./img/roll-shrimp.jpg"
+            alt=" Ролл с креветкой"
+          />
+          <div class="to-go__content">
+            <h3 class="to-go__content-name">
+              Ролл с&nbsp;креветкой и&nbsp;сальсой из&nbsp;манго
+            </h3>
+            <p class="to-go__content-description">
+              По-настоящему гастрономический вариант для перекуса&nbsp;&mdash;
+              свежайшие крупные креветки в&nbsp;дрессинге с&nbsp;яркой
+              тропической основой.
+            </p>
+          </div>
+        </li>
+        <li class="swiper-slide to-go__slide">
+          <img
+            class="to-go__img"
+            src="./img/turkey-buckwheat.jpg"
+            alt="Индейка с зеленой гречей"
+          />
+          <div class="to-go__content">
+            <h3 class="to-go__content-name">
+              Индейка с&nbsp;зеленой гречей и&nbsp;грибами
+            </h3>
+            <p class="to-go__content-description">
+              Одно из&nbsp;самых самых диетических и&nbsp;одновременно самых
+              вкусных сочетаний! Низкая калорийность и&nbsp;баланс
+              элементов&nbsp;&mdash; то, что нужно для настоящего правильного
+              питания
+            </p>
+          </div>
+        </li>
+        <li class="swiper-slide to-go__slide">
+          <img class="to-go__img" src="./img/smoothies.jpg" alt="Смузи" />
+          <div class="to-go__content">
+            <h3 class="to-go__content-name">Смузи Дыня/Шпинат/Базилик</h3>
+            <p class="to-go__content-description">
+              Тут даже слов много не&nbsp;надо&nbsp;&mdash; польза как она
+              есть&nbsp;&mdash; свежий смузи для хорошего старта дня.
+            </p>
+          </div>
+        </li>
+        <li class="swiper-slide to-go__slide">
+          <img
+            class="to-go__img"
+            src="./img/turkey-bowl.jpg"
+            alt="Боул с индейкой"
+          />
+          <div class="to-go__content">
+            <h3 class="to-go__content-name">
+              Боул с&nbsp;индейкой, булгуром, овощами и&nbsp;ореховой заправкой
+            </h3>
+            <p class="to-go__content-description">
+              Один из&nbsp;любимейших курсов команды Cofium, квинтэссенция
+              бренда! Не&nbsp;смотря на&nbsp;диетические
+              ингредиенты&nbsp;&mdash; просто пальчики оближешь!
+            </p>
+          </div>
+        </li>
+      </ul>
+      <div
+        class="swiper-button-prev slider-arrow slider-arrow_prev to-go__slider-button"
+      ></div>
+      <div class="swiper-button-next slider-arrow to-go__slider-button"></div>
+    </div>
+  </div>
+</section>
+
+      <section class="balance">
+  <div class="balance__wrap container">
+    <div class="statement">
+      <p class="balance__subtitle site-title site-title_small">Баланс и вкус</p>
+      <div class="statement__text-wrap">
+        <p class="statement__text balance__text">
+          Для наших поваров еда&nbsp;&mdash; религия! Ее&nbsp;польза
+          и&nbsp;вкус&nbsp;&mdash; догмы! Блюда Cofium идеально сбалансированы,
+          приготовлены с&nbsp;точным соблюдением технологии&nbsp;и, что самое
+          важное, такие&nbsp;же вкусные, как в&nbsp;ресторане. Посмотрите полное
+          меню.
+        </p>
+        <a class="site-button" href="#">Смотреть меню</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section class="drinks" id="drinks">
+  <div class="drinks__wrap container">
+    <h2 class="drinks__title site-title">Hапитки от&nbsp;бариста</h2>
+    <div class="drinks__content">
+      <p class="drinks__content-subtitle site-title">Новая кофейная культура</p>
+      <a class="drinks__content-link site-button">Кофейная карта</a>
+    </div>
+  </div>
+  <video class="drinks__bg-video" loop autoplay muted>
+    <source src="./video/drinks.mp4" type="video/mp4" />
+  </video>
+</section>
+
+      <section class="specialty-drinks">
+  <div class="specialty-drinks__wrap">
+    <div class="specialty-drinks__container container">
+      <h2 class="specialty-drinks__title site-title">Фирменные напитки</h2>
+    </div>
+    <div class="specialty-drinks__slider-wrap">
+      <div class="specialty-drinks__container container">
+        <div class="swiper-container specialty-drinks__slider">
+          <ul class="swiper-wrapper specialty-drinks__slider-list">
+            <li class="swiper-slide specialty-drinks__slider-item">
+              <h3 class="specialty-drinks__subtitle-wrapper">
+                <span class="specialty-drinks__kind">Латте</span>
+                <span class="specialty-drinks__name">Черничная бриошь</span>
+              </h3>
+              <p class="specialty-drinks__description">
+                Снег хрустит под ногами, морозно, шарф от&nbsp;дыхания
+                нагревается и&nbsp;покрывается инеем, как ресницы
+                и&nbsp;брови... Вроде&nbsp;бы идиллическая, но&nbsp;немного
+                холодная картинка...если&nbsp;бы не&nbsp;COFIUM
+                со&nbsp;скандинавскими корнями: яркий теплый напиток
+                с&nbsp;черникой и&nbsp;карамелью в&nbsp;основе композиции,
+                и&nbsp;розмариновым аккомпанементом, согревает и&nbsp;заряжает
+                неиссякаемым энтузиазмом! А&nbsp;еще и&nbsp;для зрения полезен!
+              </p>
+            </li>
+            <li class="swiper-slide specialty-drinks__slider-item">
+              <h3 class="specialty-drinks__subtitle-wrapper">
+                <span class="specialty-drinks__kind">Латте</span>
+                <span class="specialty-drinks__name">Лимонный крем-брюле</span>
+              </h3>
+              <p class="specialty-drinks__description">
+                Пикассо, Шагал, Хэмингуэй, Дитрих, Модильяни, Стайн,
+                Фитцжеральд&nbsp;&mdash; на&nbsp;этом можно остановиться,
+                но&nbsp;мы&nbsp;поясним&nbsp;&mdash; &laquo;Лимонный
+                крем-брюле&raquo;&nbsp;&mdash; это Париж и&nbsp;его
+                артистическая атмосфера, это кафе на&nbsp;Монпарнасе
+                в&nbsp;летних сумерках 20-х годов XX&nbsp;века, а&nbsp;кроме
+                этого еще и&nbsp;десертный напиток с&nbsp;нотами французской
+                карамели и&nbsp;лимонного крем-брюле
+              </p>
+            </li>
+            <li class="swiper-slide specialty-drinks__slider-item">
+              <h3 class="specialty-drinks__subtitle-wrapper">
+                <span class="specialty-drinks__kind">Латте</span>
+                <span class="specialty-drinks__name">Вишневый трюфель</span>
+              </h3>
+              <p class="specialty-drinks__description">
+                Это просто cherry bomb! Чит мил, который мы&nbsp;все
+                заслужили&nbsp;&mdash; этот напиток лучше любого десерта,
+                а&nbsp;еще и&nbsp;пользу кофе сюда прибавьте. Плотный,
+                сливочный, шоколадно-кофейный вкус, так напоминающий знаменитый
+                торт &laquo;Черничный лес&raquo; точно обеспечит радость
+                на&nbsp;весь день. Проверяйте сами!
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div
+          class="swiper-button-prev slider-arrow slider-arrow_prev specialty-drinks__slider-arrow specialty-drinks__slider-arrow_prev"
+        ></div>
+        <div
+          class="swiper-button-next slider-arrow specialty-drinks__slider-arrow specialty-drinks__slider-arrow_next"
+        ></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section class="market" id="market">
+  <div class="market__wrap">
+    <div class="container">
+      <h2 class="market__title site-title">Маркет</h2>
+    </div>
+    <div class="swiper-container market__slider">
+      <ul class="swiper-wrapper">
+        <li class="swiper-slide market__slide">
+          <img class="market__img" src="./img/bar.png" alt="Батончик BE KIND" />
+          <div class="market__content-wrap">
+            <h3 class="market__name">Шоколадные батончики BE KIND</h3>
+            <p class="market__description">
+              BE-KIND&nbsp;&mdash; это не&nbsp;просто название. Это
+              обязательство производить батончики без компромиссов. Лучшие
+              ингредиенты. Масса питательных веществ. Неизменно насыщенный вкус.
+            </p>
+          </div>
+        </li>
+        <li class="swiper-slide market__slide">
+          <img
+            class="market__img"
+            src="./img/vitamin-drink.png"
+            alt="Витаминный напиток"
+          />
+          <div class="market__content-wrap">
+            <h3 class="market__name">Шоколадные батончики BE KIND</h3>
+            <p class="market__description">
+              BE-KIND&nbsp;&mdash; это не&nbsp;просто название. Это
+              обязательство производить батончики без компромиссов. Лучшие
+              ингредиенты. Масса питательных веществ. Неизменно насыщенный вкус.
+            </p>
+          </div>
+        </li>
+      </ul>
+      <div
+        class="swiper-button-prev slider-arrow slider-arrow_prev market__slider-btn market__slider-btn_left"
+      ></div>
+      <div class="swiper-button-next slider-arrow market__slider-btn"></div>
+    </div>
+  </div>
+</section>
+
+      <section class="application container" id="contacts">
+  <div class="application__wrap">
+    <div class="application__map" id="map"></div>
+    <div class="application__form-wrap">
+      <h2 class="application__title">Напишите нам</h2>
+      <form class="application__form">
+        <input class="application__input" type="text" placeholder="Имя" />
+        <input class="application__input" type="tel" placeholder="Телефон" />
+        <input class="application__input" type="email" placeholder="@Email" />
+        <textarea
+          class="application__textarea"
+          placeholder="Комментарий"
+        ></textarea>
+        <div class="application__checkbox-wrap">
+          <input
+            class="application__checkbox"
+            type="checkbox"
+            name="politics"
+            id="politics"
+          />
+          <label class="application__label" for="politics">
+            Нажимая на&nbsp;кнопку &laquo;Отправить&raquo;, я&nbsp;даю
+            <a class="application__link" href="#">
+              согласие на&nbsp;обработку персональных данных.
+            </a>
+          </label>
+        </div>
+        <button class="application__button site-button site-button_small">
+          Отправить
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+    </main>
+    <footer class="footer">
+  <div class="footer__container container">
+    <div class="footer__wrap">
+      <div class="social footer__social">
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link" aria-label="instagram" href="#"></a>
+          </li>
+          <li class="social__item">
+            <a
+              class="social__link social__link_vk"
+              aria-label="vk"
+              href="#"
+            ></a>
+          </li>
+          <li class="social__item">
+            <a
+              class="social__link social__link_fb"
+              aria-label="facebook"
+              href="#"
+            ></a>
+          </li>
+        </ul>
+      </div>
+      <div class="contacts">
+        <ul class="contacts__list">
+          <li class="contacts__item">
+            <a class="contacts__link" href="tel:+79000000000"
+              >+7 (900) 000 00 00</a
+            >
+          </li>
+          <li class="contacts__item">
+            <a class="contacts__link" href="tel:+79000000000"
+              >+7 (900) 000 00 00</a
+            >
+          </li>
+          <li class="contacts__item">
+            <a class="contacts__link" href="mailto:email@email">email@email</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <ul class="footer__category-list">
+      <li class="footer__category-item">
+        <p class="footer__category-name">Для арендодателей</p>
+        <a class="footer__category-link" href="mailto:email@email"
+          >email@email</a
+        >
+      </li>
+      <li class="footer__category-item">
+        <p class="footer__category-name">Для соискателей</p>
+        <a class="footer__category-link" href="mailto:email@email"
+          >email@email</a
+        >
+      </li>
+      <li class="footer__category-item">
+        <p class="footer__category-name">Для поставщиков</p>
+        <a class="footer__category-link" href="mailto:email@email"
+          >email@email</a
+        >
+      </li>
+    </ul>
+  </div>
+</footer>
+
+    <script src="js/main.min.js"></script>
+    <script src="js/vendor.min.js"></script>
+  </body>
+</html>
