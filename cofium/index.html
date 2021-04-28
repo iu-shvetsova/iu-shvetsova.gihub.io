@@ -173,10 +173,7 @@
     </div>
     <div class="header__content">
       <img class="header__content-img" src="img/logo-img.png" alt="Кофиум" />
-      <p class="header__content-text">
-        Теперь в&nbsp;Санкт-Петербурге<br />
-        делаем крупно и&nbsp;заметно, убираем дым
-      </p>
+      <p class="header__content-text">Теперь в&nbsp;Санкт-Петербурге</p>
     </div>
   </div>
   <video class="header__bg-video" loop autoplay muted>
@@ -211,8 +208,8 @@
       <li class="advantages__item">
         <h3 class="advantages__subtitle">Маркет</h3>
         <p class="advantages__description">
-          полезные и&nbsp;умные снеки, напитки, то, что не&nbsp;так просто найти
-          в&nbsp;супермаркетах!
+          полезные, умные и&nbsp;популярные снэки, напитки, мороженное
+          и&nbsp;свежая выпечка
         </p>
       </li>
     </ul>
@@ -222,9 +219,9 @@
       <section class="values">
   <div class="values__wrap container">
     <div class="statement">
-      <p class="values__subtitle site-title site-title_bold site-title_small">
-        Кофе и&nbsp;умная еда
-      </p>
+      <h2 class="values__subtitle site-title site-title_bold site-title_small">
+        О&nbsp;НАС
+      </h2>
       <div class="statement__text-wrap">
         <p class="statement__text values__text">
           Современные реалии предполагают высокий темп жизни, многозадачность;
@@ -242,7 +239,7 @@
 
       <section class="to-go" id="food">
   <div class="to-go__wrap container">
-    <h2 class="to-go__title">Свежие блюда to go</h2>
+    <h2 class="to-go__title">Умная еда</h2>
     <div class="swiper-container to-go__slider">
       <ul class="swiper-wrapper to-go__slider-wrapper">
         <li class="swiper-slide to-go__slide">
@@ -257,7 +254,7 @@
           </p>
           <div class="to-go__content">
             <h3 class="to-go__content-name">
-              сэндвич с&nbsp;ветчиной из&nbsp;ягнятины су-вид
+              Сэндвич с&nbsp;ветчиной из&nbsp;ягнятины су-вид
             </h3>
             <p class="to-go__content-description">
               Наш суперстар: идеальная мягчайшая ягнятина су-вид
@@ -329,10 +326,12 @@
           </div>
         </li>
       </ul>
-      <div
-        class="swiper-button-prev slider-arrow slider-arrow_prev to-go__slider-button"
-      ></div>
-      <div class="swiper-button-next slider-arrow to-go__slider-button"></div>
+      <button
+        class="swiper-button-prev slider-arrow slider-arrow_prev to-go__slider-button to-go__slider-button_prev"
+      ></button>
+      <button
+        class="swiper-button-next slider-arrow to-go__slider-button to-go__slider-button_next"
+      ></button>
     </div>
   </div>
 </section>
@@ -340,7 +339,9 @@
       <section class="balance">
   <div class="balance__wrap container">
     <div class="statement">
-      <p class="balance__subtitle site-title site-title_small">Баланс и вкус</p>
+      <h2 class="balance__subtitle site-title site-title_small">
+        Баланс и вкус
+      </h2>
       <div class="statement__text-wrap">
         <p class="statement__text balance__text">
           Для наших поваров еда&nbsp;&mdash; религия! Ее&nbsp;польза
@@ -349,7 +350,316 @@
           важное, такие&nbsp;же вкусные, как в&nbsp;ресторане. Посмотрите полное
           меню.
         </p>
-        <a class="site-button" href="#">Смотреть меню</a>
+        <button class="site-button balance__btn">Смотреть меню</button>
+      </div>
+    </div>
+    <div class="modal balance__modal">
+      <div class="modal__wrappper">
+        <header class="modal__header">
+          <img
+            class="modal__header-logo"
+            alt="Кофиум"
+            src="img/logo-img.png"
+            width="36"
+            height="65"
+          />
+          <button
+            class="modal__header-button balance__btn-close"
+            type="button"
+            aria-label="Закрыть окно"
+          ></button>
+        </header>
+        <ul class="modal__list">
+          <li class="modal__item">
+            <h3 class="modal__title">Блюда для завтрака</h3>
+            <ul class="modal__sublist">
+              <li class="modal__subitem">
+                <p class="modal__product">
+                  Блины с&nbsp;клубничным джемом и&nbsp;базиликом
+                </p>
+                <p class="modal__price">149&nbsp;₽</p>
+              </li>
+              <li class="modal__subitem">
+                <p class="modal__product">
+                  Блины с&nbsp;курицей и&nbsp;клюквенным соусом
+                </p>
+                <p class="modal__price">189&nbsp;₽</p>
+              </li>
+              <li class="modal__subitem">
+                <p class="modal__product">
+                  Вареное яйцо с&nbsp;рукколой и&nbsp;песто из&nbsp;петрушки
+                </p>
+                <p class="modal__price">139&nbsp;₽</p>
+              </li>
+              <li class="modal__subitem">
+                <p class="modal__product">Гречневые блины с&nbsp;мясом</p>
+                <p class="modal__price">219&nbsp;₽</p>
+              </li>
+              <li class="modal__subitem">
+                <p class="modal__product">
+                  Испанский омлет с&nbsp;картофелем и&nbsp;беконом
+                </p>
+                <p class="modal__price">179&nbsp;₽</p>
+              </li>
+              <li class="modal__subitem">
+                <p class="modal__product">Овсяная каша с&nbsp;малиной</p>
+                <p class="modal__price">129&nbsp;₽</p>
+              </li>
+              <li class="modal__subitem">
+                <p class="modal__product">
+                  Рисовая каша на&nbsp;кокосовом молоке с&nbsp;ананасом
+                </p>
+                <p class="modal__price">179&nbsp;₽</p>
+              </li>
+              <li class="modal__subitem">
+                <p class="modal__product">
+                  Смузи боул с&nbsp;ягодным йогуртом, медом и&nbsp;гранолой
+                </p>
+                <p class="modal__price">199&nbsp;₽</p>
+              </li>
+              <li class="modal__subitem">
+                <p class="modal__product">
+                  Сырники с&nbsp;рикоттой и&nbsp;вишневым соусом
+                </p>
+                <p class="modal__price">199&nbsp;₽</p>
+              </li>
+              <li class="modal__subitem">
+                <p class="modal__product">
+                  Творожная запеканка с&nbsp;пряной грушей
+                </p>
+                <p class="modal__price">189&nbsp;₽</p>
+              </li>
+              <li class="modal__subitem">
+                <p class="modal__product">
+                  Французский тост с&nbsp;арахисовой пастой и&nbsp;ягодным
+                  джемом
+                </p>
+                <p class="modal__price">159&nbsp;₽</p>
+              </li>
+            </ul>
+          </li>
+          <li class="modal__item">
+            <h3 class="modal__title">Сэндвичи, рэпы (роллы)</h3>
+            <ul class="modal__sublist">
+              <li class="modal__subitem">
+                <p class="modal__product">
+                  Ролл с&nbsp;креветками и&nbsp;сальсой из&nbsp;манго
+                </p>
+                <p class="modal__price">349&nbsp;₽</p>
+              </li>
+              <li class="modal__subitem">
+                <p class="modal__product">
+                  Ролл с&nbsp;курицей и&nbsp;песто из&nbsp;петрушки
+                </p>
+                <p class="modal__price">219&nbsp;₽</p>
+              </li>
+              <li class="modal__subitem">
+                <p class="modal__product">Ролл с&nbsp;рваной свининой BBQ</p>
+                <p class="modal__price">239&nbsp;₽</p>
+              </li>
+              <li class="modal__subitem">
+                <p class="modal__product">
+                  Ролл с&nbsp;фалафелем из&nbsp;брокколи
+                </p>
+                <p class="modal__price">239&nbsp;₽</p>
+              </li>
+              <li class="modal__subitem">
+                <p class="modal__product">
+                  Сэндвич с&nbsp;ветчиной и&nbsp;сыром
+                </p>
+                <p class="modal__price">189&nbsp;₽</p>
+              </li>
+              <li class="modal__subitem">
+                <p class="modal__product">
+                  Сэндвич с&nbsp;ветчиной из&nbsp;ягненка
+                </p>
+                <p class="modal__price">349&nbsp;₽</p>
+              </li>
+              <li class="modal__subitem">
+                <p class="modal__product">
+                  Сэндвич с&nbsp;курицей карри и&nbsp;брынзой
+                </p>
+                <p class="modal__price">279&nbsp;₽</p>
+              </li>
+              <li class="modal__subitem">
+                <p class="modal__product">
+                  Сэндвич с&nbsp;моцареллой и&nbsp;салями
+                </p>
+                <p class="modal__price">199&nbsp;₽</p>
+              </li>
+              <li class="modal__subitem">
+                <p class="modal__product">
+                  Сэндвич с&nbsp;риетом из&nbsp;тунца
+                </p>
+                <p class="modal__price">289&nbsp;₽</p>
+              </li>
+              <li class="modal__subitem">
+                <p class="modal__product">
+                  Сэндвич с&nbsp;сулугуни и&nbsp;печеным баклажаном
+                </p>
+                <p class="modal__price">269&nbsp;₽</p>
+              </li>
+              <li class="modal__subitem">
+                <p class="modal__product">Сэндвич со&nbsp;свиным окороком</p>
+                <p class="modal__price">289&nbsp;₽</p>
+              </li>
+            </ul>
+          </li>
+          <li class="modal__item">
+            <h3 class="modal__title">Салаты, боулы, закуски</h3>
+            <ul class="modal__sublist">
+              <li class="modal__subitem">
+                <p class="modal__product">
+                  Боул с&nbsp;булгуром, лососем и&nbsp;медово-кунжутной
+                  заправкой
+                </p>
+                <p class="modal__price">389&nbsp;₽</p>
+              </li>
+              <li class="modal__subitem">
+                <p class="modal__product">
+                  Боул с&nbsp;булгуром, овощами и&nbsp;ореховой заправкой
+                </p>
+                <p class="modal__price">259&nbsp;₽</p>
+              </li>
+              <li class="modal__subitem">
+                <p class="modal__product">
+                  Боул с&nbsp;индейкой, булгуром, овощами и&nbsp;ореховой
+                  заправкой
+                </p>
+                <p class="modal__price">299&nbsp;₽</p>
+              </li>
+              <li class="modal__subitem">
+                <p class="modal__product">Картофельная галета с&nbsp;лососем</p>
+                <p class="modal__price">219&nbsp;₽</p>
+              </li>
+              <li class="modal__subitem">
+                <p class="modal__product">
+                  Картофельный салат с&nbsp;копченым лососем
+                </p>
+                <p class="modal__price">219&nbsp;₽</p>
+              </li>
+              <li class="modal__subitem">
+                <p class="modal__product">
+                  Киш с&nbsp;томатами, рикоттой и&nbsp;брокколи
+                </p>
+                <p class="modal__price">229&nbsp;₽</p>
+              </li>
+              <li class="modal__subitem">
+                <p class="modal__product">
+                  Салат из&nbsp;печёных овощей с&nbsp;брынзой
+                </p>
+                <p class="modal__price">239&nbsp;₽</p>
+              </li>
+              <li class="modal__subitem">
+                <p class="modal__product">
+                  Салат с&nbsp;бастурмой, томатами и&nbsp;шпинатом
+                </p>
+                <p class="modal__price">229&nbsp;₽</p>
+              </li>
+              <li class="modal__subitem">
+                <p class="modal__product">
+                  Салат с&nbsp;курицей, картофелем и&nbsp;лимонным айоли
+                </p>
+                <p class="modal__price">179&nbsp;₽</p>
+              </li>
+              <li class="modal__subitem">
+                <p class="modal__product">
+                  Салат с&nbsp;редисом и&nbsp;щавелевым йогуртом
+                </p>
+                <p class="modal__price">169&nbsp;₽</p>
+              </li>
+              <li class="modal__subitem">
+                <p class="modal__product">
+                  Салат со&nbsp;свиным окороком и&nbsp;чечевицей
+                </p>
+                <p class="modal__price">249&nbsp;₽</p>
+              </li>
+            </ul>
+          </li>
+          <li class="modal__item">
+            <h3 class="modal__title">Супы</h3>
+            <ul class="modal__sublist">
+              <li class="modal__subitem">
+                <p class="modal__product">Кукурузный суп с&nbsp;чили</p>
+                <p class="modal__price">149&nbsp;₽</p>
+              </li>
+              <li class="modal__subitem">
+                <p class="modal__product">Финский рыбный суп</p>
+                <p class="modal__price">249&nbsp;₽</p>
+              </li>
+              <li class="modal__subitem">
+                <p class="modal__product">
+                  Рамен из&nbsp;курицы с&nbsp;кукурузой
+                </p>
+                <p class="modal__price">199&nbsp;₽</p>
+              </li>
+            </ul>
+          </li>
+          <li class="modal__item">
+            <h3 class="modal__title">Основные блюда</h3>
+            <ul class="modal__sublist">
+              <li class="modal__subitem">
+                <p class="modal__product">
+                  Буженина с&nbsp;персидской чечевицей в&nbsp;томатном соусе
+                </p>
+                <p class="modal__price">279&nbsp;₽</p>
+              </li>
+              <li class="modal__subitem">
+                <p class="modal__product">
+                  Индейка с&nbsp;зеленой гречкой и&nbsp;грибами
+                </p>
+                <p class="modal__price">319&nbsp;₽</p>
+              </li>
+              <li class="modal__subitem">
+                <p class="modal__product">
+                  Картофельный гратен с&nbsp;белыми грибами
+                </p>
+                <p class="modal__price">249&nbsp;₽</p>
+              </li>
+              <li class="modal__subitem">
+                <p class="modal__product">Пад тай с&nbsp;курицей Wok</p>
+                <p class="modal__price">299&nbsp;₽</p>
+              </li>
+              <li class="modal__subitem">
+                <p class="modal__product">
+                  Судак с&nbsp;цукини и&nbsp;соусом из&nbsp;бекона
+                </p>
+                <p class="modal__price">349&nbsp;₽</p>
+              </li>
+              <li class="modal__subitem">
+                <p class="modal__product">
+                  Томлёная говядина с&nbsp;картофелем
+                </p>
+                <p class="modal__price">349&nbsp;₽</p>
+              </li>
+              <li class="modal__subitem">
+                <p class="modal__product">
+                  Тыквенный карри с&nbsp;кокосовым молоком и&nbsp;рисом
+                </p>
+                <p class="modal__price">229&nbsp;₽</p>
+              </li>
+              <li class="modal__subitem">
+                <p class="modal__product">
+                  Шницель из&nbsp;курицы с&nbsp;печеными овощами
+                </p>
+                <p class="modal__price">299&nbsp;₽</p>
+              </li>
+            </ul>
+          </li>
+          <li class="modal__item">
+            <h3 class="modal__title">Напитки, смузи СТМ</h3>
+            <ul class="modal__sublist">
+              <li class="modal__subitem">
+                <p class="modal__product">Смузи Смородина Йогурт Мята</p>
+                <p class="modal__price">189&nbsp;₽</p>
+              </li>
+              <li class="modal__subitem">
+                <p class="modal__product">Смузи Дыня Шпинат Базилик</p>
+                <p class="modal__price">199&nbsp;₽</p>
+              </li>
+            </ul>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
@@ -360,12 +670,156 @@
     <h2 class="drinks__title site-title">Hапитки от&nbsp;бариста</h2>
     <div class="drinks__content">
       <p class="drinks__content-subtitle site-title">Новая кофейная культура</p>
-      <a class="drinks__content-link site-button">Кофейная карта</a>
+      <button class="drinks__content-btn site-button">Кофейная карта</button>
     </div>
   </div>
   <video class="drinks__bg-video" loop autoplay muted>
     <source src="./video/drinks.mp4" type="video/mp4" />
   </video>
+  <div class="modal drinks__modal">
+    <div class="modal__wrappper">
+      <header class="modal__header">
+        <img class="modal__header-logo" alt="Кофиум" src="img/logo-img.png" />
+        <button
+          class="modal__header-button drinks__btn-close"
+          type="button"
+          aria-label="Закрыть окно"
+        ></button>
+      </header>
+      <ul class="modal__list">
+        <li class="modal__item">
+          <h3 class="modal__title">Кофейные напитки классические, фирменные</h3>
+          <ul class="modal__sublist">
+            <li class="modal__subitem">
+              <p class="modal__product">Американо 200&nbsp;мл</p>
+              <p class="modal__price">160&nbsp;₽</p>
+            </li>
+            <li class="modal__subitem">
+              <p class="modal__product">Горячий шоколад 200&nbsp;мл</p>
+              <p class="modal__price">220&nbsp;₽</p>
+            </li>
+            <li class="modal__subitem">
+              <p class="modal__product">Горячий шоколад овсяный 200&nbsp;мл</p>
+              <p class="modal__price">220&nbsp;₽</p>
+            </li>
+            <li class="modal__subitem">
+              <p class="modal__product">Капучино 250&nbsp;мл</p>
+              <p class="modal__price">190&nbsp;₽</p>
+            </li>
+            <li class="modal__subitem">
+              <p class="modal__product">Капучино 350&nbsp;мл</p>
+              <p class="modal__price">220&nbsp;₽</p>
+            </li>
+            <li class="modal__subitem">
+              <p class="modal__product">Капучино кокосовое 350&nbsp;мл</p>
+              <p class="modal__price">250&nbsp;₽</p>
+            </li>
+            <li class="modal__subitem">
+              <p class="modal__product">Капучино миндальное 350&nbsp;мл</p>
+              <p class="modal__price">250&nbsp;₽</p>
+            </li>
+            <li class="modal__subitem">
+              <p class="modal__product">Капучино овсяное 350&nbsp;мл</p>
+              <p class="modal__price">220&nbsp;₽</p>
+            </li>
+            <li class="modal__subitem">
+              <p class="modal__product">Латте 350&nbsp;мл</p>
+              <p class="modal__price">220&nbsp;₽</p>
+            </li>
+            <li class="modal__subitem">
+              <p class="modal__product">Латте кокосовый 350&nbsp;мл</p>
+              <p class="modal__price">250&nbsp;₽</p>
+            </li>
+            <li class="modal__subitem">
+              <p class="modal__product">Латте Лимонное крем-брюле 45&nbsp;мл</p>
+              <p class="modal__price">280&nbsp;₽</p>
+            </li>
+            <li class="modal__subitem">
+              <p class="modal__product">Латте миндальный 350&nbsp;мл</p>
+              <p class="modal__price">250&nbsp;₽</p>
+            </li>
+            <li class="modal__subitem">
+              <p class="modal__product">Латте овсяный 350&nbsp;мл</p>
+              <p class="modal__price">220&nbsp;₽</p>
+            </li>
+            <li class="modal__subitem">
+              <p class="modal__product">Латте Черничная бриошь 450 мл</p>
+              <p class="modal__price">280&nbsp;₽</p>
+            </li>
+            <li class="modal__subitem">
+              <p class="modal__product">Раф 350 мл</p>
+              <p class="modal__price">250&nbsp;₽</p>
+            </li>
+            <li class="modal__subitem">
+              <p class="modal__product">Раф Вишневый трюфель 450&nbsp;мл</p>
+              <p class="modal__price">280&nbsp;₽</p>
+            </li>
+            <li class="modal__subitem">
+              <p class="modal__product">Флэт Уайт 250&nbsp;мл</p>
+              <p class="modal__price">190&nbsp;₽</p>
+            </li>
+            <li class="modal__subitem">
+              <p class="modal__product">Флэт Уайт кокосовый 250&nbsp;мл</p>
+              <p class="modal__price">250&nbsp;₽</p>
+            </li>
+            <li class="modal__subitem">
+              <p class="modal__product">Флэт Уайт миндальный 250&nbsp;мл</p>
+              <p class="modal__price">250&nbsp;₽</p>
+            </li>
+            <li class="modal__subitem">
+              <p class="modal__product">Флэт Уайт овсяный 250&nbsp;мл</p>
+              <p class="modal__price">190 &nbsp;₽</p>
+            </li>
+            <li class="modal__subitem">
+              <p class="modal__product">Эспрессо 45&nbsp;мл</p>
+              <p class="modal__price">90&nbsp;₽</p>
+            </li>
+          </ul>
+        </li>
+        <li class="modal__item">
+          <h3 class="modal__title">
+            Кофейные напитки альтернативный способ варки
+          </h3>
+          <ul class="modal__sublist">
+            <li class="modal__subitem">
+              <p class="modal__product">Фильтр кофе Кения 200&nbsp;мл</p>
+              <p class="modal__price">160&nbsp;₽</p>
+            </li>
+          </ul>
+        </li>
+        <li class="modal__item">
+          <h3 class="modal__title">Напитки сезонные</h3>
+          <ul class="modal__sublist">
+            <li class="modal__subitem">
+              <p class="modal__product">Мятная липа 350&nbsp;мл</p>
+              <p class="modal__price">250&nbsp;₽</p>
+            </li>
+            <li class="modal__subitem">
+              <p class="modal__product">Лавандовый личи 350&nbsp;мл</p>
+              <p class="modal__price">250&nbsp;₽</p>
+            </li>
+            <li class="modal__subitem">
+              <p class="modal__product">Золотой масала 350&nbsp;мл</p>
+              <p class="modal__price">250&nbsp;₽</p>
+            </li>
+            <li class="modal__subitem">
+              <p class="modal__product">Латте бананы-кокосы&nbsp;350 мл</p>
+              <p class="modal__price">250&nbsp;₽</p>
+            </li>
+          </ul>
+        </li>
+        <li class="modal__item">
+          <h3 class="modal__title">Чай</h3>
+          <ul class="modal__sublist">
+            <li class="modal__subitem">
+              <p class="modal__product">Чай 250&nbsp;мл</p>
+              <p class="modal__price">90&nbsp;₽</p>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
 </section>
 
       <section class="specialty-drinks">
@@ -423,57 +877,167 @@
                 на&nbsp;весь день. Проверяйте сами!
               </p>
             </li>
+            <li class="swiper-slide specialty-drinks__slider-item">
+              <h3 class="specialty-drinks__subtitle-wrapper">
+                <span class="specialty-drinks__kind">Согревающий пунш</span>
+                <span class="specialty-drinks__name">Карамельное яблоко</span>
+              </h3>
+              <p class="specialty-drinks__description">
+                Во&nbsp;вкусе свежая выпечка, красное яблоко, мёд, изюм
+              </p>
+            </li>
+            <li class="swiper-slide specialty-drinks__slider-item">
+              <h3 class="specialty-drinks__subtitle-wrapper">
+                <span class="specialty-drinks__kind">Горячий напиток</span>
+                <span class="specialty-drinks__name">Green имбирь</span>
+              </h3>
+              <p class="specialty-drinks__description">
+                Во&nbsp;вкусе выпечка, пряности, легкая травянистость сенти
+              </p>
+            </li>
+            <li class="swiper-slide specialty-drinks__slider-item">
+              <h3 class="specialty-drinks__subtitle-wrapper">
+                <span class="specialty-drinks__kind">Латте</span>
+                <span class="specialty-drinks__name">Финик</span>
+              </h3>
+              <p class="specialty-drinks__description">
+                Согревающий плотный напиток, по&nbsp;вкусу напоминающий пахлаву
+                и&nbsp;восточные сладости
+              </p>
+            </li>
+            <li class="swiper-slide specialty-drinks__slider-item">
+              <h3 class="specialty-drinks__subtitle-wrapper">
+                <span class="specialty-drinks__kind">Раф</span>
+                <span class="specialty-drinks__name">Банановое фламбэ</span>
+              </h3>
+              <p class="specialty-drinks__description">
+                Яркий напиток со&nbsp;вкусом ромовой бабы с&nbsp;бананом
+              </p>
+            </li>
+            <li
+              class="swiper-slide specialty-drinks__slider-item specialty-drinks__slider-item_none"
+            ></li>
+            <li
+              class="swiper-slide specialty-drinks__slider-item specialty-drinks__slider-item_none"
+            ></li>
+            <li class="swiper-slide specialty-drinks__slider-item">
+              <h3 class="specialty-drinks__subtitle-wrapper">
+                <span class="specialty-drinks__kind">Горячий напиток</span>
+                <span class="specialty-drinks__name">Мятная липа</span>
+              </h3>
+              <p class="specialty-drinks__description">
+                Согревающий чай со&nbsp;вкусом дюшеса, яблока голден
+                и&nbsp;цветов
+              </p>
+            </li>
+            <li class="swiper-slide specialty-drinks__slider-item">
+              <h3 class="specialty-drinks__subtitle-wrapper">
+                <span class="specialty-drinks__kind">Горячий напиток</span>
+                <span class="specialty-drinks__name">Лавандовый личи</span>
+              </h3>
+              <p class="specialty-drinks__description">
+                Цветочный чай со&nbsp;вкусом личи и&nbsp;цитрусовых
+              </p>
+            </li>
+            <li class="swiper-slide specialty-drinks__slider-item">
+              <h3 class="specialty-drinks__subtitle-wrapper">
+                <span class="specialty-drinks__kind">Раф</span>
+                <span class="specialty-drinks__name">Золотой масала</span>
+              </h3>
+              <p class="specialty-drinks__description">
+                Пряный согревающий напиток в&nbsp;восточном стиле
+              </p>
+            </li>
+            <li class="swiper-slide specialty-drinks__slider-item">
+              <h3 class="specialty-drinks__subtitle-wrapper">
+                <span class="specialty-drinks__kind">Латте</span>
+                <span class="specialty-drinks__name">Бананы-кокосы</span>
+              </h3>
+              <p class="specialty-drinks__description">
+                Тропический латте со&nbsp;вкусом бананово-кокосового милкшейка
+              </p>
+            </li>
+            <li
+              class="swiper-slide specialty-drinks__slider-item specialty-drinks__slider-item_none"
+            ></li>
+            <li
+              class="swiper-slide specialty-drinks__slider-item specialty-drinks__slider-item_none"
+            ></li>
           </ul>
         </div>
-        <div
+        <button
           class="swiper-button-prev slider-arrow slider-arrow_prev specialty-drinks__slider-arrow specialty-drinks__slider-arrow_prev"
-        ></div>
-        <div
+        ></button>
+        <button
           class="swiper-button-next slider-arrow specialty-drinks__slider-arrow specialty-drinks__slider-arrow_next"
-        ></div>
+        ></button>
       </div>
     </div>
   </div>
 </section>
 
       <section class="market" id="market">
-  <div class="market__wrap">
-    <div class="container">
-      <h2 class="market__title site-title">Маркет</h2>
-    </div>
-    <div class="swiper-container market__slider">
-      <ul class="swiper-wrapper">
-        <li class="swiper-slide market__slide">
-          <img class="market__img" src="./img/bar.png" alt="Батончик BE KIND" />
-          <div class="market__content-wrap">
-            <h3 class="market__name">Шоколадные батончики BE KIND</h3>
-            <p class="market__description">
-              BE-KIND&nbsp;&mdash; это не&nbsp;просто название. Это
-              обязательство производить батончики без компромиссов. Лучшие
-              ингредиенты. Масса питательных веществ. Неизменно насыщенный вкус.
-            </p>
-          </div>
-        </li>
-        <li class="swiper-slide market__slide">
-          <img
-            class="market__img"
-            src="./img/vitamin-drink.png"
-            alt="Витаминный напиток"
-          />
-          <div class="market__content-wrap">
-            <h3 class="market__name">Шоколадные батончики BE KIND</h3>
-            <p class="market__description">
-              BE-KIND&nbsp;&mdash; это не&nbsp;просто название. Это
-              обязательство производить батончики без компромиссов. Лучшие
-              ингредиенты. Масса питательных веществ. Неизменно насыщенный вкус.
-            </p>
-          </div>
-        </li>
-      </ul>
-      <div
-        class="swiper-button-prev slider-arrow slider-arrow_prev market__slider-btn market__slider-btn_left"
-      ></div>
-      <div class="swiper-button-next slider-arrow market__slider-btn"></div>
+  <div class="market__wrap container">
+    <h2 class="market__title site-title">Маркет</h2>
+  </div>
+  <div class="market__slider-wrapper">
+    <div class="market__container container">
+      <div class="swiper-container market__slider">
+        <ul class="swiper-wrapper">
+          <li class="swiper-slide market__slide">
+            <img
+              class="market__img"
+              src="./img/bar.png"
+              alt="Батончик BE KIND"
+            />
+            <div class="market__content">
+              <h3 class="market__content-name">Шоколадные батончики BE KIND</h3>
+              <p class="market__content-description">
+                BE-KIND&nbsp;&mdash; это не&nbsp;просто название. Это
+                обязательство производить батончики без компромиссов. Лучшие
+                ингредиенты. Масса питательных веществ. Неизменно насыщенный
+                вкус.
+              </p>
+            </div>
+          </li>
+          <li class="swiper-slide market__slide">
+            <img
+              class="market__img"
+              src="./img/vitamin-drink.png"
+              alt="Напиток Vitamin Well"
+            />
+            <div class="market__content">
+              <h3 class="market__content-name">Напитки Vitamin Well</h3>
+              <p class="market__content-description">
+                Негазированные, прохладительные напитки, обогащённые различными
+                витаминами, минералами, фруктовыми и&nbsp;растительными
+                экстрактами, содержащие в&nbsp;качестве подсластитель
+                натуральную фруктозу
+              </p>
+            </div>
+          </li>
+          <li class="swiper-slide market__slide">
+            <img
+              class="market__img"
+              src="./img/chocolate.png"
+              alt="Шоколад Nilambari"
+            />
+            <div class="market__content">
+              <h3 class="market__content-name">Авторский шоколад Nilambari</h3>
+              <p class="market__content-description">
+                Вкусный шоколад без сахара, для приверженцев минимальной
+                обработки
+              </p>
+            </div>
+          </li>
+        </ul>
+        <button
+          class="swiper-button-prev slider-arrow slider-arrow_prev market__slider-arrow market__slider-arrow_prev"
+        ></button>
+        <button
+          class="swiper-button-next slider-arrow market__slider-arrow market__slider-arrow_next"
+        ></button>
+      </div>
     </div>
   </div>
 </section>
@@ -499,7 +1063,7 @@
             id="politics"
           />
           <label class="application__label" for="politics">
-            Нажимая на&nbsp;кнопку &laquo;Отправить&raquo;, я&nbsp;даю<br />
+            Нажимая на&nbsp;кнопку &laquo;Отправить&raquo;, я&nbsp;даю
             <a class="application__link" href="#">
               согласие на&nbsp;обработку персональных данных.
             </a>
