@@ -1,1 +1,19 @@
-<svg width="31" height="30" xmlns="http://www.w3.org/2000/svg"><style>.st0{fill:#c4b29d}</style><g id="svg_1"><g id="svg_2"><g id="svg_3"><path transform="rotate(-45.001 1194.867 664.56)" class="st0" id="svg_4" d="M810.342-639.015h8.1v17.66h-8.1z"/></g></g><g id="svg_5"><g id="svg_6"><path transform="rotate(-45.001 1202.593 656.834)" class="st0" id="svg_7" d="M818.062-646.745h8.1v17.66h-8.1z"/></g></g></g></svg>
+<svg width="31" height="30" xmlns="http://www.w3.org/2000/svg">
+ <style type="text/css">.st0{fill:#C4B29D;}</style>
+
+ <g>
+  <title>Layer 1</title>
+  <g id="svg_1">
+   <g id="svg_2">
+    <g id="svg_3">
+     <rect x="810.34242" y="-639.01484" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -119.934 1039.54)" class="st0" width="8.1" height="17.66" id="svg_4"/>
+    </g>
+   </g>
+   <g id="svg_5">
+    <g id="svg_6">
+     <rect x="818.06242" y="-646.74484" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -112.208 1042.74)" class="st0" width="8.1" height="17.66" id="svg_7"/>
+    </g>
+   </g>
+  </g>
+ </g>
+</svg>

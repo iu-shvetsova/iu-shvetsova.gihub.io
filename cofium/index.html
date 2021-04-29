@@ -90,7 +90,7 @@
       sizes="1024x1024"
       href="img/favicons/apple-touch-icon-1024x1024.png"
     />
-    <link rel="stylesheet" href="styles/main.min.css" />
+    <link rel="stylesheet" href="styles/main.css" />
   </head>
   <body>
     <header class="header" id="main">
@@ -100,7 +100,7 @@
         ><img
           class="header__company-name"
           alt="Кофиум."
-          src="img/logo.png"
+          src="./img/logo.svg"
           width="153"
           height="21"
       /></a>
@@ -153,18 +153,13 @@
         <div class="contacts header__nav-contacts">
           <ul class="contacts__list">
             <li class="contacts__item header__contacts-item">
-              <a class="contacts__link" href="tel:+79000000000"
-                >+7 (900) 000 00 00</a
+              <a class="contacts__link" href="tel:+79313892265"
+                >+7 (931) 389 22 65</a
               >
             </li>
             <li class="contacts__item header__contacts-item">
-              <a class="contacts__link" href="tel:+79000000000"
-                >+7 (900) 000 00 00</a
-              >
-            </li>
-            <li class="contacts__item header__contacts-item">
-              <a class="contacts__link" href="mailto:email@email"
-                >email@email</a
+              <a class="contacts__link" href="mailto:info@cofium.ru"
+                >info@cofium.ru</a
               >
             </li>
           </ul>
@@ -172,7 +167,7 @@
       </nav>
     </div>
     <div class="header__content">
-      <img class="header__content-img" src="img/logo-img.png" alt="Кофиум" />
+      <img class="header__content-img" src="./img/logo-img.svg" alt="Кофиум" />
       <p class="header__content-text">Теперь в&nbsp;Санкт-Петербурге</p>
     </div>
   </div>
@@ -243,11 +238,18 @@
     <div class="swiper-container to-go__slider">
       <ul class="swiper-wrapper to-go__slider-wrapper">
         <li class="swiper-slide to-go__slide">
-          <img
-            class="to-go__img"
-            src="./img/sandwich.jpg"
-            alt="Сэндвич с ветчиной"
-          />
+          <picture>
+            <source
+              type="image/webp"
+              srcset="./img/sandwich@1x.webp 1x, ./img/sandwich@2x.webp 2x"
+            />
+            <img
+              class="to-go__img"
+              src="./img/sandwich@1x.jpg"
+              srcset="./img/sandwich@2x.jpg 2x"
+              alt="Сэндвич с ветчиной"
+            />
+          </picture>
           <p class="to-go__sticker">
             Chief&rsquo;s<br />
             special
@@ -264,11 +266,21 @@
           </div>
         </li>
         <li class="swiper-slide to-go__slide">
-          <img
-            class="to-go__img"
-            src="./img/roll-shrimp.jpg"
-            alt=" Ролл с креветкой"
-          />
+          <picture>
+            <source
+              type="image/webp"
+              srcset="
+                ./img/roll-shrimp@1x.webp 1x,
+                ./img/roll-shrimp@2x.webp 2x
+              "
+            />
+            <img
+              class="to-go__img"
+              src="./img/roll-shrimp@1x.jpg"
+              srcset="./img/roll-shrimp@2x.jpg 2x"
+              alt=" Ролл с креветкой"
+            />
+          </picture>
           <div class="to-go__content">
             <h3 class="to-go__content-name">
               Ролл с&nbsp;креветкой и&nbsp;сальсой из&nbsp;манго
@@ -281,11 +293,21 @@
           </div>
         </li>
         <li class="swiper-slide to-go__slide">
-          <img
-            class="to-go__img"
-            src="./img/turkey-buckwheat.jpg"
-            alt="Индейка с зеленой гречей"
-          />
+          <picture>
+            <source
+              type="image/webp"
+              srcset="
+                ./img/turkey-buckwheat@1x.webp 1x,
+                ./img/turkey-buckwheat@2x.webp 2x
+              "
+            />
+            <img
+              class="to-go__img"
+              src="./img/turkey-buckwheat@1x.jpg"
+              srcset="./img/turkey-buckwheat@2x.jpg 2x"
+              alt="Индейка с зеленой гречей"
+            />
+          </picture>
           <div class="to-go__content">
             <h3 class="to-go__content-name">
               Индейка с&nbsp;зеленой гречей и&nbsp;грибами
@@ -299,7 +321,18 @@
           </div>
         </li>
         <li class="swiper-slide to-go__slide">
-          <img class="to-go__img" src="./img/smoothies.jpg" alt="Смузи" />
+          <picture>
+            <source
+              type="image/webp"
+              srcset="./img/smoothies@1x.webp 1x, ./img/smoothies@2x.webp 2x"
+            />
+            <img
+              class="to-go__img"
+              src="./img/smoothies@1x.jpg"
+              srcset="./img/smoothies@2x.jpg 2x"
+              alt="Смузи"
+            />
+          </picture>
           <div class="to-go__content">
             <h3 class="to-go__content-name">Смузи Дыня/Шпинат/Базилик</h3>
             <p class="to-go__content-description">
@@ -309,11 +342,21 @@
           </div>
         </li>
         <li class="swiper-slide to-go__slide">
-          <img
-            class="to-go__img"
-            src="./img/turkey-bowl.jpg"
-            alt="Боул с индейкой"
-          />
+          <picture>
+            <source
+              type="image/webp"
+              srcset="
+                ./img/turkey-bowl@1x.webp 1x,
+                ./img/turkey-bowl@2x.webp 2x
+              "
+            />
+            <img
+              class="to-go__img"
+              src="./img/turkey-bowl@1x.jpg"
+              srcset="./img/turkey-bowl@2x.jpg 2x"
+              alt="Боул с индейкой"
+            />
+          </picture>
           <div class="to-go__content">
             <h3 class="to-go__content-name">
               Боул с&nbsp;индейкой, булгуром, овощами и&nbsp;ореховой заправкой
@@ -359,7 +402,7 @@
           <img
             class="modal__header-logo"
             alt="Кофиум"
-            src="img/logo-img.png"
+            src="img/logo-img.svg"
             width="36"
             height="65"
           />
@@ -679,7 +722,7 @@
   <div class="modal drinks__modal">
     <div class="modal__wrappper">
       <header class="modal__header">
-        <img class="modal__header-logo" alt="Кофиум" src="img/logo-img.png" />
+        <img class="modal__header-logo" alt="Кофиум" src="img/logo-img.svg" />
         <button
           class="modal__header-button drinks__btn-close"
           type="button"
@@ -914,12 +957,6 @@
                 Яркий напиток со&nbsp;вкусом ромовой бабы с&nbsp;бананом
               </p>
             </li>
-            <li
-              class="swiper-slide specialty-drinks__slider-item specialty-drinks__slider-item_none"
-            ></li>
-            <li
-              class="swiper-slide specialty-drinks__slider-item specialty-drinks__slider-item_none"
-            ></li>
             <li class="swiper-slide specialty-drinks__slider-item">
               <h3 class="specialty-drinks__subtitle-wrapper">
                 <span class="specialty-drinks__kind">Горячий напиток</span>
@@ -957,12 +994,6 @@
                 Тропический латте со&nbsp;вкусом бананово-кокосового милкшейка
               </p>
             </li>
-            <li
-              class="swiper-slide specialty-drinks__slider-item specialty-drinks__slider-item_none"
-            ></li>
-            <li
-              class="swiper-slide specialty-drinks__slider-item specialty-drinks__slider-item_none"
-            ></li>
           </ul>
         </div>
         <button
@@ -985,11 +1016,20 @@
       <div class="swiper-container market__slider">
         <ul class="swiper-wrapper">
           <li class="swiper-slide market__slide">
-            <img
-              class="market__img"
-              src="./img/bar.png"
-              alt="Батончик BE KIND"
-            />
+            <picture>
+              <source
+                type="image/webp"
+                srcset="./img/bar.webp 1x, ./img/bar@2x.webp 2x"
+              />
+              <img
+                class="market__img"
+                src="./img/bar.png"
+                srcset="./img/bar@2x.png 2x"
+                alt="Батончик BE KIND"
+                width="770"
+                height="543"
+              />
+            </picture>
             <div class="market__content">
               <h3 class="market__content-name">Шоколадные батончики BE KIND</h3>
               <p class="market__content-description">
@@ -1001,11 +1041,21 @@
             </div>
           </li>
           <li class="swiper-slide market__slide">
-            <img
-              class="market__img"
-              src="./img/vitamin-drink.png"
-              alt="Напиток Vitamin Well"
-            />
+            <picture>
+              <source
+                type="image/webp"
+                srcset="
+                  ./img/vitamin-drink.webp    1x,
+                  ./img/vitamin-drink@2x.webp 2x
+                "
+              />
+              <img
+                class="market__img"
+                src="./img/vitamin-drink.png"
+                srcset="./img/vitamin-drink@2x.png 2x"
+                alt="Напиток Vitamin Well"
+              />
+            </picture>
             <div class="market__content">
               <h3 class="market__content-name">Напитки Vitamin Well</h3>
               <p class="market__content-description">
@@ -1017,11 +1067,18 @@
             </div>
           </li>
           <li class="swiper-slide market__slide">
-            <img
-              class="market__img"
-              src="./img/chocolate.png"
-              alt="Шоколад Nilambari"
-            />
+            <picture>
+              <source
+                type="image/webp"
+                srcset="./img/chocolate.webp 1x, ./img/chocolate@2x.webp 2x"
+              />
+              <img
+                class="market__img"
+                src="./img/chocolate.png"
+                srcset="./img/chocolate@2x.png 2x"
+                alt="Шоколад Nilambari"
+              />
+            </picture>
             <div class="market__content">
               <h3 class="market__content-name">Авторский шоколад Nilambari</h3>
               <p class="market__content-description">
@@ -1105,17 +1162,14 @@
       <div class="contacts">
         <ul class="contacts__list">
           <li class="contacts__item">
-            <a class="contacts__link" href="tel:+79000000000"
-              >+7 (900) 000 00 00</a
+            <a class="contacts__link" href="tel:+79313892265"
+              >+7 (931) 389 22 65</a
             >
           </li>
           <li class="contacts__item">
-            <a class="contacts__link" href="tel:+79000000000"
-              >+7 (900) 000 00 00</a
+            <a class="contacts__link" href="mailto:info@cofium.ru"
+              >info@cofium.ru</a
             >
-          </li>
-          <li class="contacts__item">
-            <a class="contacts__link" href="mailto:email@email">email@email</a>
           </li>
         </ul>
       </div>
@@ -1123,27 +1177,27 @@
     <ul class="footer__category-list">
       <li class="footer__category-item">
         <p class="footer__category-name">Для арендодателей</p>
-        <a class="footer__category-link" href="mailto:email@email"
-          >email@email</a
+        <a class="footer__category-link" href="mailto:info@cofium.ru"
+          >info@cofium.ru</a
         >
       </li>
       <li class="footer__category-item">
         <p class="footer__category-name">Для соискателей</p>
-        <a class="footer__category-link" href="mailto:email@email"
-          >email@email</a
+        <a class="footer__category-link" href="mailto:info@cofium.ru"
+          >info@cofium.ru</a
         >
       </li>
       <li class="footer__category-item">
         <p class="footer__category-name">Для поставщиков</p>
-        <a class="footer__category-link" href="mailto:email@email"
-          >email@email</a
+        <a class="footer__category-link" href="mailto:info@cofium.ru"
+          >info@cofium.ru</a
         >
       </li>
     </ul>
   </div>
 </footer>
 
-    <script src="js/main.min.js"></script>
-    <script src="js/vendor.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/vendor.js"></script>
   </body>
 </html>
