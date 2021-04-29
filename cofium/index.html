@@ -120,7 +120,7 @@
             <a class="header__link" href="#food">Еда</a>
           </li>
           <li class="header__item">
-            <a class="header__link" href="#drinks">Напитки</a>
+            <a class="header__link" href="#drinks">Кофейня</a>
           </li>
           <li class="header__item">
             <a class="header__link" href="#market">Маркет</a>
@@ -132,20 +132,10 @@
         <div class="social header__nav-social">
           <ul class="social__list">
             <li class="social__item header__social-item">
-              <a class="social__link" aria-label="instagram" href="#"></a>
-            </li>
-            <li class="social__item header__social-item">
               <a
-                class="social__link social__link_vk"
-                aria-label="vk"
-                href="#"
-              ></a>
-            </li>
-            <li class="social__item header__social-item">
-              <a
-                class="social__link social__link_fb"
-                aria-label="facebook"
-                href="#"
+                class="social__link"
+                aria-label="instagram"
+                href="https://www.instagram.com/cofium.ru/?igshid=jic2gw25w490"
               ></a>
             </li>
           </ul>
@@ -171,7 +161,7 @@
       <p class="header__content-text">Теперь в&nbsp;Санкт-Петербурге</p>
     </div>
   </div>
-  <video class="header__bg-video" loop autoplay muted>
+  <video class="header__bg-video" loop autoplay muted playsinline>
     <source src="./video/main.mp4" type="video/mp4" />
   </video>
 </header>
@@ -186,7 +176,7 @@
     <h2 class="visually-hidden">Наши продукты</h2>
     <ul class="advantages__list">
       <li class="advantages__item">
-        <h3 class="advantages__subtitle">Умна еда</h3>
+        <h3 class="advantages__subtitle">Умная еда</h3>
         <p class="advantages__description">
           Ресторанное меню в&nbsp;to&nbsp;go формате. Блюда от&nbsp;нашего
           бренд-шефа: синтез гастрономии, пользы и&nbsp;баланса. Для тех, кто
@@ -203,7 +193,7 @@
       <li class="advantages__item">
         <h3 class="advantages__subtitle">Маркет</h3>
         <p class="advantages__description">
-          полезные, умные и&nbsp;популярные снэки, напитки, мороженное
+          полезные, умные и&nbsp;популярные снеки, напитки, мороженное
           и&nbsp;свежая выпечка
         </p>
       </li>
@@ -214,9 +204,7 @@
       <section class="values">
   <div class="values__wrap container">
     <div class="statement">
-      <h2 class="values__subtitle site-title site-title_bold site-title_small">
-        О&nbsp;НАС
-      </h2>
+      <h2 class="values__subtitle site-title">О&nbsp;НАС</h2>
       <div class="statement__text-wrap">
         <p class="statement__text values__text">
           Современные реалии предполагают высокий темп жизни, многозадачность;
@@ -369,6 +357,9 @@
           </div>
         </li>
       </ul>
+      <div
+        class="swiper-pagination slider-pagination to-go__slider-pagination"
+      ></div>
       <button
         class="swiper-button-prev slider-arrow slider-arrow_prev to-go__slider-button to-go__slider-button_prev"
       ></button>
@@ -382,9 +373,7 @@
       <section class="balance">
   <div class="balance__wrap container">
     <div class="statement">
-      <h2 class="balance__subtitle site-title site-title_small">
-        Баланс и вкус
-      </h2>
+      <h2 class="balance__subtitle site-title">Баланс и вкус</h2>
       <div class="statement__text-wrap">
         <p class="statement__text balance__text">
           Для наших поваров еда&nbsp;&mdash; религия! Ее&nbsp;польза
@@ -720,7 +709,7 @@
       <button class="drinks__content-btn site-button">Кофейная карта</button>
     </div>
   </div>
-  <video class="drinks__bg-video" loop autoplay muted>
+  <video class="drinks__bg-video" loop autoplay muted playsinline>
     <source src="./video/drinks.mp4" type="video/mp4" />
   </video>
   <div class="modal drinks__modal">
@@ -739,7 +728,7 @@
           <ul class="modal__sublist">
             <li class="modal__subitem">
               <p class="modal__product">Американо 200&nbsp;мл</p>
-              <p class="modal__price">160&nbsp;₽</p>
+              <p class="modal__price">140&nbsp;₽</p>
             </li>
             <li class="modal__subitem">
               <p class="modal__product">Горячий шоколад 200&nbsp;мл</p>
@@ -751,7 +740,7 @@
             </li>
             <li class="modal__subitem">
               <p class="modal__product">Капучино 250&nbsp;мл</p>
-              <p class="modal__price">190&nbsp;₽</p>
+              <p class="modal__price">180&nbsp;₽</p>
             </li>
             <li class="modal__subitem">
               <p class="modal__product">Капучино 350&nbsp;мл</p>
@@ -759,11 +748,11 @@
             </li>
             <li class="modal__subitem">
               <p class="modal__product">Капучино кокосовое 350&nbsp;мл</p>
-              <p class="modal__price">250&nbsp;₽</p>
+              <p class="modal__price">220&nbsp;₽</p>
             </li>
             <li class="modal__subitem">
               <p class="modal__product">Капучино миндальное 350&nbsp;мл</p>
-              <p class="modal__price">250&nbsp;₽</p>
+              <p class="modal__price">220&nbsp;₽</p>
             </li>
             <li class="modal__subitem">
               <p class="modal__product">Капучино овсяное 350&nbsp;мл</p>
@@ -775,15 +764,17 @@
             </li>
             <li class="modal__subitem">
               <p class="modal__product">Латте кокосовый 350&nbsp;мл</p>
-              <p class="modal__price">250&nbsp;₽</p>
+              <p class="modal__price">220&nbsp;₽</p>
             </li>
             <li class="modal__subitem">
-              <p class="modal__product">Латте Лимонное крем-брюле 45&nbsp;мл</p>
-              <p class="modal__price">280&nbsp;₽</p>
+              <p class="modal__product">
+                Латте Лимонное крем-брюле 450&nbsp;мл
+              </p>
+              <p class="modal__price">скоро</p>
             </li>
             <li class="modal__subitem">
               <p class="modal__product">Латте миндальный 350&nbsp;мл</p>
-              <p class="modal__price">250&nbsp;₽</p>
+              <p class="modal__price">220&nbsp;₽</p>
             </li>
             <li class="modal__subitem">
               <p class="modal__product">Латте овсяный 350&nbsp;мл</p>
@@ -803,19 +794,19 @@
             </li>
             <li class="modal__subitem">
               <p class="modal__product">Флэт Уайт 250&nbsp;мл</p>
-              <p class="modal__price">190&nbsp;₽</p>
+              <p class="modal__price">220&nbsp;₽</p>
             </li>
             <li class="modal__subitem">
               <p class="modal__product">Флэт Уайт кокосовый 250&nbsp;мл</p>
-              <p class="modal__price">250&nbsp;₽</p>
+              <p class="modal__price">220&nbsp;₽</p>
             </li>
             <li class="modal__subitem">
               <p class="modal__product">Флэт Уайт миндальный 250&nbsp;мл</p>
-              <p class="modal__price">250&nbsp;₽</p>
+              <p class="modal__price">220&nbsp;₽</p>
             </li>
             <li class="modal__subitem">
               <p class="modal__product">Флэт Уайт овсяный 250&nbsp;мл</p>
-              <p class="modal__price">190 &nbsp;₽</p>
+              <p class="modal__price">220&nbsp;₽</p>
             </li>
             <li class="modal__subitem">
               <p class="modal__product">Эспрессо 45&nbsp;мл</p>
@@ -1081,6 +1072,9 @@
             </div>
           </li>
         </ul>
+        <div
+          class="swiper-pagination slider-pagination market__slider-pagination"
+        ></div>
         <button
           class="swiper-button-prev slider-arrow slider-arrow_prev market__slider-arrow market__slider-arrow_prev"
         ></button>
@@ -1137,20 +1131,10 @@
       <div class="social footer__social">
         <ul class="social__list">
           <li class="social__item">
-            <a class="social__link" aria-label="instagram" href="#"></a>
-          </li>
-          <li class="social__item">
             <a
-              class="social__link social__link_vk"
-              aria-label="vk"
-              href="#"
-            ></a>
-          </li>
-          <li class="social__item">
-            <a
-              class="social__link social__link_fb"
-              aria-label="facebook"
-              href="#"
+              class="social__link"
+              aria-label="instagram"
+              href="https://www.instagram.com/cofium.ru/?igshid=jic2gw25w490"
             ></a>
           </li>
         </ul>
