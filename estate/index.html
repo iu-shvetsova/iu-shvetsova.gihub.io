@@ -23,48 +23,59 @@
         <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
         <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
         <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.min.css/4.1.1/animate.min.min.css"/>
         <link rel="stylesheet" href="styles/main.min.css">
     </head>
     <body>
         <header class="header">
     <img class="header__logo" src="./img/logo.svg" alt="Estate" width="39" height="36">
-    <nav class="header__nav-wrapper">
-        <ul class="header__nav-list">
-            <li class="header__nav-item">
-                <a class="header__nav-link" href="#about">
-                    О компании
-                </a>
-            </li>
-            <li class="header__nav-item">
-                <a class="header__nav-link" href="#development">
-                    Наши принципы
-                </a>
-            </li>
-            <li class="header__nav-item">
-                <a class="header__nav-link" href="#bloom-house">
-                    Объекты
-                </a>
-            </li>
-        </ul>
-    </nav>
-    <div class="header__contacts">
-        <a class="header__phone" href="tel:+9219920392">
-            +7 921 992-03-92
-        </a>
-        <a class="header__email" href="mailto:vib@pulkovospb.ru" aria-label="vib@pulkovospb.ru"></a>
+    <button class="header__burger" type="button">
+        <span class="header__line"></span>
+        <span class="visually-hidden">Открыть меню</span>
+    </button>
+    <div class="header__menu">
+        <nav class="header__nav-wrapper">
+            <ul class="header__nav-list">
+                <li class="header__nav-item">
+                    <a class="header__nav-link" href="#about">
+                        О компании
+                    </a>
+                </li>
+                <li class="header__nav-item">
+                    <a class="header__nav-link" href="#development">
+                        Наши принципы
+                    </a>
+                </li>
+                <li class="header__nav-item">
+                    <a class="header__nav-link" href="#bloom-house">
+                        Объекты
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="header__contacts">
+            <a class="header__phone" href="tel:+9219920392">
+                +7 921 992-03-92
+            </a>
+            <a class="header__email" href="mailto:vib@pulkovospb.ru" aria-label="vib@pulkovospb.ru"></a>
+        </div>
     </div>
 </header>
         <main>
             <section class="intro-block">
-    <h2 class="intro-block__title">Предвосхищая <br>ваши ожидания</h2>
-    <ul class="intro-block__list">
-        <li class="intro-block__item">
+    <h2 class="intro-block__title">
+        <span class="intro-block__first-image animate__animated animate__fadeInRight"></span>
+        <span class="animate__animated animate__fadeIn animate__delay-1s">Предвосхищая <br>ваши ожидания</span>
+        <span class="intro-block__second-image animate__animated animate__fadeInRight animate__delay-1s"></span>
+    </h2>
+    <ul class="intro-block__list animate__animated animate__fadeIn animate__delay-2s">
+        <li class="intro-block__item animate__animated animate__fadeInRight animate__delay-2s">
             Собственный стандарт проектирования жилой недвижимости
         </li>
-        <li class="intro-block__item">
+        <li class="intro-block__item animate__animated animate__fadeInRight animate__delay-2s">
             Высочайшие внутренние требования к&nbsp;продукту
         </li>
-        <li class="intro-block__item">
+        <li class="intro-block__item animate__animated animate__fadeInRight animate__delay-2s">
             Сильная и&nbsp;опытная команда профессионалов рынка
         </li>
     </ul>
@@ -95,24 +106,34 @@
     <ul class="development__list">
         <li class="development__item">
             <h2 class="development__title">New wave <br>development</h2>
-            <p class="development__text">
-                Мы&nbsp;придерживаемся собственного подхода к&nbsp;девелопменту жилой недвижимости, в&nbsp;основе которого, прежде всего, лежит тщательно проработанный продукт и&nbsp;глубокое понимание запросов современного покупателя.
+            <p class="development__wrapper">
+                <span class="development__line"></span>
+                <span class="development__text">
+                    Мы&nbsp;придерживаемся собственного подхода к&nbsp;девелопменту жилой недвижимости, в&nbsp;основе которого, прежде всего, лежит тщательно проработанный продукт и&nbsp;глубокое понимание запросов современного покупателя.
+                </span>
             </p>
         </li>
         <li class="development__item">
-            <p class="development__text">
-                Основной вектор развития для нас&nbsp;&mdash; создание эксклюзивных штучных проектов с&nbsp;интересной концепцией, вниманием к&nbsp;деталям и&nbsp;высокими стандартами качества.
+            <p class="development__wrapper">
+                <span class="development__line"></span>
+                <span class="development__text">
+                    Основной вектор развития для нас&nbsp;&mdash; создание эксклюзивных штучных проектов с&nbsp;интересной концепцией, вниманием к&nbsp;деталям и&nbsp;высокими стандартами качества.
+                </span>
             </p>
         </li>
         <li class="development__item">
-            <p class="development__text">
-                Мы&nbsp;стремится предложить рынку по-настоящему эталонный продукт, предвосхищая ожидания потребителей на&nbsp;всех этапах взаимодействия с&nbsp;компанией.
+            <p class="development__wrapper">
+                <span class="development__line"></span>
+                <span class="development__text">
+                    Мы&nbsp;стремится предложить рынку по-настоящему эталонный продукт, предвосхищая ожидания потребителей на&nbsp;всех этапах взаимодействия с&nbsp;компанией.
+                </span>
             </p>
         </li>
     </ul>
 </section>
             </div>
             <section class="bloom-house" id="bloom-house">
+    <span class="bloom-house__left-image"></span>
     <h2 class="bloom-house__title">
         Bloom House
         <svg class="bloom-house__logo" viewBox="0 0 81.1 78.2" xmlns="http://www.w3.org/2000/svg" fill="#ffffff">
@@ -146,6 +167,7 @@
         </p>
     </div>
 <!--    <a class="bloom-house__link" href="#">Узнать больше</a>-->
+    <span class="bloom-house__right-image"></span>
 </section>
             <div class="blocks-wrapper">
                 <section class="features">
